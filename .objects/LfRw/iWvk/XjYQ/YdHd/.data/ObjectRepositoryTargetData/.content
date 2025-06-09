@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="GWbWg7cPYE-lgWBOWz953A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="production.sureprep.com/ManageUsers/UserManagement/Index/1" CVScreenId="370ef37d-5add-4b79-a109-0d334414f414" CvTextArea="848, 188, 22, 12" CvTextArgument="API" CvType="Text" DesignTimeRectangle="850, 186, 19, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl parentid='bodyContainer' tableCol='33' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzyAccuracy="0.75" Guid="23d63887-9ff2-4239-9765-74c45802f352" ScopeSelectorArgument="&lt;html app='chrome.exe' title='User Management' /&gt;" SearchSteps="Selector, CV" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="f50e58ecc48327978e595cb32ce629f5.png" xmlns="">0FAhy7_l9EEqIZc1o0kMMaA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">Click</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,191 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="LogOut_SCD" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>LogOut_SCD_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="LogOut_SCD" sap:VirtualizedContainerService.HintSize="1452.0000000000002,1428.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: SurePrep – Service Center Dashboard" sap:VirtualizedContainerService.HintSize="1019.2,1405.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="3364d4d6-2f3c-48fe-bc9c-aeb89376a6fc" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="985.6,1165.6" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'settings'" sap:VirtualizedContainerService.HintSize="952,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3364d4d6-2f3c-48fe-bc9c-aeb89376a6fc" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://scdashboard.sureprep.com/EngagementQueue/Verification/VerificationQueue" CVScreenId="ecabe1df-94f6-4d21-95c4-67fc81d242cc" CvElementArea="24, 926, 37, 37" CvType="Icon" DesignTimeRectangle="28, 923, 30, 44" DesignTimeScaleFactor="1.25" FriendlyName="'settings'" FullSelectorArgument="&lt;webctrl parentid='settingdiv' tag='I' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='settingdiv' tag='I' type='' class='material-icons md-24' aaname='settings' check:innerText='settings' /&gt;" Guid="d719e313-98c4-4f3f-970e-bbffc5c3410c" InformativeScreenshot="d292bd503ae413ae42934ca2c962187a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SurePrep – Service Center Dashboard' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Logout'" sap:VirtualizedContainerService.HintSize="952,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="3364d4d6-2f3c-48fe-bc9c-aeb89376a6fc" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable BrowserURL="https://scdashboard.sureprep.com/EngagementQueue/Verification/VerificationQueue" CVScreenId="87822b0e-e6ab-407b-83db-a6d23d8188e6" CvTextArea="187, 934, 61, 21" CvTextArgument="Logout" CvType="Text" DesignTimeRectangle="85, 928, 171, 33" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Logout'" FullSelectorArgument="&lt;webctrl id='log-out-btn' tag='BUTTON' /&gt;" FuzzySelectorArgument="&lt;webctrl id='log-out-btn' tag='BUTTON' type='' class='' aaname='Logout' check:innerText='Logout' /&gt;" Guid="6c81266c-5c68-4f34-b34e-dad62cea24c6" InformativeScreenshot="37fd1450c2cb5ca6cabe41e44a9436a4.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SurePrep – Service Center Dashboard' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+              <uix:NClick.VerifyOptions>
+                <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
+                  <uix:VerifyExecutionOptions.Retry>
+                    <InArgument x:TypeArguments="x:Boolean" />
+                  </uix:VerifyExecutionOptions.Retry>
+                  <uix:VerifyExecutionOptions.Timeout>
+                    <InArgument x:TypeArguments="x:Double" />
+                  </uix:VerifyExecutionOptions.Timeout>
+                </uix:VerifyExecutionOptions>
+              </uix:NClick.VerifyOptions>
+            </uix:NClick>
+            <uix:NCheckState DisplayName="Check App State 'You signed'" sap:VirtualizedContainerService.HintSize="952,652.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="3364d4d6-2f3c-48fe-bc9c-aeb89376a6fc" Timeout="60" Version="V3">
+              <uix:NCheckState.IfExists>
+                <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="449.6,369.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,176" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[&quot;Successfully logout from SCD&quot;]" />
+                  <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window 'chrome.exe SurePrep'" sap:VirtualizedContainerService.HintSize="416,132" sap2010:WorkflowViewState.IdRef="CloseWindow_1" InformativeScreenshot="35877c67f38e21915370dfc683c99765" WaitForReady="INTERACTIVE" />
+                </Sequence>
+              </uix:NCheckState.IfExists>
+              <uix:NCheckState.IfNotExists>
+                <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="449.6,230.4" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,168.8" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;Not able to logout from SCD&quot;]" />
+                </Sequence>
+              </uix:NCheckState.IfNotExists>
+              <uix:NCheckState.Target>
+                <uix:TargetAnchorable BrowserURL="https://scdashboard.sureprep.com/Logout" DesignTimeRectangle="1501, 629, 274, 51" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'You signed'" FullSelectorArgument="&lt;webctrl id='warn-attempt' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='warn-attempt' tag='SPAN' type='' class='' aaname='                             You signed out of Service Center Dashboard.                         ' check:innerText='You signed out of Service Center Dashboard.' /&gt;" Guid="fb8dc902-0dbe-4fa0-8bc4-c4047e7d25c5" InformativeScreenshot="02aa0deea5b797f197860006707136f6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='SurePrep – Service Center Dashboard' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NCheckState.Target>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NCheckState>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-9, -9, 1938, 1038" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="0969c9cfe92c49d33a74002d62436006.jpg" Selector="&lt;html app='chrome.exe' title='SurePrep – Service Center Dashboard' /&gt;" Title="SurePrep – Service Center Dashboard" Url="[in_Config(&quot;SCD_VerificationQueue&quot;).ToString]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

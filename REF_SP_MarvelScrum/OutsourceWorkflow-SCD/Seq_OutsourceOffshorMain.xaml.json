@@ -1,0 +1,129 @@
+{
+  "DisplayName": "Seq_OutsourceOffshorMain",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "in_ServiceType",
+      "DisplayName": "in_ServiceType",
+      "Category": null,
+      "Tooltip": "Argument variable containing the service type of the binder extracted from the transaciton item.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_BinderOption",
+      "DisplayName": "in_BinderOption",
+      "Category": null,
+      "Tooltip": "Argument variable containing the Yes/No Binder Option of the binder extracted from the transaciton item.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_UserID",
+      "DisplayName": "in_UserID",
+      "Category": null,
+      "Tooltip": "Argument variable containing the User Id in the SCD application",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Location",
+      "DisplayName": "in_Location",
+      "Category": null,
+      "Tooltip": "Argument containing the location in the SCD application according to the environment.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_TaxYear",
+      "DisplayName": "in_TaxYear",
+      "Category": null,
+      "Tooltip": "Argument variable containing the tax year of the binder extracted from the transaciton item.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_TaxSoftware",
+      "DisplayName": "in_TaxSoftware",
+      "Category": null,
+      "Tooltip": "Argument variable containing the tax software of the binder extracted from the transaciton item.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_TransactionItem",
+      "DisplayName": "in_TransactionItem",
+      "Category": null,
+      "Tooltip": "Transaction item to be processed.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_Config",
+      "DisplayName": "in_Config",
+      "Category": null,
+      "Tooltip": "Dictionary containing the input settings to be passed to the workflow.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "io_dtTestSummaryReport",
+      "DisplayName": "io_dtTestSummaryReport",
+      "Category": null,
+      "Tooltip": null,
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "in_BinderID",
+      "DisplayName": "in_BinderID",
+      "Category": null,
+      "Tooltip": "String variable containing the binder ID of the binder extracted from the transaciton item.",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": false,
+      "IsPrincipal": true,
+      "ArgumentType": 0,
+      "DataSourceItems": null
+    }
+  ]
+}

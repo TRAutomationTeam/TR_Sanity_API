@@ -1,0 +1,227 @@
+{
+  "Workflows": [
+    {
+      "Path": null,
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": null,
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "SCD_ManagerAssignmentToVerificaionQueue.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [],
+      "ArgumentsSectionElementsOrder": [
+        "in_strBinderId",
+        "in_TransactionItem",
+        "in_Config",
+        "io_dtTestSummaryReport"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "REF_SP_MarvelScrum/OutsourceWorkflow-SCD/Seq_OutsourceOffshorMain.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "dt_LoginData&Sequence_49",
+        "str_ServiceType&Sequence_49",
+        "str_BinderOption&Sequence_49",
+        "str_UserID&Sequence_49",
+        "str_Location&Sequence_49",
+        "str_TaxYear&Sequence_49",
+        "str_TaxSoftware&Sequence_49",
+        "str_TransactionProgress&Sequence_49",
+        "str_SCDURL&Sequence_49"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "io_dtTestSummaryReport",
+        "in_ServiceType",
+        "in_BinderID",
+        "in_BinderOption",
+        "in_UserID",
+        "in_Location",
+        "in_TaxYear",
+        "in_TaxSoftware",
+        "in_TransactionItem",
+        "in_Config",
+        "io_dtReporterData"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "REF_SP_MarvelScrum/OutsourceWorkflow-SCD/Seq_AssignBinderFromManagerToTeamLead.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strServiceType&Sequence_4",
+        "strBinderID&Sequence_4",
+        "strUserID&Sequence_4",
+        "strTransactionprogress&Sequence_4"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ServiceType",
+        "in_BinderID",
+        "in_UserID",
+        "in_TransactionItem",
+        "in_Config",
+        "io_dtTestSummaryReport"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CommonFunctions-SCD/Seq_NavigateToWorkSpace.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intTimeDuration&Sequence_5",
+        "strScdURL&Sequence_5"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CommonFunctions-SCD/Seq_NavigateToMumbaiVerification.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strSCDURL&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CommonFunctions-SCD/Seq_NaviagateToQueue.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strSCDURL&Sequence_1",
+        "strQueueName&Sequence_1",
+        "strQueueName&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_QueueNames"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CommonFunctions-SCD/Seq_SearchBinder.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intTimeDuration10&Sequence_1",
+        "intTimeDuration30&Sequence_1",
+        "strScdURL&Sequence_1",
+        "strBinderID&Sequence_1",
+        "ui_CheckBinderId&Sequence_18",
+        "str_CheckBoxStatus&Sequence_18",
+        "strExceptionScreenshot&Sequence_21"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_BinderID",
+        "inOut_dtTestSummaryReport",
+        "in_Config",
+        "in_TransactionItem"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CommonFunctions-SCD/Seq_AddMember.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strManagerQueueURL&Sequence_10",
+        "str_MemberName&Sequence_1",
+        "MemberNameArr&Sequence_1",
+        "strMemberName&Sequence_1"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_MemberName",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CommonFunctions-SCD/Seq_SearchBinderInLowerPanel.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "intTimeDuration60&Sequence_1",
+        "strManagerQueueURL&Sequence_1",
+        "strBinderID&Sequence_1",
+        "strUserRole&Sequence_1",
+        "strBinderStatus&Sequence_1",
+        "binderTransferToTeamLead&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_BinderID",
+        "in_UserRole"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "REF_SP_MarvelScrum/OutsourceWorkflow-SCD/Seq_AssignBinderFromTeamLeadToVerifier.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strServiceType&Sequence_2",
+        "strBinderID&Sequence_2",
+        "strUserID&Sequence_2",
+        "strTransactionProgress&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ServiceType",
+        "in_BinderID",
+        "in_UserID",
+        "in_TransactionItem",
+        "in_Config",
+        "io_dtTestSummaryReport"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "REF_SP_MarvelScrum/OutsourceWorkflow-SCD/Seq_BinderOpeningByVerifierRole.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "strServiceType&Sequence_2",
+        "strBinderID&Sequence_2"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_ServiceType",
+        "in_BinderID",
+        "in_TransactionItem",
+        "in_Config"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    },
+    {
+      "Path": "CommonFunctions-SCD/Seq_SearchBinderInGrid.xaml",
+      "SortBy": 0,
+      "VariablesSectionElementsOrder": [
+        "allBinders&Sequence_1",
+        "strBinderID&Sequence_1",
+        "str_Leadsheet&Sequence_1",
+        "strVerificationQueueUrl&Sequence_1",
+        "intTimeDuration10&Sequence_1",
+        "strToasterMessage&Sequence_6",
+        "str_TransactionProgress&Sequence_7"
+      ],
+      "ArgumentsSectionElementsOrder": [
+        "in_Config",
+        "in_BinderID",
+        "in_TransactionItem"
+      ],
+      "ConstantsSectionElementsOrder": null,
+      "AddedNamespaces": null
+    }
+  ]
+}

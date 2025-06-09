@@ -1,0 +1,14 @@
+﻿{
+  "Name": "App Management",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "kyF8w7h5G0eVDThPRnwZFg",
+  "Reference": "kOjobpdQYEyzZnkE2nPqag/kyF8w7h5G0eVDThPRnwZFg",
+  "ParentRef": "kOjobpdQYEyzZnkE2nPqag/XjYQumLt702kM8uRwmEA7Q",
+  "Created": "2025-03-18T06:38:07.1042556Z",
+  "Updated": "2025-03-18T06:38:07.1042556Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.11.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.11.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

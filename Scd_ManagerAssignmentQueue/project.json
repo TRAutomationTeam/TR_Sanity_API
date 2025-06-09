@@ -1,0 +1,56 @@
+{
+  "name": "Scd_ManagerAssignmentQueue",
+  "projectId": "a59ab537-3e43-4b7a-b4a8-a23e6d9b23ea",
+  "description": "In the SCD searching the binder id and assigning manager assignment queue to verification queue.",
+  "main": "NewActivity.xaml",
+  "dependencies": {
+    "PingID": "1.0.8",
+    "SanityReport_GenerateOutput": "1.0.3",
+    "SanityReport_TCFiltering": "1.0.1",
+    "TakeScreenshot": "1.0.1",
+    "UiPath.System.Activities": "24.10.7",
+    "UiPath.Testing.Activities": "24.10.3",
+    "UiPath.UIAutomation.Activities": "23.10.13"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "24.10.1.0",
+  "projectVersion": "1.0.7",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Library",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

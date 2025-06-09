@@ -1,0 +1,126 @@
+{
+  "name": "API_SanityTest",
+  "projectId": "08dc5623-858a-4070-89ac-50d47c175979",
+  "description": "Robotic Enterprise Framework",
+  "main": "Main.xaml",
+  "dependencies": {
+    "Cloning_MasterTaxClient": "[1.0.18]",
+    "PingID": "[1.0.9]",
+    "Review_Wizards": "[1.0.61]",
+    "Sanity_AddDoc": "[1.0.9]",
+    "Sanity_ApiIndexTreeValidations": "[1.0.2]",
+    "Sanity_CCHLeadSheet": "[1.0.11]",
+    "SanityReport_GenerateOutput": "[1.0.3]",
+    "SanityReport_ReadTemplate": "[1.0.6]",
+    "SanityReport_TCFiltering": "[1.0.1]",
+    "Scd_ManagerAssignmentQueue": "[1.0.9]",
+    "TakeScreenshot": "[1.0.1]",
+    "TaxSoftware_Login": "[1.0.14]",
+    "UiPath.DataService.Activities": "[25.2.0]",
+    "UiPath.Excel.Activities": "[2.24.4]",
+    "UiPath.System.Activities": "[24.10.7]",
+    "UiPath.Testing.Activities": "[24.10.3]",
+    "UiPath.UIAutomation.Activities": "[23.10.13]",
+    "UiPath.WebAPI.Activities": "[1.21.1]",
+    "Verification_AddDoc": "[1.0.7]"
+  },
+  "webServices": [],
+  "entitiesStores": [
+    {
+      "serviceDocument": ".entities/EntitiesStore.json",
+      "tenantName": "DefaultTenant",
+      "namespace": "APISanityWorkflow_2023",
+      "uniqueReference": "bIaJt/zhxdtDPS4bA1z5uinFyj+yUh0jIiHlHlshbGA="
+    }
+  ],
+  "schemaVersion": "4.0",
+  "studioVersion": "24.10.6.0",
+  "projectVersion": "1.0.8",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": false,
+    "workflowSerialization": "DataContract",
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "4b840867-e6b2-4a9f-8813-b1c01c1c4323",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\GetTransactionDataTestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "763d2c3b-1782-4c74-a04a-697892710879",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\InitAllApplicationsTestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "9a37d45c-2aa5-4472-a65c-f0857271dd27",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\InitAllSettingsTestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "3596486f-195a-4f5e-965a-53b4b5f29df2",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\MainTestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "7fb1f80c-5bcc-46da-b80b-4c528b08b0ba",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\ProcessTestCase.xaml"
+      },
+      {
+        "editingStatus": "InProgress",
+        "testCaseId": "e1bd534b-7a4a-4d41-b2b2-30ad729dcad0",
+        "testCaseType": "TestCase",
+        "executionTemplateType": "Local",
+        "fileName": "Tests\\WorkflowTestCaseTemplate.xaml"
+      }
+    ],
+    "saveToCloud": false
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "87895094-52ac-4ab1-bf5f-cd524b9c375b",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

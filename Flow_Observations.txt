@@ -1,0 +1,50 @@
+* Steps and observation for old wrong sanity document
+1. Create clone of master locator for CCH
+2. Verify Automatic export functionality check in admin setting
+3. Create binder via API using clone client id as unique identifier
+4. Process binder via SCD
+5. Process Wizard
+- Pre verification wizard not appear (Unexpected behaviour)
+- Verification wizard appear (first page references blank - Unexpected behaviour)
+- Superseded wizard not appear (unexpected behaviour)
+- CFA appear (unexpected behaviour)
+  * After clicking on Show source document checkbox bank of America form is not automatically associated
+  * There is no Rental form under Rental Income and expenses folder
+  * Getting 3 unassociated documents in CFA instead of 2
+- Duplicate wizard not appear (unexpected behaviour)
+- NFR appear uncertain (unexpected behaviour)
+6. Open CCH Tax File and modify federal estimate payments
+7. Import TR from SP Binder
+8. Validate value in leadsheet
+9. Add doc with sureprep option selected
+
+* Steps and observation with API new CCH sanity doc -
+(API 1st Biner ID - 37115344)(API 2nd binder ID - 37117521)
+1. Create clone client with master locator
+2. Verify Automatic export functionality check in admin setting
+3. Create binder in API using above client
+4. Process binder via SCD
+5. Process Wizard
+- Pre verification wizard not appear
+- Verification wizard appear with 10 pages
+- Superseded wizard appear
+- CFA appear
+- Duplicate wizard appear
+- NFR appear appear
+6. Binder stuck in RM jobs after wizard completion
+
+(Fileroom Binder - 37117461)
+1. Create clone client with master locator
+2. Verify Automatic export functionality check in admin setting
+3. Create binder in Fileroom using above client
+4. Process binder via SCD
+- Pre verification wizard not appear
+- Verification wizard appear with 10 pages
+- Superseded wizard appear
+- CFA appear
+- Duplicate wizard appear
+- NFR appear appear
+
+
+2024 API binders - 37220508(Complete sanity flow E2E on this binder), 37220749, 38838294
+Unused client Id - HS180325_3

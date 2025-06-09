@@ -1,0 +1,438 @@
+04/08/2025 17:25:09 => [Info] APISanityWorkflow_2023 execution started
+04/08/2025 17:25:09 => [Info] The primary screen resolution is: 1920 x 1080
+04/08/2025 17:25:10 => [Info] Test Data Dispatched to Queue
+04/08/2025 17:25:11 => [Info] Get the transaction item
+04/08/2025 17:25:11 => [Info] Transaction Started
+04/08/2025 17:25:11 => [Info] Processing Transaction Number: 1
+04/08/2025 17:25:11 => [Info] Client Creation is already executed.
+04/08/2025 17:25:14 => [Info] Nevigate to the Url - https://production.sureprep.com
+04/08/2025 17:25:25 => [Warning] [Target ''FileRoom'']: Could not find the UI element corresponding to this selector:
+<webctrl id='poptab' tableRow='1' tag='TABLE'/>
+<webctrl aaname='FileRoom' tableRow='1' tag='A'/>
+04/08/2025 17:25:27 => [Info] Entered the TR email id.
+04/08/2025 17:26:04 => [Warning] [Target ''Select a'']: Strict selector failure:
+<webctrl id='otp' tag='INPUT'/>
+
+The closest selector matches found are:
+[58%] <webctrl id='btnSubmit' tag='INPUT'/>
+[55%] <webctrl id='SelectedDomainName' tag='INPUT'/>
+[50%] <webctrl id='' tag='INPUT'/>
+04/08/2025 17:26:04 => [Info] Bypass the SSO authentication because of the user is already authenticated
+04/08/2025 17:26:06 => [Info] Entered the Firm id as - Automation-01
+04/08/2025 17:26:11 => [Info] Checking for auto export checkbox option
+04/08/2025 17:26:15 => [Info] TC_02 - Able to navigate to Admin > API > FirmDefaults - Pass
+04/08/2025 17:26:18 => [Info] TC_03 - Validate Export to Tax Checkbox as Check - Pass
+04/08/2025 17:26:20 => [Info] TC_04 - Validate Print Option Checkbox as Uncheck - Pass
+04/08/2025 17:26:20 => [Info] Auto Export Enable Successfully
+04/08/2025 17:26:20 => [Info] ************************************************************************Binder Creation Started************************************************************************
+04/08/2025 17:26:30 => [Info] 1 Binder created succesfully. Binder Id - 38905956 Response code - OK
+04/08/2025 17:26:30 => [Info] TC_01 - Successfully Created Binder via API - Pass
+04/08/2025 17:26:40 => [Info] [{"name":"CCH.pdf","message":"","size":2070878}]
+04/08/2025 17:26:44 => [Info] 1 Binder Document Uploaded successfully. Response code - OK
+04/08/2025 17:26:44 => [Info] TC_02 - Successfully Uploaded Document in Binder via API - Pass
+04/08/2025 17:26:47 => [Info] 1 Binder submitted successfully. Response code - OK
+04/08/2025 17:26:47 => [Info] TC_03 - Successully Submitted Binder via API - Pass
+04/08/2025 17:26:48 => [Info] API Submission Run Time - 00:00:27.2901273
+04/08/2025 17:26:48 => [Info] ************************************************************************Binder Creation Ended************************************************************************
+04/08/2025 17:26:55 => [Info] Checking Import TR agent status for binder: 38905956
+04/08/2025 17:31:36 => [Info] Binder Status: Awaiting Assignment to SP-Verifier
+04/08/2025 17:31:37 => [Info] ************************************************************************SCD Verification Started************************************************************************
+04/08/2025 17:31:39 => [Info] Nevigate to the Url - https://scdashboard.sureprep.com/
+04/08/2025 17:31:47 => [Info] TC_01 : Login to the SCD system and verify access : Pass
+04/08/2025 17:31:48 => [Info] Clicked on Workspace
+04/08/2025 17:31:49 => [Info] Clicked on Mumbai Verification
+04/08/2025 17:32:08 => [Warning] [Verify execution] Target '' was found using fallback method 'Computer Vision'.
+04/08/2025 17:32:10 => [Info] Binder ID : 38905956 is visible
+04/08/2025 17:32:20 => [Info] TC_02 : Verify that the newly created binder is available in the SCD > Manager Assignment Queue : Pass
+04/08/2025 17:32:28 => [Info] The following member : Harsh Shinde has been assigned.
+04/08/2025 17:32:29 => [Info] Binder ID: 38905956 is assgined to Team Lead and binder status is Awaiting Assignment to SP-Verifier.
+04/08/2025 17:32:30 => [Info] Successfully Binder assigned to Team Lead
+04/08/2025 17:32:30 => [Info] Assigning binder from team lead to verifier.
+04/08/2025 17:32:31 => [Info] Clicked on Workspace
+04/08/2025 17:32:32 => [Info] Clicked on Mumbai Verification
+04/08/2025 17:32:47 => [Warning] [Verify execution] Target '' was found using fallback method 'Computer Vision'.
+04/08/2025 17:32:48 => [Info] Binder ID : 38905956 is visible
+04/08/2025 17:33:06 => [Info] The following member : Harsh Shinde has been assigned.
+04/08/2025 17:33:07 => [Info] Binder ID: 38905956 is assgined to Verifier and binder status is Awaiting SP-Verification.
+04/08/2025 17:33:08 => [Info] Successfully Binder assigned to Verifier
+04/08/2025 17:33:08 => [Info] Binder assigned from team lead to verifier.
+04/08/2025 17:33:09 => [Info] Clicked on Workspace
+04/08/2025 17:33:10 => [Info] Clicked on Mumbai Verification
+04/08/2025 17:33:17 => [Info] Binder ID is visible.
+04/08/2025 17:33:53 => [Warning] [Target ''SPbinder PBF'']: Could not find the UI element corresponding to this selector:
+[1] <ctrl name='SurePrep – Service Center Dashboard - Google Chrome' role='pane'/>
+[2] <ctrl name='Downloads bar' role='grouping'/>
+[3] <ctrl name=' SPbinder PBF - 2021_Anderson, Jack_AT_Go_20Jan23_498640.pbfx' role='grouping'/>
+
+Search failed at selector tag:
+[1] <ctrl name='SurePrep – Service Center Dashboard - Google Chrome' role='pane'/>
+
+The closest matches found are:
+[95%] <ctrl name='SurePrep – Service Center Dashboard - Google Chrome – Person 1' role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+04/08/2025 17:33:53 => [Info] Binder opened by verifier role.
+04/08/2025 17:33:53 => [Info] TC_03 : Transfer the binder from the Manager Assignment Queue to the Verification Queue and confirm successful transfer : Pass
+04/08/2025 17:33:53 => [Info] SCD Verification Run Time - 00:02:16.3011558
+04/08/2025 17:33:53 => [Info] ************************************************************************SCD Verification Ended************************************************************************
+04/08/2025 17:33:54 => [Info] ************************************************************************Wizard Started************************************************************************
+04/08/2025 17:34:00 => [Info] ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+04/08/2025 17:34:00 => [Info] Initiating Verification wizard
+04/08/2025 17:34:01 => [Info] TC_01 Validate that the Verification wizard launches successfully.Pass
+04/08/2025 17:34:04 => [Info] TC_02 Verify that the 'All pages' option, which consists of 10 pages, is visible and selectable.Pass
+04/08/2025 17:34:36 => [Warning] [Target ''2023'']: Could not find the UI element corresponding to this selector:
+[1] <wnd ctrlname='pnlMain'/>
+[2] <wnd ctrlname='pnlInputForm'/>
+[3] <wnd ctrlname='UCSPVInputFormNew'/>
+[4] <wnd ctrlname='SplitContainer1'/>
+[5] <wnd aaname='* Mandatory Fields' cls='WindowsForms10.Window.*'/>
+[6] <wnd cls='WindowsForms10.COMBOBOX.*'/>
+
+Search failed at selector tag:
+[5] <wnd aaname='* Mandatory Fields' cls='WindowsForms10.Window.*'/>
+
+The closest matches found are:
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd aaname=' ' cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+04/08/2025 17:35:28 => [Warning] [Target ''111-11-1111'']: Strict selector failure:
+<ctrl name='123-45-6789' role='list item'/>
+
+The closest selector matches found are:
+[74%] <ctrl name='106589' role='list item'/>
+[73%] <ctrl name='321-54-9876' role='list item'/>
+[68%] <ctrl name='144-44-1444' role='list item'/>
+[68%] <ctrl name='133-13-1333' role='list item'/>
+[64%] <ctrl name='Federal4868' role='list item'/>
+[64%] <ctrl name='111-11-1111' role='list item'/>
+[64%] <ctrl name='222-22-2222' role='list item'/>
+[63%] <ctrl name='2024' role='list item'/>
+[63%] <ctrl name='2023' role='list item'/>
+[63%] <ctrl name='2025' role='list item'/>
+04/08/2025 17:37:26 => [Warning] Target ''JILL ANDERSON'' was found using fallback method 'Computer Vision'.
+04/08/2025 17:37:42 => [Warning] [Target ''111-11-1111'']: Strict selector failure:
+<ctrl name='123-45-6789' role='list item'/>
+
+The closest selector matches found are:
+[74%] <ctrl name='106589' role='list item'/>
+[73%] <ctrl name='321-54-9876' role='list item'/>
+[68%] <ctrl name='144-44-1444' role='list item'/>
+[68%] <ctrl name='133-13-1333' role='list item'/>
+[64%] <ctrl name='111-11-1111' role='list item'/>
+[64%] <ctrl name='222-22-2222' role='list item'/>
+[63%] <ctrl name='2024' role='list item'/>
+[63%] <ctrl name='2023' role='list item'/>
+[63%] <ctrl name='2025' role='list item'/>
+[63%] <ctrl name='C00100125012' role='list item'/>
+04/08/2025 17:38:58 => [Warning] Target ''Dovenmuehle Mortgage,'' was found using fallback method 'Computer Vision'.
+04/08/2025 17:38:59 => [Warning] [Target ''Dovenmuehle Mortgage,'']: Could not find the UI element corresponding to this selector:
+[1] <wnd ctrlname='pnlMain'/>
+[2] <wnd ctrlname='pnlInputForm'/>
+[3] <wnd ctrlname='UCSPVInputFormNew'/>
+[4] <wnd ctrlname='SplitContainer1'/>
+[5] <wnd aaname='2023' cls='WindowsForms10.Window.*'/>
+[6] <wnd cls='Edit'/>
+
+Search failed at selector tag:
+[5] <wnd aaname='2023' cls='WindowsForms10.Window.*'/>
+
+The closest matches found are:
+[87%] <wnd aaname='2024' cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd cls='WindowsForms10.Window.*'/>
+[50%] <wnd aaname='TAX YEAR' cls='WindowsForms10.Window.*'/>
+[50%] <wnd aaname='PAYER&apos;S TIN' cls='WindowsForms10.Window.*'/>
+[50%] <wnd aaname='Account number' cls='WindowsForms10.Window.*'/>
+[50%] <wnd aaname='$' cls='WindowsForms10.Window.*'/>
+[50%] <wnd aaname='$' cls='WindowsForms10.Window.*'/>
+04/08/2025 17:41:58 => [Info] TC_03 Validate and review all yellow-highlighted fields for accuracy.Pass
+04/08/2025 17:43:41 => [Info] TC_04 Click the submit button and verify successful submission.Pass
+04/08/2025 17:43:41 => [Info] TC_05 Ensure the binder is processed successfully through the Verification wizard.Pass
+04/08/2025 17:43:52 => [Info] ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+04/08/2025 17:43:52 => [Info] Initiating CFA wizard
+04/08/2025 17:43:53 => [Info] TC_01 Verify that the CFA wizard launches successfully.' : Pass
+04/08/2025 17:43:55 => [Info] TC_03 Verify that two pages are visible under unassociated nodes.'Pass
+04/08/2025 17:44:30 => [Warning] [Target ''RENTAL'']: Could not find the UI element corresponding to this selector:
+[1] <wnd ctrlname='UCStageTree'/>
+[2] <ctrl name='RENTAL                    ' role='outline item'/>
+
+Search failed at selector tag:
+[2] <ctrl name='RENTAL                    ' role='outline item'/>
+
+The closest matches found are:
+[65%] <ctrl name='INTEGRA LIFESCIENCES CORP.                    ' role='outline item'/>
+[65%] <ctrl name='Rental or Royalty Income &amp; Expenses                    ' role='outline item'/>
+[62%] <ctrl name='JILL&apos;S CRAFT SHOP                    ' role='outline item'/>
+[62%] <ctrl name='55 SANDY BEACH LANE                    ' role='outline item'/>
+[60%] <ctrl name='Farm Income and Expenses                    ' role='outline item'/>
+[59%] <ctrl name='Business Income and Expenses                    ' role='outline item'/>
+[59%] <ctrl name='Form 2106: Business Expenses                    ' role='outline item'/>
+[59%] <ctrl name='Form 2106: Business Expenses                    ' role='outline item'/>
+[58%] <ctrl name='WELLS FARGO BANK, N.A. (019595) (1234 MAIN STREET)                    ' role='outline item'/>
+[57%] <ctrl name='Add Form                    ' role='outline item'/>
+04/08/2025 17:44:30 => [Info] Screenshot saved at: C:\Automation Team\API Sanity Testing\Exceptions_Screenshots\ExceptionScreenshot_250408.054430.png
+04/08/2025 17:44:30 => [Info] TC_04 Associate one page to the 'Rental' Proforma and verify successful association. 'Fail
+04/08/2025 17:44:32 => [Info] TC_05 Click the Next button in the CFA wizard and verify navigation. 'Pass
+04/08/2025 17:44:32 => [Info] TC_06 Ensure the binder is processed successfully through the CFA wizard. 'Pass
+04/08/2025 17:45:04 => [Info] ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+04/08/2025 17:45:04 => [Info] Initiating NFR wizard
+04/08/2025 17:45:05 => [Info] TC_01 Verify that the NFR wizard launches successfully.Pass
+04/08/2025 17:45:09 => [Info] TC_02 Confirm the visibility of already associated pages and associated nodes.Pass
+04/08/2025 17:45:41 => [Warning] Target ''W-2 -'' was found using fallback method 'Computer Vision'.
+04/08/2025 17:45:41 => [Warning] [Target ''W-2 -'']: Could not find the UI element corresponding to this selector:
+[1] <wnd ctrlname='UCStageTreeRt'/>
+[2] <ctrl name='Tips on Using Shortcut Keys' role='outline'/>
+[3] <ctrl name='W-2 - US BANK NATIONAL ASSOC. (T)                              ' role='outline item'/>
+
+Search failed at selector tag:
+[3] <ctrl name='W-2 - US BANK NATIONAL ASSOC. (T)                              ' role='outline item'/>
+
+The closest matches found are:
+[85%] <ctrl name='Wages , Salaries and Tips (W-2) - US BANK NATIONAL ASSOC. (T)                              ' role='outline item'/>
+[66%] <ctrl name='Dividends (1099-DIV) - TESLA INC                              ' role='outline item'/>
+[66%] <ctrl name='Miscellaneous Income (IRS 1099-MISC ) - AYOTTE &amp; SHACKELFORD, INC. (T)                              ' role='outline item'/>
+[65%] <ctrl name='Dividends (1099-DIV) - MELLON INVESTOR SERVICES                              ' role='outline item'/>
+[65%] <ctrl name='Dividends (1099-DIV) - THE-WALT—DL-SNEyeOMPAN¥ (S)                              ' role='outline item'/>
+[64%] <ctrl name='Sch E, p 2 - Partnership Passthrough (K-1 1065) - SUN AND MOON LLC (T) (45-2598497) (BC-$443079)                              ' role='outline item'/>
+[64%] <ctrl name='Mortgage Interest (IRS 1098-MIS) - Dovenmuehle Mortgage, Inc., (6980023698)                              ' role='outline item'/>
+[62%] <ctrl name='Dividends (1099-DIV) - EXXON                              ' role='outline item'/>
+[62%] <ctrl name='Dividends (1099-DIV) - MORGAN                              ' role='outline item'/>
+04/08/2025 17:45:44 => [Info] TC_03Associate 'U2 Bank' association to the W2 node and verify the update.Pass
+04/08/2025 17:45:44 => [Info] TC_04Verify that four pages are available in unmatched nodes.Fail
+04/08/2025 17:45:45 => [Info] TC_05Click the Next button in the NFR wizard and verify navigation.Pass
+04/08/2025 17:45:46 => [Info] TC_06Ensure the binder is processed successfully through the NFR wizard.Pass
+04/08/2025 17:45:53 => [Info] Successfully logout from SCD
+04/08/2025 17:45:54 => [Info] Wizard Run Time - 00:11:59.9730320
+04/08/2025 17:45:54 => [Info] ************************************************************************Wizard Ended************************************************************************
+04/08/2025 17:45:54 => [Info] ************************************************************************Leadsheet Match & Update Started************************************************************************
+04/08/2025 17:45:57 => [Info] Nevigate to the Url - https://production.sureprep.com
+04/08/2025 17:46:07 => [Warning] [Target ''FileRoom'']: Could not find the UI element corresponding to this selector:
+<webctrl id='poptab' tableRow='1' tag='TABLE'/>
+<webctrl aaname='FileRoom' tableRow='1' tag='A'/>
+04/08/2025 17:46:10 => [Info] Entered the TR email id.
+04/08/2025 17:46:56 => [Warning] [Target ''Select a'']: Strict selector failure:
+<webctrl id='otp' tag='INPUT'/>
+
+The closest selector matches found are:
+[58%] <webctrl id='btnSubmit' tag='INPUT'/>
+[55%] <webctrl id='SelectedDomainName' tag='INPUT'/>
+[50%] <webctrl id='' tag='INPUT'/>
+04/08/2025 17:46:56 => [Info] SSO authentication not required
+04/08/2025 17:46:58 => [Info] Entered the Firm id as - Automation-01
+04/08/2025 17:47:08 => [Warning] [Target ''FileRoom'']: Could not find the UI element corresponding to this selector:
+[1] <webctrl id='poptab' tableRow='1' tag='TABLE'/>
+[2] <webctrl aaname='FileRoom' tableRow='1' tag='A'/>
+
+Search failed at selector tag:
+[2] <webctrl aaname='FileRoom' tableRow='1' tag='A'/>
+
+The closest matches found are:
+[72%] <webctrl aaname='Admin' tableRow='1' tag='A'/>
+[67%] <webctrl aaname='FileRoom' tableRow='2' tag='A'/>
+[37%] <webctrl aaname='Dashboard' tableRow='4' tag='A'/>
+[33%] <webctrl aaname='TaxCaddy' tableRow='3' tag='A'/>
+04/08/2025 17:47:08 => [Info] Login to Fileroom : Pass.
+04/08/2025 17:47:19 => [Info] The CCH Application started
+04/08/2025 17:48:09 => [Info] Login to the CCH Tax software
+04/08/2025 17:48:20 => [Info] TC_01 - Able to search and open client file from CCH - Pass
+04/08/2025 17:49:44 => [Info] TC_02 - Able to Navigate > worksheet tab > Fedral estimate tax payment form - Pass
+04/08/2025 17:49:58 => [Info] TC_03 - Able to Edit the values four fields from period 1 to period 4 - Pass
+04/08/2025 17:49:58 => [Info] Value add till 4th period in payment form. The total of values are 8000
+04/08/2025 17:50:09 => [Info] TC_04 - Able to Navigate > Fed Goverment tab > Form 1040 - Pass
+04/08/2025 17:50:21 => [Info] TC_05 - Able to fetch value for line 15 and line 35a from Form 1040 - Pass
+04/08/2025 17:50:57 => [Info] TC_06 - Able to save, calculate and close tax file from CCH - Pass
+04/08/2025 17:51:59 => [Warning] [Target '']: Could not find the UI element corresponding to this selector:
+[1] <ctrl automationid='ViewMenuItem'/>
+[2] <ctrl name='_View' role='text'/>
+
+Search failed at selector tag:
+[1] <ctrl automationid='ViewMenuItem'/>
+
+The closest matches found are:
+[42%] <ctrl automationid='MenuBar'/>
+[42%] <ctrl automationid='MenuBar'/>
+[36%] <ctrl automationid='DownButton'/>
+[36%] <ctrl automationid='DownButton'/>
+[31%] <ctrl automationid='DownPageButton'/>
+[31%] <ctrl automationid='DownPageButton'/>
+[26%] <ctrl automationid='NonClientVerticalScrollBar'/>
+[25%] <ctrl automationid='NonClientHorizontalScrollBar'/>
+[25%] <ctrl automationid='UpPageButton'/>
+[25%] <ctrl automationid='UpPageButton'/>
+04/08/2025 17:53:30 => [Info] TC_01 - Able to perform import via SPBinder - Pass
+04/08/2025 17:53:31 => [Info] TC_01 - Able to navigate to leadsheet from SPBinder - Pass
+04/08/2025 17:54:22 => [Error] CV Screen Scope 'client  lssheet': Could not find the UI element corresponding to this selector:
+[1] <ctrl automationid='rpgInputForm'/>
+[2] <ctrl automationid='rpInputForm'/>
+[3] <ctrl automationid='LeadsTabItem'/>
+[4] <ctrl omit:automationid='lssheet'/>
+
+Search failed at selector tag:
+[1] <ctrl automationid='rpgInputForm'/>
+
+The closest matches found are:
+[42%] <ctrl automationid='UpPageButton'/>
+[42%] <ctrl automationid='UpPageButton'/>
+[40%] <ctrl automationid='UpButton'/>
+[40%] <ctrl automationid='UpButton'/>
+[38%] <ctrl automationid='DownPageButton'/>
+[38%] <ctrl automationid='DownPageButton'/>
+[36%] <ctrl automationid='DownButton'/>
+[36%] <ctrl automationid='DownButton'/>
+[32%] <ctrl automationid='MenuBar'/>
+[32%] <ctrl automationid='MenuBar'/>
+04/08/2025 17:54:38 => [Error] 8000 is not equal to 0. Hence, Match & Update for value 26 is Failed.
+04/08/2025 17:54:38 => [Info] TC_02 - Successfully Able to validate the total value for period 1 to period 4 in leadsheet - Fail
+04/08/2025 17:54:39 => [Info] Screenshot saved at: C:\Automation Team\API Sanity Testing\Exceptions_Screenshots\ExceptionScreenshot_250408.055439.png
+04/08/2025 17:55:11 => [Error] CV Screen Scope 'client  lssheet': Could not find the UI element corresponding to this selector:
+[1] <ctrl automationid='rpgInputForm'/>
+[2] <ctrl automationid='rpInputForm'/>
+[3] <ctrl automationid='LeadsTabItem'/>
+[4] <ctrl automationid='lssheet'/>
+
+Search failed at selector tag:
+[1] <ctrl automationid='rpgInputForm'/>
+
+The closest matches found are:
+[42%] <ctrl automationid='UpPageButton'/>
+[42%] <ctrl automationid='UpPageButton'/>
+[40%] <ctrl automationid='UpButton'/>
+[40%] <ctrl automationid='UpButton'/>
+[38%] <ctrl automationid='DownPageButton'/>
+[38%] <ctrl automationid='DownPageButton'/>
+[36%] <ctrl automationid='DownButton'/>
+[36%] <ctrl automationid='DownButton'/>
+[32%] <ctrl automationid='MenuBar'/>
+[32%] <ctrl automationid='MenuBar'/>
+04/08/2025 17:55:34 => [Error] 39476 is equal to 0. Hence, Match & Update for value 35a is Not Successful.
+04/08/2025 17:55:34 => [Error] TC_04 - Successfully Able to validate the value for line 35a in leadsheet - Fail
+04/08/2025 17:55:35 => [Info] Screenshot saved at: C:\Automation Team\API Sanity Testing\Exceptions_Screenshots\ExceptionScreenshot_250408.055439.png
+04/08/2025 17:56:13 => [Error] CV Screen Scope 'client  lssheet': Could not find the UI element corresponding to this selector:
+[1] <ctrl automationid='rpgInputForm'/>
+[2] <ctrl automationid='rpInputForm'/>
+[3] <ctrl automationid='LeadsTabItem'/>
+[4] <ctrl automationid='lssheet'/>
+
+Search failed at selector tag:
+[1] <ctrl automationid='rpgInputForm'/>
+
+The closest matches found are:
+[42%] <ctrl automationid='UpPageButton'/>
+[42%] <ctrl automationid='UpPageButton'/>
+[40%] <ctrl automationid='UpButton'/>
+[40%] <ctrl automationid='UpButton'/>
+[38%] <ctrl automationid='DownPageButton'/>
+[38%] <ctrl automationid='DownPageButton'/>
+[36%] <ctrl automationid='DownButton'/>
+[36%] <ctrl automationid='DownButton'/>
+[32%] <ctrl automationid='MenuBar'/>
+[32%] <ctrl automationid='MenuBar'/>
+04/08/2025 17:56:31 => [Error] 308327 is equal to 0. Hence, Match & Update for value 15 is Successful.
+04/08/2025 17:56:31 => [Error] TC_03 - Successfully Able to validate the value for line 15 in leadsheet - Fail
+04/08/2025 17:56:31 => [Info] Screenshot saved at: C:\Automation Team\API Sanity Testing\Exceptions_Screenshots\ExceptionScreenshot_250408.055439.png
+04/08/2025 17:56:32 => [Info] Leadsheet Match & Update Run Time - 00:10:38.2719150
+04/08/2025 17:56:32 => [Info] ************************************************************************Leadsheet Match & Update Ended************************************************************************
+04/08/2025 17:56:32 => [Info] ************************************************************************Add Document Started************************************************************************
+04/08/2025 17:56:32 => [Info] Add document process started
+04/08/2025 17:56:43 => [Info] TC_01 - Able to open Add Document window from SPBinder - Pass
+04/08/2025 17:56:43 => [Info] There was a fault in the test case reporting mechanism.
+04/08/2025 17:56:48 => [Info] TC_2 - Browse button appear for add doc - Pass
+04/08/2025 17:56:48 => [Info] There was a fault in the test case reporting mechanism.
+04/08/2025 17:56:59 => [Info] TC_3 - Document added successfully - Pass
+04/08/2025 17:56:59 => [Info] There was a fault in the test case reporting mechanism.
+04/08/2025 17:57:03 => [Info] TC_4 - Sureprep option selected for add document - Pass
+04/08/2025 17:57:03 => [Info] There was a fault in the test case reporting mechanism.
+04/08/2025 17:57:04 => [Info] TC_5 - Added document submitted successfully - Pass
+04/08/2025 17:57:05 => [Info] There was a fault in the test case reporting mechanism.
+04/08/2025 17:58:13 => [Error] Failed to generate sanity test report. Exception: Object reference not set to an instance of an object.
+04/08/2025 17:58:13 => [Info] Add Document Run Time - 00:01:41.1087407
+04/08/2025 17:58:13 => [Info] ************************************************************************Add Document Ended************************************************************************
+04/08/2025 17:58:16 => [Info] Checking Import TR agent status for binder: 38905956
+04/08/2025 17:59:40 => [Info] Binder Status: Awaiting Assignment to SP-Verifier
+04/08/2025 17:59:40 => [Info] ************************************************************************SCD Verification AddDoc Started************************************************************************
+04/08/2025 17:59:42 => [Info] Nevigate to the Url - https://scdashboard.sureprep.com/
+04/08/2025 17:59:51 => [Info] TC_01 : Login to the SCD system and verify access : Pass
+04/08/2025 17:59:52 => [Info] Clicked on Workspace
+04/08/2025 17:59:54 => [Info] Clicked on Mumbai Verification
+04/08/2025 18:00:11 => [Warning] [Verify execution] Target '' was found using fallback method 'Computer Vision'.
+04/08/2025 18:00:13 => [Info] Binder ID : 38905956 is visible
+04/08/2025 18:00:24 => [Info] TC_02 : Verify that the newly created binder is available in the SCD > Manager Assignment Queue : Pass
+04/08/2025 18:00:31 => [Info] The following member : Harsh Shinde has been assigned.
+04/08/2025 18:00:32 => [Info] Binder ID: 38905956 is assgined to Team Lead and binder status is Awaiting Assignment to SP-Verifier - Resubmit.
+04/08/2025 18:00:33 => [Info] Successfully Binder assigned to Team Lead
+04/08/2025 18:00:33 => [Info] Assigning binder from team lead to verifier.
+04/08/2025 18:00:34 => [Info] Clicked on Workspace
+04/08/2025 18:00:35 => [Info] Clicked on Mumbai Verification
+04/08/2025 18:00:50 => [Warning] [Verify execution] Target '' was found using fallback method 'Computer Vision'.
+04/08/2025 18:00:52 => [Info] Binder ID : 38905956 is visible
+04/08/2025 18:01:09 => [Info] The following member : Harsh Shinde has been assigned.
+04/08/2025 18:01:11 => [Info] Binder ID: 38905956 is assgined to Verifier and binder status is Awaiting SP-Verification - Resubmit.
+04/08/2025 18:01:12 => [Info] Successfully Binder assigned to Verifier
+04/08/2025 18:01:12 => [Info] Binder assigned from team lead to verifier.
+04/08/2025 18:01:13 => [Info] Clicked on Workspace
+04/08/2025 18:01:15 => [Info] Clicked on Mumbai Verification
+04/08/2025 18:01:22 => [Info] Binder ID is visible.
+04/08/2025 18:02:13 => [Warning] [Target ''SPbinder PBF'']: Could not find the UI element corresponding to this selector:
+[1] <ctrl name='SurePrep – Service Center Dashboard - Google Chrome' role='pane'/>
+[2] <ctrl name='Downloads bar' role='grouping'/>
+[3] <ctrl name=' SPbinder PBF - 2021_Anderson, Jack_AT_Go_20Jan23_498640.pbfx' role='grouping'/>
+
+Search failed at selector tag:
+[1] <ctrl name='SurePrep – Service Center Dashboard - Google Chrome' role='pane'/>
+
+The closest matches found are:
+[95%] <ctrl name='SurePrep – Service Center Dashboard - Google Chrome – Person 1' role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+[50%] <ctrl role='pane'/>
+04/08/2025 18:02:14 => [Info] Binder opened by verifier role.
+04/08/2025 18:02:14 => [Info] TC_03 : Transfer the binder from the Manager Assignment Queue to the Verification Queue and confirm successful transfer : Pass
+04/08/2025 18:02:15 => [Info] SCD Verification AddDoc Run Time - 00:02:34.3822851
+04/08/2025 18:02:15 => [Info] ************************************************************************SCD Verification AddDoc Ended************************************************************************
+04/08/2025 18:02:15 => [Info] ************************************************************************AddDoc Wizard Started************************************************************************
+04/08/2025 18:03:35 => [Info] TC: Page count calculated. Binder has [2]  pages
+04/08/2025 18:03:40 => [Info] 1040SCAN: Review Options has appeared
+04/08/2025 18:03:51 => [Info] Tax Year Updated
+04/08/2025 18:04:36 => [Info] SSN Updated
+04/08/2025 18:04:39 => [Info] emp name in first page is matching [ WHYNOT STOP INC.].
+04/08/2025 18:04:56 => [Info] Tax Year Updated
+04/08/2025 18:04:57 => [Info] Payer name in second  page is matching [ STATE OF CALIFORNIA].
+04/08/2025 18:05:18 => [Info] TIN Updated in second page
+04/08/2025 18:05:59 => [Info] Verificatin Wizard submitted successfully
+04/08/2025 18:06:26 => [Info] Successfully logout from SCD
+04/08/2025 18:06:26 => [Info] Wizard Run Time - 00:04:10.9629343
+04/08/2025 18:06:26 => [Info] ************************************************************************Wizard Ended************************************************************************
+04/08/2025 18:06:26 => [Info] ************************************************************************Index Tree Validation Started************************************************************************
+04/08/2025 18:06:37 => [Error] Hover 'TD': The UI element is invalid. Make sure the target application is open and the element is on the screen.
+04/08/2025 18:07:31 => [Info] Screenshot saved at: C:\Automation Team\API Sanity Testing\Exceptions_Screenshots\ExceptionScreenshot_250408.060731.png
+04/08/2025 18:07:32 => [Info] Index Tree Run Time - 00:01:05.3336277
+04/08/2025 18:07:32 => [Info] ************************************************************************Index Tree Ended************************************************************************
+04/08/2025 18:07:32 => [Info] Process Completed
+04/08/2025 18:07:32 => [Info] Transaction Ended
+04/08/2025 18:07:32 => [Info] Transaction Successful.
+04/08/2025 18:07:32 => [Info] Get the transaction item
+04/08/2025 18:07:33 => [Info] No Transaction Data
+04/08/2025 18:07:33 => [Info] Process finished due to no more transaction data
+04/08/2025 18:07:33 => [Info] APISanityWorkflow_2023 execution ended in: 00:42:24

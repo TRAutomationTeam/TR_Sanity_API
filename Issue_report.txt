@@ -1,0 +1,18 @@
+1. Close fileroom after export checkbox check - Done
+2. Logout and close SCD after wizards done - Done
+3. Increase SPBinder wait for leadsheet - Done
+4. Close CCH tax software after leadsheet complete - Done
+5. Close SPBinder after add doc complete - Done
+6. Add SCD Login part in AddDoc SCD verification - Done
+7. Add logout and close SCD after add doc wizards - Done
+8. Need to add below link in config and pass in SCD_logout xaml - Done
+https://scdashboard.sureprep.com/EngagementQueue/Verification/VerificationQueue
+9. Change navigation to fileroom - 
+
+
+
+Fileroom login not working - 
+1. While adding TR mail add user ID in same type into box without clicking okay
+2. Login and coming out automatically
+SCD login not working -
+While adding TR mail add user ID in same type into box without clicking okay
