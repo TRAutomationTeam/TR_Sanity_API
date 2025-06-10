@@ -5,7 +5,7 @@
   "main": "Main.xaml",
   "dependencies": {
     "Cloning_MasterTaxClient": "[1.0.18]",
-    "ExceptionClassifier": "[1.0.5]",
+    "ExceptionClassifier": "[1.0.6]",
     "PingID": "[1.0.9]",
     "Review_Wizards": "[1.0.61]",
     "Sanity_AddDoc": "[1.0.9]",
