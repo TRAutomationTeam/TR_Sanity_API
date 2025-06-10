@@ -142,7 +142,7 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1452.0000000000002,747.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1198.8,747.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strClientId" />
     </Sequence.Variables>
@@ -152,7 +152,7 @@
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Flowchart sap:VirtualizedContainerService.HintSize="1468.8000000000002,563.2" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+    <Flowchart sap:VirtualizedContainerService.HintSize="1204.8,580.8" sap2010:WorkflowViewState.IdRef="Flowchart_1">
       <Flowchart.Variables>
         <Variable x:TypeArguments="sd:DataRow" Name="drRowToUpdate" />
         <Variable x:TypeArguments="x:Boolean" Name="boolClientCreation" />
@@ -399,7 +399,7 @@
                                                             <av:Point x:Key="ShapeLocation">650,930</av:Point>
                                                             <av:Size x:Key="ShapeSize">60,60</av:Size>
                                                             <av:PointCollection x:Key="TrueConnector">680,990 680,1070.2 565.4,1070.2</av:PointCollection>
-                                                            <av:PointCollection x:Key="FalseConnector">710,960 739.9999999999999,960 739.9999999999999,960.2 815,960.2</av:PointCollection>
+                                                            <av:PointCollection x:Key="FalseConnector">710,960 740,960 740,960.2 815,960.2</av:PointCollection>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
                                                         <FlowDecision.True>
