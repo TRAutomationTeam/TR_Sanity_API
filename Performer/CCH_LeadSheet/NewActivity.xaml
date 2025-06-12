@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_SanityTestFileSheetName="Test Cases" this:Main.in_strBinderID="37220508" this:Main.in_strCCHFilePath="C:\Program Files (x86)\WK\ProSystem fx Suite\Smart Client\SaaS\cch.commonuiframework.shell.exe" this:Main.in_strClientID="CCAB08042586" this:Main.in_strExceptionScreenshotFolder="C:\Automation Team\API Sanity Testing\Exceptions_Screenshots" this:Main.in_intAddValueInPaymentForm="2000" this:Main.in_intDelaySaveAndCalculate="10" this:Main.in_ImportWaitTime="240" this:Main.in_SpbinderFileroom_FilePath="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" this:Main.in_strTaxYear="2023" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:SanityReport_TCFiltering;assembly=SanityReport_TCFiltering" xmlns:s1="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s2="clr-namespace:SanityReport_GenerateOutput;assembly=SanityReport_GenerateOutput" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:t="clr-namespace:TakeScreenshot;assembly=TakeScreenshot" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.in_SanityTestFileSheetName="Test Cases" this:Main.in_strBinderID="39869591" this:Main.in_strCCHFilePath="C:\Program Files (x86)\WK\ProSystem fx Suite\Smart Client\SaaS\cch.commonuiframework.shell.exe" this:Main.in_strClientID="[&quot;CCAB11062546&quot;]" this:Main.in_strExceptionScreenshotFolder="C:\Automation Team\API Sanity Testing\Exceptions_Screenshots" this:Main.in_intAddValueInPaymentForm="2000" this:Main.in_intDelaySaveAndCalculate="10" this:Main.in_ImportWaitTime="240" this:Main.in_SpbinderFileroom_FilePath="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" this:Main.in_strTaxYear="2024" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:s="clr-namespace:SanityReport_TCFiltering;assembly=SanityReport_TCFiltering" xmlns:s1="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s2="clr-namespace:SanityReport_GenerateOutput;assembly=SanityReport_GenerateOutput" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd2="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:t="clr-namespace:TakeScreenshot;assembly=TakeScreenshot" xmlns:this="clr-namespace:" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="in_SanityTestFileSheetName" Type="InArgument(x:String)" />
     <x:Property Name="io_dtTestSummaryReport" Type="InOutArgument(sd:DataTable)" />
@@ -98,6 +98,9 @@
       <x:String>System.Text.RegularExpressions</x:String>
       <x:String>UiPath.CSV.Activities</x:String>
       <x:String>UiPath.CSV</x:String>
+      <x:String>Reset_SP_Binder</x:String>
+      <x:String>UiPath.UIAutomationNext.Models</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Services.RuntimeAnalyze</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -162,9 +165,10 @@
       <AssemblyReference>UiPath.OCR.Contracts</AssemblyReference>
       <AssemblyReference>System.Data.SqlClient</AssemblyReference>
       <AssemblyReference>System.Text.RegularExpressions</AssemblyReference>
+      <AssemblyReference>Reset SP Binder</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1452.0000000000002,2969.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap:VirtualizedContainerService.HintSize="1019.6000000000001,2402.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strExceptionScreenshot" />
       <Variable x:TypeArguments="x:Int32" Name="intCCHValueIn26" />
@@ -174,24 +178,20 @@
       <Variable x:TypeArguments="x:String" Name="strLeadsheet26Value" />
       <Variable x:TypeArguments="x:String" Name="strLeadsheet15Value" />
       <Variable x:TypeArguments="s1:DateTime" Name="dtStartTime" />
-      <Variable x:TypeArguments="x:Int32" Name="intComponentRowIndex">
-        <Variable.Default>
-          <Literal x:TypeArguments="x:Int32" Value="4" />
-        </Variable.Default>
-      </Variable>
+      <Variable x:TypeArguments="x:Int32" Default="4" Name="intComponentRowIndex" />
     </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="CCH_Match_&amp;_Update" sap:VirtualizedContainerService.HintSize="548,2946.4" sap2010:WorkflowViewState.IdRef="Sequence_2">
+    <Sequence DisplayName="CCH_Match_&amp;_Update" sap:VirtualizedContainerService.HintSize="679.2,2379.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Searching and opening tax return from CCH &amp; adding values for in payment form" AttachMode="ByInstance" CloseMode="Never" DisplayName="Return Manager" sap:VirtualizedContainerService.HintSize="514.4,116.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="619ef909-4f2c-4528-bd74-a57a61d0aff7" Version="V2">
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Searching and opening tax return from CCH &amp; adding values for in payment form" AttachMode="ByInstance" CloseMode="Never" DisplayName="Return Manager" sap:VirtualizedContainerService.HintSize="645.6,116.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" OpenMode="Never" ScopeGuid="619ef909-4f2c-4528-bd74-a57a61d0aff7" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
@@ -219,7 +219,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'INPUT txt_searchClient'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="382.4,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="619ef909-4f2c-4528-bd74-a57a61d0aff7" Text="[in_strClientID]" Version="V3">
                       <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable CVScreenId="566316f4-5d48-4c0a-84f1-aabe0abcdb34" CvTextArea="1668, 69, 174, 14" CvTextArgument="Search by client name or ID" CvType="Text" DesignTimeRectangle="1664, 63, 209, 29" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'INPUT txt_searchClient'" FullSelectorArgument="&lt;webctrl id='txt_searchClient' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txt_searchClient' tag='INPUT' type='text' class='ng-untouched ng-pristine ng-valid' aaname='' /&gt;" Guid="855d2197-fec5-4205-83b7-2add598fe28e" InformativeScreenshot="35d311004d8aa4687d93d28fcbb88124.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='WKAxcessTaxWebThinClient' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        <uix:TargetAnchorable CVScreenId="566316f4-5d48-4c0a-84f1-aabe0abcdb34" CvTextArea="1668, 69, 174, 14" CvTextArgument="Search by client name or ID" CvType="Text" DesignTimeRectangle="1664, 63, 209, 29" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl id='txt_searchClient' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txt_searchClient' tag='INPUT' type='text' class='ng-untouched ng-pristine ng-valid' aaname='' /&gt;" Guid="855d2197-fec5-4205-83b7-2add598fe28e" InformativeScreenshot="35d311004d8aa4687d93d28fcbb88124.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='WKAxcessTaxWebThinClient' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NTypeInto.Target>
                       <uix:NTypeInto.VerifyOptions>
                         <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
@@ -234,7 +234,7 @@
                     </uix:NTypeInto>
                     <uix:NClick ActivateBefore="True" ClickType="Single" DelayBefore="2" DisplayName="Click 'SPAN imgIcon_search'" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="619ef909-4f2c-4528-bd74-a57a61d0aff7" Version="V3">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable DesignTimeRectangle="1853, 66, 14, 21" DesignTimeScaleFactor="1" FriendlyName="'SPAN imgIcon_search'" FullSelectorArgument="&lt;webctrl id='imgIcon_search' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='imgIcon_search' tag='SPAN' type='' class='commonglyphs commonglyphs-search search-columns-icon' aaname='' /&gt;" Guid="0b5e193d-9ae0-45f1-b378-e5aa3c7759b9" InformativeScreenshot="11eb871df8fed8ed9acd6d4f14b34025.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='WKAxcessTaxWebThinClient' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        <uix:TargetAnchorable DesignTimeRectangle="1853, 66, 14, 21" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl id='imgIcon_search' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='imgIcon_search' tag='SPAN' type='' class='commonglyphs commonglyphs-search search-columns-icon' aaname='' /&gt;" Guid="0b5e193d-9ae0-45f1-b378-e5aa3c7759b9" InformativeScreenshot="11eb871df8fed8ed9acd6d4f14b34025.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='WKAxcessTaxWebThinClient' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                       <uix:NClick.VerifyOptions>
                         <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -249,10 +249,10 @@
                     </uix:NClick>
                     <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '2024I:HS190325_3:V1'" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="619ef909-4f2c-4528-bd74-a57a61d0aff7" Version="V3">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable CVScreenId="495888de-2573-4b15-a511-6693dffc32f0" CvTextArea="680, 172, 128, 15" CvTextArgument="2024I:HS190325_3:V1" CvType="Text" DesignTimeRectangle="851, 242, 236, 55" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'2024I:HS190325_3:V1'" FullSelectorArgument="&lt;webctrl class='return-text' parentid='cmp_rmGrid' parentname='center' tag='DIV' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl class='return-text' parentid='cmp_rmGrid' parentname='center' tag='DIV' type='' aaname='{0}I:{1}:*' check:text='{0}I:{1}:V1' /&gt;&quot;, in_strTaxYear, in_strClientID)]" Guid="3d0577ee-d531-4bfc-8496-93250f2de7a5" ImageBase64="" InformativeScreenshot="de6571c1fdc524152f09548c7eb2a222.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='WKAxcessTaxWebThinClient' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
+                        <uix:TargetAnchorable CVScreenId="495888de-2573-4b15-a511-6693dffc32f0" CvTextArea="680, 172, 128, 15" CvTextArgument="2024I:HS190325_3:V1" CvType="Text" DesignTimeRectangle="851, 242, 236, 55" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl class='return-text' parentid='cmp_rmGrid' parentname='center' tag='DIV' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl class='return-text' parentid='cmp_rmGrid' parentname='center' tag='DIV' type='' aaname='{0}I:{1}:*' check:text='{0}I:{1}:V1' /&gt;&quot;, in_strTaxYear, in_strClientID)]" Guid="3d0577ee-d531-4bfc-8496-93250f2de7a5" ImageBase64="" InformativeScreenshot="de6571c1fdc524152f09548c7eb2a222.png" ScopeSelectorArgument="&lt;html app='cch.commonuiframework.shell.exe' title='WKAxcessTaxWebThinClient' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
                             <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target CVScreenId="495888de-2573-4b15-a511-6693dffc32f0" CvTextArea="681, 135, 70, 12" CvTextArgument="RETURN ID" CvType="Text" DesignTimeRectangle="852, 168, 87, 18" ElementType="Text" FriendlyName="'Return ID'" FullSelectorArgument="&lt;webctrl id='txt_rmGridColumn_return_id' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txt_rmGridColumn_return_id' tag='SPAN' type='' class='ag-header-cell-text' aaname='Return ID' check:text='Return ID' /&gt;" SearchSteps="FuzzySelector" />
+                              <uix:Target CVScreenId="495888de-2573-4b15-a511-6693dffc32f0" CvTextArea="681, 135, 70, 12" CvTextArgument="RETURN ID" CvType="Text" DesignTimeRectangle="852, 168, 87, 18" ElementType="Text" FullSelectorArgument="&lt;webctrl id='txt_rmGridColumn_return_id' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txt_rmGridColumn_return_id' tag='SPAN' type='' class='ag-header-cell-text' aaname='Return ID' check:text='Return ID' /&gt;" Guid="44edf79f-6c13-464e-bdcc-95c443becacc" SearchSteps="FuzzySelector" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
@@ -312,7 +312,13 @@
                   </Catch>
                 </TryCatch.Catches>
                 <TryCatch.Finally>
-                  <Sequence DisplayName="Finally" sap2010:WorkflowViewState.IdRef="Sequence_53" />
+                  <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_53">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </Sequence>
                 </TryCatch.Finally>
               </TryCatch>
             </Sequence>
@@ -329,19 +335,19 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Navigating to worksheet. Open payment form section. Add 20k value till 4 period in Payment form and storing total in variable to validate in leadsheet. Also fetching value for 15 and 35a from fed form 1040" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 2024I:HS190325__3:V1 - ANDERSON, JACK - Tax" sap:VirtualizedContainerService.HintSize="514.4,196.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V2" WindowResize="Maximize">
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Navigating to worksheet. Open payment form section. Add 20k value till 4 period in Payment form and storing total in variable to validate in leadsheet. Also fetching value for 15 and 35a from fed form 1040" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: 2024I:HS190325__3:V1 - ANDERSON, JACK - Tax" sap:VirtualizedContainerService.HintSize="645.6,196.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" OpenMode="Never" ScopeGuid="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V2" WindowResize="Maximize">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1019.2,3000" sap2010:WorkflowViewState.IdRef="Sequence_6">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1019.2,2956.8" sap2010:WorkflowViewState.IdRef="Sequence_6">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <uix:NCheckState DisplayName="Check App State 'Worksheets'" sap:VirtualizedContainerService.HintSize="985.6,2938.4" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Timeout="70" Version="V3">
+              <uix:NCheckState DisplayName="Check App State 'Worksheets'" sap:VirtualizedContainerService.HintSize="985.6,2896.8" sap2010:WorkflowViewState.IdRef="NCheckState_1" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Timeout="70" Version="V3">
                 <uix:NCheckState.IfExists>
                   <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="483.2,2655.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
@@ -351,7 +357,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Maximize'" sap:VirtualizedContainerService.HintSize="449.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V3">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable CVScreenId="42c3c5fe-50b1-42c5-a9af-f46bc8279115" CvElementArea="914, 5, 19, 18" CvType="MaximizeButton" DesignTimeRectangle="900, 1, 46, 27" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Maximize'" FullSelectorArgument="&lt;ctrl name='Maximize' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Maximize' role='push button' automationid='' check:text='Maximize' /&gt;" Guid="f11436c6-f215-459a-98c6-1628f43082e3" InformativeScreenshot="723d7794510557427bdadc9198ea6c2e.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        <uix:TargetAnchorable CVScreenId="42c3c5fe-50b1-42c5-a9af-f46bc8279115" CvElementArea="914, 5, 19, 18" CvType="MaximizeButton" DesignTimeRectangle="900, 1, 46, 27" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Maximize' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Maximize' role='push button' automationid='' check:text='Maximize' /&gt;" Guid="f11436c6-f215-459a-98c6-1628f43082e3" InformativeScreenshot="723d7794510557427bdadc9198ea6c2e.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                       <uix:NClick.VerifyOptions>
                         <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -373,7 +379,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Worksheets'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V3">
                         <uix:NClick.Target>
-                          <uix:TargetAnchorable CVScreenId="fb5e9ee6-3e85-49a1-9875-c1f5fb21b2e7" CvElementArea="92, 160, 76, 19" CvTextArea="100, 163, 63, 12" CvTextArgument="Worksheets" CvType="Button" DesignTimeRectangle="101, 161, 61, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Worksheets'" FullSelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Worksheets' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Worksheets' role='text' automationid='' check:text='Worksheets' /&gt;" Guid="fc3331f6-996e-4fd5-8005-9e08ae0a3db0" InformativeScreenshot="189bc87c0c357b8192602fa47e159e7e.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          <uix:TargetAnchorable CVScreenId="fb5e9ee6-3e85-49a1-9875-c1f5fb21b2e7" CvElementArea="92, 160, 76, 19" CvTextArea="100, 163, 63, 12" CvTextArgument="Worksheets" CvType="Button" DesignTimeRectangle="101, 161, 61, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Worksheets' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Worksheets' role='text' automationid='' check:text='Worksheets' /&gt;" Guid="fc3331f6-996e-4fd5-8005-9e08ae0a3db0" InformativeScreenshot="189bc87c0c357b8192602fa47e159e7e.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                         <uix:NClick.VerifyOptions>
                           <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -397,7 +403,7 @@
                       </s:SanityReport_TCFiltering>
                       <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Payments'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V3">
                         <uix:NClick.Target>
-                          <uix:TargetAnchorable CVScreenId="7029de73-d453-4837-880a-7b21c685b0c4" CvTextArea="1521, 513, 66, 18" CvTextArgument="Payments" CvType="Text" DesignTimeRectangle="1506, 511, 80, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Payments'" FullSelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Payments' role='list item' /&gt;&lt;ctrl automationid='lblItemName' /&gt;&lt;ctrl name='    Payments' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Payments' role='list item' /&gt;&lt;ctrl automationid='lblItemName' /&gt;&lt;ctrl name='    Payments' role='text' automationid='' check:text='Payments' /&gt;" Guid="9ee16b6d-3131-4661-827f-27306d514005" InformativeScreenshot="5a395935699de82dad46782ef9e964bd.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          <uix:TargetAnchorable CVScreenId="7029de73-d453-4837-880a-7b21c685b0c4" CvTextArea="1521, 513, 66, 18" CvTextArgument="Payments" CvType="Text" DesignTimeRectangle="1506, 511, 80, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Payments' role='list item' /&gt;&lt;ctrl automationid='lblItemName' /&gt;&lt;ctrl name='    Payments' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Payments' role='list item' /&gt;&lt;ctrl automationid='lblItemName' /&gt;&lt;ctrl name='    Payments' role='text' automationid='' check:text='Payments' /&gt;" Guid="9ee16b6d-3131-4661-827f-27306d514005" InformativeScreenshot="5a395935699de82dad46782ef9e964bd.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                         <uix:NClick.VerifyOptions>
                           <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -412,10 +418,10 @@
                       </uix:NClick>
                       <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '1st Period'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_2" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Text="[in_intAddValueInPaymentForm.ToString]" Version="V3">
                         <uix:NTypeInto.Target>
-                          <uix:TargetAnchorable CVScreenId="476442a7-edd1-4c4a-8094-482c71db28bd" CvElementArea="989, 366, 123, 27" CvType="InputBox" DesignTimeRectangle="991, 368, 120, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'20000'" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_20' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_20' role='editable text' /&gt;" Guid="e2553457-22f7-424b-980f-1fce4299e958" InformativeScreenshot="381aa53c4ab2fdf3b761dbcefe379238.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable CVScreenId="476442a7-edd1-4c4a-8094-482c71db28bd" CvElementArea="989, 366, 123, 27" CvType="InputBox" DesignTimeRectangle="991, 368, 120, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_20' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_20' role='editable text' /&gt;" Guid="e2553457-22f7-424b-980f-1fce4299e958" InformativeScreenshot="381aa53c4ab2fdf3b761dbcefe379238.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
                               <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                <uix:Target CVScreenId="476442a7-edd1-4c4a-8094-482c71db28bd" CvTextArea="1021, 345, 66, 13" CvTextArgument="1st Period" CvType="Text" DesignTimeRectangle="1022, 345, 65, 15" ElementType="Text" FriendlyName="'1st Period'" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='1st Period' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='1st Period' role='text' automationid='' check:text='1st Period' /&gt;" SearchSteps="Selector" />
+                                <uix:Target CVScreenId="476442a7-edd1-4c4a-8094-482c71db28bd" CvTextArea="1021, 345, 66, 13" CvTextArgument="1st Period" CvType="Text" DesignTimeRectangle="1022, 345, 65, 15" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='1st Period' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='1st Period' role='text' automationid='' check:text='1st Period' /&gt;" Guid="6db6eac3-addb-4796-bf38-60be3e1173e6" SearchSteps="Selector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
@@ -433,10 +439,10 @@
                       </uix:NTypeInto>
                       <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '2nd Period'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="NTypeInto_3" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Text="[in_intAddValueInPaymentForm.ToString]" Version="V3">
                         <uix:NTypeInto.Target>
-                          <uix:TargetAnchorable CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvElementArea="1131, 366, 123, 27" CvType="InputBox" DesignTimeRectangle="1133, 368, 120, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'20000'" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_18' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_18' role='editable text' /&gt;" Guid="5cc83e53-11d7-41e7-84c4-37d421adbf4b" InformativeScreenshot="b61e823ef56b2584c4f5e74b411aff28.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvElementArea="1131, 366, 123, 27" CvType="InputBox" DesignTimeRectangle="1133, 368, 120, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_18' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_18' role='editable text' /&gt;" Guid="5cc83e53-11d7-41e7-84c4-37d421adbf4b" InformativeScreenshot="b61e823ef56b2584c4f5e74b411aff28.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
                               <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                <uix:Target CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvTextArea="1170, 345, 69, 13" CvTextArgument="2nd Period" CvType="Text" DesignTimeRectangle="1171, 345, 69, 15" ElementType="Text" FriendlyName="'2nd Period'" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='2nd Period' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='2nd Period' role='text' automationid='' check:text='2nd Period' /&gt;" SearchSteps="Selector" />
+                                <uix:Target CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvTextArea="1170, 345, 69, 13" CvTextArgument="2nd Period" CvType="Text" DesignTimeRectangle="1171, 345, 69, 15" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='2nd Period' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='2nd Period' role='text' automationid='' check:text='2nd Period' /&gt;" Guid="7be24c1a-be96-4f62-b4bf-f2000b2fc8f7" SearchSteps="Selector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
@@ -454,10 +460,10 @@
                       </uix:NTypeInto>
                       <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '3rd Period'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="NTypeInto_4" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Text="[in_intAddValueInPaymentForm.ToString]" Version="V3">
                         <uix:NTypeInto.Target>
-                          <uix:TargetAnchorable CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvElementArea="1281, 366, 124, 27" CvType="InputBox" DesignTimeRectangle="1283, 368, 120, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'20000'" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_12' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_12' role='editable text' /&gt;" Guid="390e36c1-24ba-4d90-853b-b7570864aa69" InformativeScreenshot="094e9ccaf434b246a406cdc4199fe167.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvElementArea="1281, 366, 124, 27" CvType="InputBox" DesignTimeRectangle="1283, 368, 120, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_12' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_12' role='editable text' /&gt;" Guid="390e36c1-24ba-4d90-853b-b7570864aa69" InformativeScreenshot="094e9ccaf434b246a406cdc4199fe167.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
                               <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                <uix:Target CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvTextArea="1306, 345, 67, 13" CvTextArgument="3rd Period" CvType="Text" DesignTimeRectangle="1307, 345, 66, 15" ElementType="Text" FriendlyName="'3rd Period'" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='3rd Period' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='3rd Period' role='text' automationid='' check:text='3rd Period' /&gt;" SearchSteps="Selector" />
+                                <uix:Target CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvTextArea="1306, 345, 67, 13" CvTextArgument="3rd Period" CvType="Text" DesignTimeRectangle="1307, 345, 66, 15" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='3rd Period' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='3rd Period' role='text' automationid='' check:text='3rd Period' /&gt;" Guid="864177af-c18a-456a-bf80-7bfc83ea8f9b" SearchSteps="Selector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
@@ -475,10 +481,10 @@
                       </uix:NTypeInto>
                       <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into '4th Period'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,288" sap2010:WorkflowViewState.IdRef="NTypeInto_5" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Text="[in_intAddValueInPaymentForm.ToString]" Version="V3">
                         <uix:NTypeInto.Target>
-                          <uix:TargetAnchorable CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvElementArea="1424, 366, 125, 27" CvType="InputBox" DesignTimeRectangle="1426, 368, 120, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FriendlyName="'20000'" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_16' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_16' role='editable text' /&gt;" Guid="d075884e-eaa6-4dd0-84d1-716aef712a6e" InformativeScreenshot="35a8a002acdc3b20da10aae40f09d2f8.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvElementArea="1424, 366, 125, 27" CvType="InputBox" DesignTimeRectangle="1426, 368, 120, 25" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_16' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl automationid='_0_16' role='editable text' /&gt;" Guid="d075884e-eaa6-4dd0-84d1-716aef712a6e" InformativeScreenshot="35a8a002acdc3b20da10aae40f09d2f8.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
                               <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                <uix:Target CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvTextArea="1455, 345, 68, 13" CvTextArgument="4th Period" CvType="Text" DesignTimeRectangle="1457, 345, 65, 15" ElementType="Text" FriendlyName="'4th Period'" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='4th Period' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='4th Period' role='text' automationid='' check:text='4th Period' /&gt;" SearchSteps="Selector" />
+                                <uix:Target CVScreenId="fe445ab4-1500-4494-a759-07b846b6aef9" CvTextArea="1455, 345, 68, 13" CvTextArgument="4th Period" CvType="Text" DesignTimeRectangle="1457, 345, 65, 15" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='4th Period' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Payments' role='page tab' /&gt;&lt;ctrl name='System.Windows.Controls.Grid' role='list item' /&gt;&lt;ctrl name='1 - Federal Estimated Tax Payments' role='grouping' /&gt;&lt;ctrl name='4th Period' role='text' automationid='' check:text='4th Period' /&gt;" Guid="5457e5c8-3980-4a47-b423-6e4618f4aac7" SearchSteps="Selector" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
@@ -522,7 +528,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Fed Government'" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V3">
                         <uix:NClick.Target>
-                          <uix:TargetAnchorable CVScreenId="9494701f-e1ed-4371-886e-757be1e7711b" CvElementArea="209, 200, 128, 23" CvTextArea="216, 203, 113, 13" CvTextArgument="Fed Government" CvType="Button" DesignTimeRectangle="218, 201, 110, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Fed Government'" FullSelectorArgument="&lt;ctrl name='Fed Government' role='page tab' /&gt;&lt;ctrl name='Fed Government' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Fed Government' role='page tab' /&gt;&lt;ctrl name='Fed Government' role='text' automationid='' check:text='Fed Government' /&gt;" Guid="c55ec957-2147-477b-902e-497dd5255ddf" InformativeScreenshot="ef11943e5c8aaafe88c6ce82bf914250.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          <uix:TargetAnchorable CVScreenId="9494701f-e1ed-4371-886e-757be1e7711b" CvElementArea="209, 200, 128, 23" CvTextArea="216, 203, 113, 13" CvTextArgument="Fed Government" CvType="Button" DesignTimeRectangle="218, 201, 110, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Fed Government' role='page tab' /&gt;&lt;ctrl name='Fed Government' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Fed Government' role='page tab' /&gt;&lt;ctrl name='Fed Government' role='text' automationid='' check:text='Fed Government' /&gt;" Guid="c55ec957-2147-477b-902e-497dd5255ddf" InformativeScreenshot="ef11943e5c8aaafe88c6ce82bf914250.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                         <uix:NClick.VerifyOptions>
                           <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -537,7 +543,7 @@
                       </uix:NClick>
                       <uix:NClick ActivateBefore="True" ClickType="Double" DelayAfter="5" DisplayName="Click 'Form 1040'" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_7" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V3">
                         <uix:NClick.Target>
-                          <uix:TargetAnchorable CVScreenId="c0e49a1c-730b-44a6-b499-85419504073b" CvTextArea="48, 293, 74, 17" CvTextArgument="Form 1040" CvType="Text" DesignTimeRectangle="33, 292, 88, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'Form 1040'" FullSelectorArgument="&lt;ctrl name='Fed Government' role='page tab' /&gt;&lt;ctrl name='Form 1040' role='list item' /&gt;&lt;ctrl automationid='lblItemName' /&gt;&lt;ctrl name='    Form 1040' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Fed Government' role='page tab' /&gt;&lt;ctrl name='Form 1040' role='list item' /&gt;&lt;ctrl automationid='lblItemName' /&gt;&lt;ctrl name='    Form 1040' role='text' automationid='' check:text='Form 1040' /&gt;" Guid="566581a5-3692-455c-8a54-a375f7bfaa84" InformativeScreenshot="b23ca6d0d8714c5a3edb932b94afcab8.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          <uix:TargetAnchorable CVScreenId="c0e49a1c-730b-44a6-b499-85419504073b" CvTextArea="48, 293, 74, 17" CvTextArgument="Form 1040" CvType="Text" DesignTimeRectangle="33, 292, 88, 20" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Fed Government' role='page tab' /&gt;&lt;ctrl name='Form 1040' role='list item' /&gt;&lt;ctrl automationid='lblItemName' /&gt;&lt;ctrl name='    Form 1040' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Fed Government' role='page tab' /&gt;&lt;ctrl name='Form 1040' role='list item' /&gt;&lt;ctrl automationid='lblItemName' /&gt;&lt;ctrl name='    Form 1040' role='text' automationid='' check:text='Form 1040' /&gt;" Guid="566581a5-3692-455c-8a54-a375f7bfaa84" InformativeScreenshot="b23ca6d0d8714c5a3edb932b94afcab8.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                         <uix:NClick.VerifyOptions>
                           <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -568,15 +574,15 @@
                       </s:SanityReport_TCFiltering>
                       <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll 'Stmt Stmt'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NMouseScroll_1" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V3">
                         <uix:NMouseScroll.Target>
-                          <uix:TargetAnchorable DesignTimeRectangle="483, 258, 1436, 730" DesignTimeScaleFactor="1.25" FriendlyName="'Stmt Stmt'" FullSelectorArgument="&lt;ctrl name='Form 1040 - U.S. Individual Income Tax Return' role='page tab' /&gt;&lt;ctrl idx='2' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Form 1040 - U.S. Individual Income Tax Return' role='page tab' /&gt;&lt;ctrl automationid='' role='client' check:fulltext='Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;Statement&amp;#xD;&amp;#xA;Statement&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;See' /&gt;" Guid="6c14c8cb-9ed4-4db2-8180-50e8a40da7f8" ImageBase64="" InformativeScreenshot="1bd2c66a7759e38730cd936a598c456a.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          <uix:TargetAnchorable DesignTimeRectangle="483, 258, 1436, 730" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='Form 1040 - U.S. Individual Income Tax Return' role='page tab' /&gt;&lt;ctrl idx='2' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Form 1040 - U.S. Individual Income Tax Return' role='page tab' /&gt;&lt;ctrl automationid='' role='client' check:fulltext='Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;Statement&amp;#xD;&amp;#xA;Statement&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;See' /&gt;" Guid="6c14c8cb-9ed4-4db2-8180-50e8a40da7f8" ImageBase64="" InformativeScreenshot="1bd2c66a7759e38730cd936a598c456a.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NMouseScroll.Target>
                       </uix:NMouseScroll>
                       <uix:NGetText DisplayName="Get Text 'Form 1040 (2024)'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" TextString="[strCCHValueIn15]" Version="V3">
                         <uix:NGetText.Target>
-                          <uix:TargetAnchorable CVScreenId="d217d36b-275b-49ee-804f-5b50f13a570f" CvTextArea="1555, 850, 76, 16" CvType="AnyWordGroup" DesignTimeRectangle="1555, 850, 76, 16" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'cch.commonuiframework.s…'" Guid="c5abacb3-c36d-4821-900c-d066a6b553f5" InformativeScreenshot="4a45747e9ef47180a9413cc555dce834.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable CVScreenId="d217d36b-275b-49ee-804f-5b50f13a570f" CvTextArea="1555, 850, 76, 16" CvType="AnyWordGroup" DesignTimeRectangle="1555, 850, 76, 16" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="c5abacb3-c36d-4821-900c-d066a6b553f5" InformativeScreenshot="4a45747e9ef47180a9413cc555dce834.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
                               <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                <uix:Target CVScreenId="d217d36b-275b-49ee-804f-5b50f13a570f" CvTextArea="1553, 895, 84, 13" CvTextArgument="Form 1040 (2024)" CvType="Text" DesignTimeRectangle="1553, 895, 84, 13" ElementType="Text" FriendlyName="'Form 1040 (2024)'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                <uix:Target CVScreenId="d217d36b-275b-49ee-804f-5b50f13a570f" CvTextArea="1553, 895, 84, 13" CvTextArgument="Form 1040 (2024)" CvType="Text" DesignTimeRectangle="1553, 895, 84, 13" ElementType="Text" Guid="23c975c2-be57-4c03-b767-83420a628475" SearchSteps="CV" TargetType="ComputerVisionBased" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
@@ -584,16 +590,16 @@
                       </uix:NGetText>
                       <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll 'Stmt Stmt'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NMouseScroll_8" InteractionMode="HardwareEvents" MovementUnits="15" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V3">
                         <uix:NMouseScroll.Target>
-                          <uix:TargetAnchorable DesignTimeRectangle="483, 258, 1436, 730" DesignTimeScaleFactor="1.25" FriendlyName="'Stmt Stmt'" FullSelectorArgument="&lt;ctrl name='Form 1040 - U.S. Individual Income Tax Return' role='page tab' /&gt;&lt;ctrl idx='2' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Form 1040 - U.S. Individual Income Tax Return' role='page tab' /&gt;&lt;ctrl automationid='' role='client' check:fulltext='Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;Statement&amp;#xD;&amp;#xA;Statement&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;See' /&gt;" Guid="6c14c8cb-9ed4-4db2-8180-50e8a40da7f8" ImageBase64="" InformativeScreenshot="1bd2c66a7759e38730cd936a598c456a.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          <uix:TargetAnchorable DesignTimeRectangle="483, 258, 1436, 730" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl name='Form 1040 - U.S. Individual Income Tax Return' role='page tab' /&gt;&lt;ctrl idx='2' role='client' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Form 1040 - U.S. Individual Income Tax Return' role='page tab' /&gt;&lt;ctrl automationid='' role='client' check:fulltext='Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;Stmt&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;Statement&amp;#xD;&amp;#xA;Statement&amp;#xD;&amp;#xA;See Statement&amp;#xD;&amp;#xA;See' /&gt;" Guid="6c14c8cb-9ed4-4db2-8180-50e8a40da7f8" ImageBase64="" InformativeScreenshot="1bd2c66a7759e38730cd936a598c456a.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NMouseScroll.Target>
                       </uix:NMouseScroll>
                       <uix:NGetText DelayBefore="2" DisplayName="Get Text '35a'" sap:VirtualizedContainerService.HintSize="416,189.6" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" TextString="[strCCHValueIn35a]" Version="V3">
                         <uix:NGetText.Target>
-                          <uix:TargetAnchorable CVScreenId="82a6f26d-4902-4abf-893f-c0ad1cb38db9" CvTextArea="1567, 865, 60, 15" CvType="AnyWordGroup" DesignTimeRectangle="1567, 865, 60, 15" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'cch.commonuiframework.s…'" Guid="f01c1689-47bf-4549-a119-cbdd97d27a5b" InformativeScreenshot="ef19c6ed5889c1c8b99e475987b20bca.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable CVScreenId="82a6f26d-4902-4abf-893f-c0ad1cb38db9" CvTextArea="1567, 865, 60, 15" CvType="AnyWordGroup" DesignTimeRectangle="1567, 865, 60, 15" DesignTimeScaleFactor="1.25" ElementType="Text" Guid="f01c1689-47bf-4549-a119-cbdd97d27a5b" InformativeScreenshot="ef19c6ed5889c1c8b99e475987b20bca.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.Anchors>
                               <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
-                                <uix:Target CVScreenId="82a6f26d-4902-4abf-893f-c0ad1cb38db9" CvTextArea="1453, 868, 25, 13" CvTextArgument="35a" CvType="Text" DesignTimeRectangle="1453, 868, 25, 13" ElementType="Text" FriendlyName="'35a'" SearchSteps="CV" TargetType="ComputerVisionBased" />
-                                <uix:Target CVScreenId="82a6f26d-4902-4abf-893f-c0ad1cb38db9" CvTextArea="1221, 848, 198, 16" CvTextArgument="This is the amount you overpaid" CvType="Text" DesignTimeRectangle="1221, 848, 198, 16" ElementType="Text" FriendlyName="'This is'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                <uix:Target CVScreenId="82a6f26d-4902-4abf-893f-c0ad1cb38db9" CvTextArea="1453, 868, 25, 13" CvTextArgument="35a" CvType="Text" DesignTimeRectangle="1453, 868, 25, 13" ElementType="Text" Guid="e4819195-2817-4c78-92a9-d621e1d35b65" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                                <uix:Target CVScreenId="82a6f26d-4902-4abf-893f-c0ad1cb38db9" CvTextArea="1221, 848, 198, 16" CvTextArgument="This is the amount you overpaid" CvType="Text" DesignTimeRectangle="1221, 848, 198, 16" ElementType="Text" Guid="1a1c8011-3e3a-46bb-9841-36a548a85836" SearchSteps="CV" TargetType="ComputerVisionBased" />
                               </scg:List>
                             </uix:TargetAnchorable.Anchors>
                           </uix:TargetAnchorable>
@@ -650,7 +656,7 @@
                       </uix:NKeyboardShortcuts>
                       <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="NClick_18" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V3">
                         <uix:NClick.Target>
-                          <uix:TargetAnchorable CVScreenId="5d0d47dc-3ab3-45bc-9d5c-7eb83a984cad" CvElementArea="1867, 9, 59, 32" CvType="CloseButton" DesignTimeRectangle="1868, 9, 61, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="164bcafd-9703-4867-91af-4c5642d44396" InformativeScreenshot="a171636597db6bacbe47799cfc0d8e99.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          <uix:TargetAnchorable CVScreenId="5d0d47dc-3ab3-45bc-9d5c-7eb83a984cad" CvElementArea="1867, 9, 59, 32" CvType="CloseButton" DesignTimeRectangle="1868, 9, 61, 32" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;ctrl name='Close' role='push button' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Close' role='push button' automationid='' check:text='Close' /&gt;" Guid="164bcafd-9703-4867-91af-4c5642d44396" InformativeScreenshot="a171636597db6bacbe47799cfc0d8e99.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                         <uix:NClick.VerifyOptions>
                           <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -673,7 +679,7 @@
                             </sap:WorkflowViewStateService.ViewState>
                             <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '_Yes'" sap:VirtualizedContainerService.HintSize="416,218.4" sap2010:WorkflowViewState.IdRef="NClick_8" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="daa433d1-bdf2-45ec-927d-5b3124bffd2b" Version="V3">
                               <uix:NClick.Target>
-                                <uix:TargetAnchorable CVScreenId="6e258db2-1ea6-4d7b-8d69-37ed86fa4a3a" CvElementArea="191, 90, 78, 25" CvTextArea="220, 96, 18, 12" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="221, 95, 17, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'_Yes'" FullSelectorArgument="&lt;ctrl automationid='FirstButton' /&gt;&lt;ctrl name='_Yes' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='FirstButton' /&gt;&lt;ctrl name='_Yes' role='text' automationid='' check:text='_Yes' /&gt;" Guid="443f4be7-2715-4084-8ad4-14421eb5a5bd" InformativeScreenshot="34de134bdb6afcb2c730e2844ab8cc08.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='Close Return' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                <uix:TargetAnchorable CVScreenId="6e258db2-1ea6-4d7b-8d69-37ed86fa4a3a" CvElementArea="191, 90, 78, 25" CvTextArea="220, 96, 18, 12" CvTextArgument="Yes" CvType="Button" DesignTimeRectangle="221, 95, 17, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='FirstButton' /&gt;&lt;ctrl name='_Yes' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='FirstButton' /&gt;&lt;ctrl name='_Yes' role='text' automationid='' check:text='_Yes' /&gt;" Guid="443f4be7-2715-4084-8ad4-14421eb5a5bd" InformativeScreenshot="34de134bdb6afcb2c730e2844ab8cc08.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='Close Return' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                               </uix:NClick.Target>
                               <uix:NClick.VerifyOptions>
                                 <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -698,7 +704,7 @@
                           </Sequence>
                         </uix:NCheckState.IfNotExists>
                         <uix:NCheckState.Target>
-                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 441, 127" DesignTimeScaleFactor="1" FriendlyName="'Close Return'" Guid="ac425554-8dcd-48dc-b37a-b181dddb4736" InformativeScreenshot="36350138a2d974f7fcb048c6f6b764a8.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='Close Return' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                          <uix:TargetAnchorable DesignTimeRectangle="0, 0, 441, 127" DesignTimeScaleFactor="1" Guid="ac425554-8dcd-48dc-b37a-b181dddb4736" InformativeScreenshot="36350138a2d974f7fcb048c6f6b764a8.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='Close Return' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                             <uix:TargetAnchorable.FuzzySelectorArgument>
                               <InArgument x:TypeArguments="x:String">
                                 <Literal x:TypeArguments="x:String" Value="" />
@@ -751,7 +757,7 @@
                   </Sequence>
                 </uix:NCheckState.IfNotExists>
                 <uix:NCheckState.Target>
-                  <uix:TargetAnchorable CVScreenId="18af5e57-c306-4b72-af3d-54d2c7ccb121" CvElementArea="92, 160, 76, 19" CvTextArea="100, 163, 63, 12" CvTextArgument="Worksheets" CvType="Button" DesignTimeRectangle="101, 161, 61, 16" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Worksheets'" FullSelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Worksheets' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Worksheets' role='text' automationid='' check:text='Worksheets' /&gt;" Guid="636d7730-489b-4987-a5cf-09561fcd35d4" InformativeScreenshot="cd24dc698c416940ef07094f4bccec58.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable CVScreenId="18af5e57-c306-4b72-af3d-54d2c7ccb121" CvElementArea="92, 160, 76, 19" CvTextArea="100, 163, 63, 12" CvTextArgument="Worksheets" CvType="Button" DesignTimeRectangle="101, 161, 61, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Worksheets' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Worksheets' role='page tab' /&gt;&lt;ctrl name='Worksheets' role='text' automationid='' check:text='Worksheets' /&gt;" Guid="636d7730-489b-4987-a5cf-09561fcd35d4" InformativeScreenshot="cd24dc698c416940ef07094f4bccec58.png" ScopeSelectorArgument="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='2024I:HS190325__3:V1 - ANDERSON, JACK - Tax' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NCheckState.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -774,7 +780,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <ui:CloseApplication DisplayName="Close Application 'text  Return Manager'" sap:VirtualizedContainerService.HintSize="514.4,139.2" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
+      <ui:CloseApplication DisplayName="Close Application 'text  Return Manager'" sap:VirtualizedContainerService.HintSize="645.6,139.2" sap2010:WorkflowViewState.IdRef="CloseApplication_1">
         <ui:CloseApplication.Target>
           <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="d62883e9-994b-4c97-9da9-2020dd4d4a88" InformativeScreenshot="a99d7aea8257e36f730509a0caca3171" Selector="&lt;wnd app='cch.commonuiframework.shell.exe' cls='HwndWrapper*' title='Return Manager' /&gt;">
             <ui:Target.TimeoutMS>
@@ -786,22 +792,22 @@
           </ui:Target>
         </ui:CloseApplication.Target>
       </ui:CloseApplication>
-      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Search binder in fileroom and open SPBinder wizard" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: FileRoom" sap:VirtualizedContainerService.HintSize="514.4,2116.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="55a43feb-9492-4194-bd32-c864c29e3b8a" Version="V2">
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Search binder in fileroom and open SPBinder wizard" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: FileRoom" sap:VirtualizedContainerService.HintSize="645.6,100.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" InteractionMode="DebuggerApi" OpenMode="Never" ScopeGuid="55a43feb-9492-4194-bd32-c864c29e3b8a" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,1836.8" sap2010:WorkflowViewState.IdRef="Sequence_15">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="467.2,1834.4" sap2010:WorkflowViewState.IdRef="Sequence_15">
               <Sequence.Variables>
-                <Variable x:TypeArguments="x:String" Name="strTaxYear" />
+                <Variable x:TypeArguments="x:String" Default="2024" Name="strTaxYear" />
               </Sequence.Variables>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_11">
+              <Assign sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_11">
                 <Assign.To>
                   <OutArgument x:TypeArguments="x:String">[strTaxYear]</OutArgument>
                 </Assign.To>
@@ -810,7 +816,7 @@
                 </Assign.Value>
               </Assign>
               <uix:NGoToUrl DisplayName="Go To URL" sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="NGoToUrl_2" Url="[in_Config(&quot;FileroomListing_URL&quot;).ToString]" Version="V3" />
-              <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'IMG  imgHelpCenter'" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="Activate_1">
+              <ui:Activate DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Activate 'IMG  imgHelpCenter'" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="Activate_4">
                 <ui:Activate.Target>
                   <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="f89c0e1a-46d9-4096-9501-e3710c3ad5e9" InformativeScreenshot="e9096392af2e91d2c8c1dc3d1ddcff43" Selector="&lt;webctrl tableRow='1' tag='TABLE' /&gt;&lt;webctrl id='*' tableRow='1' tag='IMG' /&gt;">
                     <ui:Target.TimeoutMS>
@@ -824,10 +830,10 @@
               </ui:Activate>
               <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Show All Binders'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_21" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="55a43feb-9492-4194-bd32-c864c29e3b8a" Version="V3">
                 <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="948, 300, 20, 20" DesignTimeScaleFactor="1.25" FriendlyName="'SPAN'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;span' isleaf='1' tableCol='8' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' isleaf='1' class='k-icon k-i-arrow-60-down' aaname='' tag='SPAN' /&gt;" Guid="2d51461d-3e71-440e-856e-d10989bb4ff9" InformativeScreenshot="0b404e27b075acb7b5d57978c3be85c6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="948, 300, 20, 20" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table&amp;gt;tbody&amp;gt;tr&amp;gt;td&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;span&amp;gt;span' isleaf='1' tableCol='8' tableRow='1' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' isleaf='1' class='k-icon k-i-arrow-60-down' aaname='' tag='SPAN' /&gt;" Guid="2d51461d-3e71-440e-856e-d10989bb4ff9" InformativeScreenshot="0b404e27b075acb7b5d57978c3be85c6.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive">
                     <uix:TargetAnchorable.Anchors>
                       <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                        <uix:Target CVScreenId="c1b12619-e1eb-46d5-aa1d-9663a6c718f4" CvTextArea="984, 300, 118, 15" CvTextArgument="Show All Binders" CvType="Text" DesignTimeRectangle="983, 297, 125, 23" ElementType="Text" FriendlyName="'Show All Binders'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl aaname='Show All Binders' aria-role='option' tableRow='1' tag='SPAN' /&gt;" FuzzyAccuracy="0.85" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Show All Binders' aria-role='option' type='' tag='SPAN' class='k-input' check:innerText='Show All Binders' /&gt;" SearchSteps="FuzzySelector" />
+                        <uix:Target CVScreenId="c1b12619-e1eb-46d5-aa1d-9663a6c718f4" CvTextArea="984, 300, 118, 15" CvTextArgument="Show All Binders" CvType="Text" DesignTimeRectangle="983, 297, 125, 23" ElementType="Text" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl aaname='Show All Binders' aria-role='option' tableRow='1' tag='SPAN' /&gt;" FuzzyAccuracy="0.85" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='Show All Binders' aria-role='option' type='' tag='SPAN' class='k-input' check:innerText='Show All Binders' /&gt;" Guid="48e1945a-ee56-498f-816b-11d3417945a5" SearchSteps="FuzzySelector" />
                       </scg:List>
                     </uix:TargetAnchorable.Anchors>
                   </uix:TargetAnchorable>
@@ -845,7 +851,7 @@
               </uix:NClick>
               <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click '2024'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_22" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="55a43feb-9492-4194-bd32-c864c29e3b8a" Version="V3">
                 <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" CVScreenId="3f4dbc35-6a8e-4cbc-b160-e7726721fb7b" CvTextArea="894, 332, 35, 13" CvTextArgument="2024" CvType="Text" DesignTimeRectangle="890, 323, 77, 29" DesignTimeScaleFactor="1.25" ElementType="ListItem" FriendlyName="'2024'" FullSelectorArgument="&lt;webctrl aria-role='option' tag='LI' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aria-role='option' tag='LI' type='' class='k-item k-state-selected k-state-focused' aaname='{0}' check:innerText='{0}' /&gt;&quot;, strTaxYear)]" Guid="d4acbf37-317f-4139-b36f-745aa7dd9e91" InformativeScreenshot="fd3f9ff561b09991aa2431bfd2d5aa73.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" CVScreenId="3f4dbc35-6a8e-4cbc-b160-e7726721fb7b" CvTextArea="894, 332, 35, 13" CvTextArgument="2024" CvType="Text" DesignTimeRectangle="890, 323, 77, 29" DesignTimeScaleFactor="1.25" ElementType="ListItem" FullSelectorArgument="&lt;webctrl aria-role='option' tag='LI' /&gt;" FuzzySelectorArgument="[string.Format(&quot;&lt;webctrl aria-role='option' tag='LI' type='' class='k-item k-state-selected k-state-focused' aaname='{0}' check:innerText='{0}' /&gt;&quot;, strTaxYear)]" Guid="d4acbf37-317f-4139-b36f-745aa7dd9e91" InformativeScreenshot="fd3f9ff561b09991aa2431bfd2d5aa73.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive" />
                 </uix:NClick.Target>
                 <uix:NClick.VerifyOptions>
                   <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -860,7 +866,7 @@
               </uix:NClick>
               <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Search'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="55a43feb-9492-4194-bd32-c864c29e3b8a" Version="V3">
                 <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" CVScreenId="f88f22d6-77d3-424c-acaa-2b02e3d18f2d" CvElementArea="1661, 232, 250, 29" CvType="InputBox" DesignTimeRectangle="1692, 237, 189, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl id='txtSearch' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl id='txtSearch' type='text' tag='INPUT' class='fr-searchbox' aaname='' /&gt;" Guid="826cee97-fc1d-438b-94e3-6d66365d369c" InformativeScreenshot="67f832f1e40b9a596a2bc018e670a4d5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" CVScreenId="f88f22d6-77d3-424c-acaa-2b02e3d18f2d" CvElementArea="1661, 232, 250, 29" CvType="InputBox" DesignTimeRectangle="1692, 237, 189, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl id='txtSearch' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl id='txtSearch' type='text' tag='INPUT' class='fr-searchbox' aaname='' /&gt;" Guid="826cee97-fc1d-438b-94e3-6d66365d369c" InformativeScreenshot="67f832f1e40b9a596a2bc018e670a4d5.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NClick.Target>
                 <uix:NClick.VerifyOptions>
                   <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -875,7 +881,7 @@
               </uix:NClick>
               <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DelayAfter="3" DisplayName="Type Into 'Search'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="433.6,286.4" sap2010:WorkflowViewState.IdRef="NTypeInto_6" ScopeIdentifier="55a43feb-9492-4194-bd32-c864c29e3b8a" Text="[in_strBinderID]" Version="V3">
                 <uix:NTypeInto.Target>
-                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" CVScreenId="92ffa0e9-666a-4436-8645-f23dbf09553a" CvElementArea="1661, 232, 250, 29" CvType="InputBox" DesignTimeRectangle="1692, 237, 189, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FriendlyName="'Search'" FullSelectorArgument="&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl id='txtSearch' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl id='txtSearch' type='text' tag='INPUT' class='fr-searchbox' aaname='' /&gt;" Guid="317e2da5-1f75-48b1-ab0c-9e2df897c50f" InformativeScreenshot="76163c581f6b87da232c1ebc0c5d3988.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" CVScreenId="92ffa0e9-666a-4436-8645-f23dbf09553a" CvElementArea="1661, 232, 250, 29" CvType="InputBox" DesignTimeRectangle="1692, 237, 189, 20" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;webctrl aria-role='presentation' css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;table' tag='TABLE' /&gt;&lt;webctrl id='txtSearch' tableRow='1' tag='INPUT' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='presentation' tag='TABLE' /&gt;&lt;webctrl id='txtSearch' type='text' tag='INPUT' class='fr-searchbox' aaname='' /&gt;" Guid="317e2da5-1f75-48b1-ab0c-9e2df897c50f" InformativeScreenshot="76163c581f6b87da232c1ebc0c5d3988.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NTypeInto.Target>
                 <uix:NTypeInto.VerifyOptions>
                   <uix:VerifyExecutionTypeIntoOptions DisplayName="{x:Null}" Mode="Appears">
@@ -888,9 +894,9 @@
                   </uix:VerifyExecutionTypeIntoOptions>
                 </uix:NTypeInto.VerifyOptions>
               </uix:NTypeInto>
-              <uix:NHover DisplayName="Hover 'TD'" sap:VirtualizedContainerService.HintSize="382.4,225.6" HoverTime="2" sap2010:WorkflowViewState.IdRef="NHover_2" ScopeIdentifier="55a43feb-9492-4194-bd32-c864c29e3b8a" Version="V3">
+              <uix:NHover DisplayName="Hover 'TD'" sap:VirtualizedContainerService.HintSize="433.6,225.6" HoverTime="2" sap2010:WorkflowViewState.IdRef="NHover_2" ScopeIdentifier="55a43feb-9492-4194-bd32-c864c29e3b8a" Version="V3">
                 <uix:NHover.Target>
-                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="183, 363, 80, 30" DesignTimeScaleFactor="1" FriendlyName="'TD'" FullSelectorArgument="&lt;webctrl aria-role='grid' class='k-selectable' tag='TABLE' /&gt;&lt;webctrl class='binderbtn' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='grid' class='k-selectable' tag='TABLE' /&gt;&lt;webctrl class='binderbtn' type='' tag='TD' aaname='' /&gt;" Guid="e746b1b2-a3ac-4cae-8377-803c41506c62" InformativeScreenshot="33a8925c5f2d0f4efec8e169ce0d1d22.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="183, 363, 80, 30" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl aria-role='grid' class='k-selectable' tag='TABLE' /&gt;&lt;webctrl class='binderbtn' tableRow='1' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl aria-role='grid' class='k-selectable' tag='TABLE' /&gt;&lt;webctrl class='binderbtn' type='' tag='TD' aaname='' /&gt;" Guid="e746b1b2-a3ac-4cae-8377-803c41506c62" InformativeScreenshot="33a8925c5f2d0f4efec8e169ce0d1d22.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NHover.Target>
                 <uix:NHover.VerifyOptions>
                   <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -903,9 +909,9 @@
                   </uix:VerifyExecutionOptions>
                 </uix:NHover.VerifyOptions>
               </uix:NHover>
-              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'A #'" sap:VirtualizedContainerService.HintSize="382.4,218.4" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="55a43feb-9492-4194-bd32-c864c29e3b8a" Version="V3">
+              <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'A #'" sap:VirtualizedContainerService.HintSize="433.6,218.4" sap2010:WorkflowViewState.IdRef="NClick_11" InteractionMode="Simulate" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="55a43feb-9492-4194-bd32-c864c29e3b8a" Version="V3">
                 <uix:NClick.Target>
-                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="193, 368, 20, 20" DesignTimeScaleFactor="1" FriendlyName="'A #'" FullSelectorArgument="&lt;webctrl parentid='FileroomGrid_Row_0' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='FileroomGrid_Row_0' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='fr-open openLink' aaname='                                     ' /&gt;" Guid="6882226f-bb31-4352-a5c2-c1d241763731" InformativeScreenshot="7179046bd4dfbc5e1df0780fcc246c8b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable BrowserURL="https://production.sureprep.com/Fileroom/Fileroom/Listing" DesignTimeRectangle="193, 368, 20, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;webctrl parentid='FileroomGrid_Row_0' tableRow='1' tag='TABLE' /&gt;&lt;webctrl tableRow='1' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='FileroomGrid_Row_0' tag='TABLE' /&gt;&lt;webctrl type='' tag='A' class='fr-open openLink' aaname='                                     ' /&gt;" Guid="6882226f-bb31-4352-a5c2-c1d241763731" InformativeScreenshot="7179046bd4dfbc5e1df0780fcc246c8b.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='FileRoom' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NClick.Target>
                 <uix:NClick.VerifyOptions>
                   <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -926,118 +932,33 @@
         </uix:NApplicationCard.TargetApp>
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Completing Import TR. After that navigating to leadsheet" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SPbinder - OBFB, BUNR (CCAB17042567 (V1)) | 1040 | 2024 | Binder ID: 39372564 | Aut" sap:VirtualizedContainerService.HintSize="514.4,100.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" OpenMode="Never" ScopeGuid="2417706c-8cb9-4015-a627-10b439469ec7" Version="V2">
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Reset view SPBinder. Completing Import TR. After that navigating to leadsheet" AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Application: SPbinder - OBFB, BUNR (CCAB17042567 (V1)) | 1040 | 2024 | Binder ID: 39372564 | Aut" sap:VirtualizedContainerService.HintSize="645.6,1536.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" OpenMode="Never" ScopeGuid="2417706c-8cb9-4015-a627-10b439469ec7" Timeout="60" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,281.6" sap2010:WorkflowViewState.IdRef="Sequence_18">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="612,1182.4" sap2010:WorkflowViewState.IdRef="Sequence_18">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+              <Sequence DisplayName="Import TR" sap:VirtualizedContainerService.HintSize="524.8,1014.4" sap2010:WorkflowViewState.IdRef="Sequence_58">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <TryCatch.Try>
-                  <ui:RetryScope DisplayName="Retry Reset View" sap:VirtualizedContainerService.HintSize="761.6,735.2" sap2010:WorkflowViewState.IdRef="RetryScope_1" NumberOfRetries="2">
-                    <ui:RetryScope.ActivityBody>
-                      <ActivityAction>
-                        <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Reset View" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_3" Shortcuts="[d(hk)][d(alt)]v[u(alt)][u(hk)][d(hk)]r[u(hk)]" Timeout="60" Version="V3" />
-                      </ActivityAction>
-                    </ui:RetryScope.ActivityBody>
-                    <ui:RetryScope.Condition>
-                      <ActivityFunc x:TypeArguments="x:Boolean">
-                        <uix:NCheckState DisplayName="Check App State - View" sap:VirtualizedContainerService.HintSize="720,396.8" sap2010:WorkflowViewState.IdRef="NCheckState_4" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
-                          <uix:NCheckState.IfExists>
-                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Reset View" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_4" Shortcuts="[d(hk)][d(alt)]v[u(alt)][u(hk)][d(hk)]r[u(hk)]" Timeout="60" Version="V3" />
-                          </uix:NCheckState.IfExists>
-                          <uix:NCheckState.IfNotExists>
-                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Reset View" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_5" Shortcuts="[d(hk)][d(alt)]v[u(alt)][u(hk)][d(hk)]r[u(hk)]" Timeout="60" Version="V3" />
-                          </uix:NCheckState.IfNotExists>
-                          <uix:NCheckState.Target>
-                            <uix:TargetAnchorable CvTextArea="141, 41, 38, 15" CvTextArgument="View" CvType="Text" DesignTimeRectangle="144, 39, 34, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='ViewMenuItem' /&gt;&lt;ctrl name='_View' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ViewMenuItem' /&gt;&lt;ctrl name='_View' role='text' automationid='' check:text='_View' /&gt;" Guid="e9fcc40c-165c-430c-baa3-1d37232b30a6" InformativeScreenshot="601fb5ea76094082cd4786b8f4b452cf.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete" />
-                          </uix:NCheckState.Target>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
-                        </uix:NCheckState>
-                      </ActivityFunc>
-                    </ui:RetryScope.Condition>
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                  </ui:RetryScope>
-                </TryCatch.Try>
-                <TryCatch.Catches>
-                  <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="764.8,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_2">
-                    <sap:WorkflowViewStateService.ViewState>
-                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                      </scg:Dictionary>
-                    </sap:WorkflowViewStateService.ViewState>
-                    <ActivityAction x:TypeArguments="s1:Exception">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="s1:Exception" Name="exception" />
-                      </ActivityAction.Argument>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="LogMessage_14" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Failed to reset the view&quot;]" />
-                    </ActivityAction>
-                  </Catch>
-                </TryCatch.Catches>
-                <TryCatch.Finally>
-                  <Sequence DisplayName="Finally" sap2010:WorkflowViewState.IdRef="Sequence_57" />
-                </TryCatch.Finally>
-              </TryCatch>
-              <uix:NDragAndDrop CursorMotionType="Smooth" DelayBetweenActions="0.3" DestinationScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" DisplayName="Drag and Drop 'Pane Header'" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="NDragAndDrop_1" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Timeout="60" Version="V3">
-                <uix:NDragAndDrop.DestinationTarget>
-                  <uix:TargetAnchorable DesignTimeRectangle="14, 29, 1902, 20" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl automationid='M_Menu' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='M_Menu' role='popup menu' check:fulltext='Binder&amp;#xD;&amp;#xA;_Binder&amp;#xD;&amp;#xA;Edit&amp;#xD;&amp;#xA;_Edit&amp;#xD;&amp;#xA;View&amp;#xD;&amp;#xA;_View&amp;#xD;&amp;#xA;Help&amp;#xD;&amp;#xA;_Help' /&gt;" Guid="64122c86-cfc4-4289-aeb8-15a509886486" ImageBase64="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" InformativeScreenshot="155b404a2514d77bba70536b460293bc.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
-                    <uix:TargetAnchorable.PointOffset>
-                      <uix:PointOffset Position="TopLeft" />
-                    </uix:TargetAnchorable.PointOffset>
-                  </uix:TargetAnchorable>
-                </uix:NDragAndDrop.DestinationTarget>
-                <uix:NDragAndDrop.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="10, 309, 1900, 19" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='HeaderElement' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='HeaderElement' role='client' check:text='Pane Header' /&gt;" Guid="832daa45-4461-4a6e-b50b-91c9649b1dd3" ImageBase64="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" InformativeScreenshot="68562989b720e9efdfd1718f1670e050.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V1" Visibility="Interactive">
-                    <uix:TargetAnchorable.PointOffset>
-                      <uix:PointOffset Y="-13" />
-                    </uix:TargetAnchorable.PointOffset>
-                  </uix:TargetAnchorable>
-                </uix:NDragAndDrop.Target>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </uix:NDragAndDrop>
-              <Sequence DisplayName="Import TR" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_58">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <Assign sap:VirtualizedContainerService.HintSize="433.6,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
+                <Assign sap:VirtualizedContainerService.HintSize="491.2,114.4" sap2010:WorkflowViewState.IdRef="Assign_2">
                   <Assign.To>
                     <OutArgument x:TypeArguments="s1:DateTime">[dtStartTime]</OutArgument>
                   </Assign.To>
@@ -1045,7 +966,7 @@
                     <InArgument x:TypeArguments="s1:DateTime">[DateTime.Now]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="RetryScope_2">
+                <ui:RetryScope DisplayName="Retry Scope" sap:VirtualizedContainerService.HintSize="491.2,656" sap2010:WorkflowViewState.IdRef="RetryScope_2">
                   <ui:RetryScope.ActivityBody>
                     <ActivityAction>
                       <Sequence DisplayName="Action" sap:VirtualizedContainerService.HintSize="449.6,276.8" sap2010:WorkflowViewState.IdRef="Sequence_19">
@@ -1056,7 +977,7 @@
                         </sap:WorkflowViewStateService.ViewState>
                         <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'push button'" sap:VirtualizedContainerService.HintSize="416,216.8" sap2010:WorkflowViewState.IdRef="NClick_12" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                           <uix:NClick.Target>
-                            <uix:TargetAnchorable CVScreenId="950412b8-f533-4780-8997-e589fd003cb1" CvElementArea="387, 51, 21, 21" CvType="Icon" DesignTimeRectangle="383, 50, 30, 24" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'push button'" FullSelectorArgument="&lt;ctrl role='push button' helpText='Import TR' /&gt;" FuzzySelectorArgument="&lt;ctrl role='push button' helpText='Import TR' automationid='' /&gt;" Guid="51ec3457-80db-4fdf-becb-94bdb4cb4df7" InformativeScreenshot="56120be74ade4a9357a98d0c0f2f7d1a.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+                            <uix:TargetAnchorable CVScreenId="950412b8-f533-4780-8997-e589fd003cb1" CvElementArea="387, 51, 21, 21" CvType="Icon" DesignTimeRectangle="383, 50, 30, 24" DesignTimeScaleFactor="1" ElementType="Button" FullSelectorArgument="&lt;ctrl role='push button' helpText='Import TR' /&gt;" FuzzySelectorArgument="&lt;ctrl role='push button' helpText='Import TR' automationid='' /&gt;" Guid="51ec3457-80db-4fdf-becb-94bdb4cb4df7" InformativeScreenshot="56120be74ade4a9357a98d0c0f2f7d1a.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" WaitForReadyArgument="None" />
                           </uix:NClick.Target>
                           <uix:NClick.VerifyOptions>
                             <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -1076,13 +997,10 @@
                     <ActivityFunc x:TypeArguments="x:Boolean">
                       <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists 'text  Proceed'" sap:VirtualizedContainerService.HintSize="449.6,107.2" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
                         <ui:UiElementExists.Target>
-                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="885a9d73-c9d5-4848-8ab2-f93e60d1671c" InformativeScreenshot="6445cf62d9e15c7916afe5d33a4b6154" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Import TR' /&gt;&lt;ctrl automationid='btnProceed' /&gt;&lt;ctrl name='Proceed' role='text' /&gt;">
+                          <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="885a9d73-c9d5-4848-8ab2-f93e60d1671c" InformativeScreenshot="6445cf62d9e15c7916afe5d33a4b6154" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Import TR' /&gt;&lt;ctrl automationid='btnProceed' /&gt;&lt;ctrl name='Proceed' role='text' /&gt;" WaitForReady="COMPLETE">
                             <ui:Target.TimeoutMS>
                               <InArgument x:TypeArguments="x:Int32" />
                             </ui:Target.TimeoutMS>
-                            <ui:Target.WaitForReady>
-                              <InArgument x:TypeArguments="ui:WaitForReady" />
-                            </ui:Target.WaitForReady>
                           </ui:Target>
                         </ui:UiElementExists.Target>
                       </ui:UiElementExists>
@@ -1090,14 +1008,14 @@
                   </ui:RetryScope.Condition>
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:RetryScope>
-                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Proceed'" sap:VirtualizedContainerService.HintSize="433.6,56.8" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
+                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Proceed'" sap:VirtualizedContainerService.HintSize="491.2,56.8" sap2010:WorkflowViewState.IdRef="NClick_13" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                   <uix:NClick.Target>
-                    <uix:TargetAnchorable CVScreenId="a7ee68fc-11da-4ebc-b969-9a192f212e58" CvElementArea="400, 96, 78, 28" CvTextArea="415, 102, 47, 13" CvTextArgument="Proceed" CvType="Button" DesignTimeRectangle="416, 102, 45, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Proceed'" FullSelectorArgument="&lt;ctrl automationid='btnProceed' /&gt;&lt;ctrl name='Proceed' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnProceed' /&gt;&lt;ctrl name='Proceed' role='text' automationid='' check:text='Proceed' /&gt;" Guid="19b9e278-fa21-44cd-97cf-b02ae2132b5c" InformativeScreenshot="fd22560f61fa0629d7d0fea8484b7a47.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Import TR' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                    <uix:TargetAnchorable CVScreenId="a7ee68fc-11da-4ebc-b969-9a192f212e58" CvElementArea="400, 96, 78, 28" CvTextArea="415, 102, 47, 13" CvTextArgument="Proceed" CvType="Button" DesignTimeRectangle="416, 102, 45, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='btnProceed' /&gt;&lt;ctrl name='Proceed' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnProceed' /&gt;&lt;ctrl name='Proceed' role='text' automationid='' check:text='Proceed' /&gt;" Guid="19b9e278-fa21-44cd-97cf-b02ae2132b5c" InformativeScreenshot="fd22560f61fa0629d7d0fea8484b7a47.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Import TR' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                   </uix:NClick.Target>
                   <uix:NClick.VerifyOptions>
                     <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -1116,7 +1034,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NClick>
-                <uix:NCheckState sap2010:Annotation.AnnotationText="Waiting for import to complete" DisplayName="Check App State 'Process Completed !'" sap:VirtualizedContainerService.HintSize="433.6,93.6" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Timeout="[in_ImportWaitTime]" Version="V3">
+                <uix:NCheckState sap2010:Annotation.AnnotationText="Waiting for import to complete" DisplayName="Check App State 'Process Completed !'" sap:VirtualizedContainerService.HintSize="491.2,93.6" sap2010:WorkflowViewState.IdRef="NCheckState_5" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Timeout="[in_ImportWaitTime]" Version="V3">
                   <uix:NCheckState.IfExists>
                     <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="467.2,999.2" sap2010:WorkflowViewState.IdRef="Sequence_21">
                       <sap:WorkflowViewStateService.ViewState>
@@ -1126,7 +1044,7 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Close'" sap:VirtualizedContainerService.HintSize="433.6,225.6" sap2010:WorkflowViewState.IdRef="NClick_14" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                         <uix:NClick.Target>
-                          <uix:TargetAnchorable CVScreenId="eff11389-666a-488b-8852-9484a122c10a" CvElementArea="484, 117, 77, 27" CvTextArea="507, 124, 32, 12" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="509, 123, 29, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Close'" FullSelectorArgument="&lt;ctrl automationid='btnClose' /&gt;&lt;ctrl name='Close' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnClose' /&gt;&lt;ctrl name='Close' role='text' automationid='' check:text='Close' /&gt;" Guid="0603bb83-662e-4f21-ad14-316735aa8960" InformativeScreenshot="d6a0edcb35eb20ef9c0fd7e1e007971f.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Import TR' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          <uix:TargetAnchorable CVScreenId="eff11389-666a-488b-8852-9484a122c10a" CvElementArea="484, 117, 77, 27" CvTextArea="507, 124, 32, 12" CvTextArgument="Close" CvType="Button" DesignTimeRectangle="509, 123, 29, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='btnClose' /&gt;&lt;ctrl name='Close' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnClose' /&gt;&lt;ctrl name='Close' role='text' automationid='' check:text='Close' /&gt;" Guid="0603bb83-662e-4f21-ad14-316735aa8960" InformativeScreenshot="d6a0edcb35eb20ef9c0fd7e1e007971f.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Import TR' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                         </uix:NClick.Target>
                         <uix:NClick.VerifyOptions>
                           <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -1194,10 +1112,10 @@
                     </Sequence>
                   </uix:NCheckState.IfNotExists>
                   <uix:NCheckState.Target>
-                    <uix:TargetAnchorable CVScreenId="eff11389-666a-488b-8852-9484a122c10a" CvTextArea="37, 40, 112, 12" CvTextArgument="Process Completed !" CvType="Text" DesignTimeRectangle="34, 34, 118, 24" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'Process Completed !'" FullSelectorArgument="&lt;ctrl name='Process Completed !' role='text' /&gt;" FuzzyAccuracy="0.68" FuzzySelectorArgument="&lt;ctrl name='Process Completed !' role='text' automationid='' check:text='Process Completed !' /&gt;" Guid="9eca36ec-dac4-42b8-98ad-e2dead151caf" InformativeScreenshot="3e420eeb65a2ff0a7652670b242b25d6.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Import TR' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
+                    <uix:TargetAnchorable CVScreenId="eff11389-666a-488b-8852-9484a122c10a" CvTextArea="37, 40, 112, 12" CvTextArgument="Process Completed !" CvType="Text" DesignTimeRectangle="34, 34, 118, 24" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Process Completed !' role='text' /&gt;" FuzzyAccuracy="0.68" FuzzySelectorArgument="&lt;ctrl name='Process Completed !' role='text' automationid='' check:text='Process Completed !' /&gt;" Guid="9eca36ec-dac4-42b8-98ad-e2dead151caf" InformativeScreenshot="3e420eeb65a2ff0a7652670b242b25d6.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Import TR' /&gt;" SearchSteps="FuzzySelector, CV" Version="V2" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
                         <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                          <uix:Target CVScreenId="eff11389-666a-488b-8852-9484a122c10a" CvTextArea="31, 12, 117, 14" CvTextArgument="SPbinder - Import TR" CvType="Text" DesignTimeRectangle="31, 12, 117, 14" ElementType="Text" FriendlyName="'SPbinder - Import TR'" SearchSteps="CV" TargetType="ComputerVisionBased" />
+                          <uix:Target CVScreenId="eff11389-666a-488b-8852-9484a122c10a" CvTextArea="31, 12, 117, 14" CvTextArgument="SPbinder - Import TR" CvType="Text" DesignTimeRectangle="31, 12, 117, 14" ElementType="Text" Guid="f97b0f72-1d2e-4545-9c7b-8c96175021f9" SearchSteps="CV" TargetType="ComputerVisionBased" />
                         </scg:List>
                       </uix:TargetAnchorable.Anchors>
                     </uix:TargetAnchorable>
@@ -1211,7 +1129,165 @@
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NCheckState>
               </Sequence>
-              <TryCatch DisplayName="Navigate to LEADS" sap:VirtualizedContainerService.HintSize="449.6,49.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: SPbinder - Anderson, Jack (DD24SP53-1) | 1040 | 2024 | Binder ID: 34896012 | Automa" sap:VirtualizedContainerService.HintSize="524.8,56.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="d9a421b7-0ecc-4fe8-a5bf-95cedfda1129" Version="V2">
+                <uix:NApplicationCard.Body>
+                  <ActivityAction x:TypeArguments="x:Object">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                    </ActivityAction.Argument>
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="561.6,978.4" sap2010:WorkflowViewState.IdRef="Sequence_81">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <TryCatch DisplayName="Try Catch - Reset View &amp; Lower Panel dragging" sap:VirtualizedContainerService.HintSize="417.6,916.8" sap2010:WorkflowViewState.IdRef="TryCatch_5">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <TryCatch.Try>
+                          <Sequence DisplayName="Try" sap:VirtualizedContainerService.HintSize="416,516.8" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:RetryScope DisplayName="Retry - Reset View" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="RetryScope_5" NumberOfRetries="2">
+                              <ui:RetryScope.ActivityBody>
+                                <ActivityAction>
+                                  <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="SPBinder - Reset View" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_7" Shortcuts="[d(hk)][d(alt)]v[u(alt)][u(hk)][d(hk)]r[u(hk)]" Timeout="60" Version="V3" />
+                                </ActivityAction>
+                              </ui:RetryScope.ActivityBody>
+                              <ui:RetryScope.Condition>
+                                <ActivityFunc x:TypeArguments="x:Boolean">
+                                  <uix:NCheckState DisplayName="Check App State - View" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="NCheckState_7" ScopeIdentifier="d9a421b7-0ecc-4fe8-a5bf-95cedfda1129" Version="V3">
+                                    <uix:NCheckState.IfExists>
+                                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="If- Reset View" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_8" Shortcuts="[d(hk)][d(alt)]v[u(alt)][u(hk)][d(hk)]r[u(hk)]" Timeout="60" Version="V3" />
+                                    </uix:NCheckState.IfExists>
+                                    <uix:NCheckState.IfNotExists>
+                                      <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Else - Reset View" sap:VirtualizedContainerService.HintSize="333.6,178.4" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_9" Shortcuts="[d(hk)][d(alt)]v[u(alt)][u(hk)][d(hk)]r[u(hk)]" Timeout="60" Version="V3" />
+                                    </uix:NCheckState.IfNotExists>
+                                    <uix:NCheckState.Target>
+                                      <uix:TargetAnchorable CvTextArea="141, 41, 38, 15" CvTextArgument="View" CvType="Text" DesignTimeRectangle="144, 39, 34, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='ViewMenuItem' /&gt;&lt;ctrl name='_View' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='ViewMenuItem' /&gt;&lt;ctrl name='_View' role='text' automationid='' check:text='_View' /&gt;" Guid="e9fcc40c-165c-430c-baa3-1d37232b30a6" InformativeScreenshot="601fb5ea76094082cd4786b8f4b452cf.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Visible" WaitForReadyArgument="Complete" />
+                                    </uix:NCheckState.Target>
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                  </uix:NCheckState>
+                                </ActivityFunc>
+                              </ui:RetryScope.Condition>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:RetryScope>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_46" Level="Info" Message="[&quot;Binder reset success&quot;]" />
+                            <ui:RetryScope DisplayName="Lower Panel dragging" sap:VirtualizedContainerService.HintSize="382.4,56.8" sap2010:WorkflowViewState.IdRef="RetryScope_6" NumberOfRetries="2">
+                              <ui:RetryScope.ActivityBody>
+                                <ActivityAction>
+                                  <Sequence DisplayName="Lower Panel dragging" sap:VirtualizedContainerService.HintSize="449.6,456" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'spbinder.exe SPbinder'" sap:VirtualizedContainerService.HintSize="416,188" sap2010:WorkflowViewState.IdRef="ClickImage_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                      <ui:ClickImage.CursorPosition>
+                                        <ui:CursorPosition Position="Center">
+                                          <ui:CursorPosition.OffsetX>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetX>
+                                          <ui:CursorPosition.OffsetY>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:CursorPosition.OffsetY>
+                                        </ui:CursorPosition>
+                                      </ui:ClickImage.CursorPosition>
+                                      <ui:ClickImage.Image>
+                                        <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" InitialScalingFactor="1.25" Profile="Basic" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEIAAAAUCAYAAAA5g+sCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAACDSURBVFhH7ZWxCoAgFEX9/61vaW6NoKU1gloKCRr8gxcvrkPwxnoZ3AMHVETkIBjEmabtMbqj62vcMLPpxihVPTymnpf5VYg3YQjAEIAhAEMAhgBFhZiWGTN/gl7AWwtrn6fuL6JUGAIwBGAIwBDgk1+jRMN+JKGJIbIMARkCMsRlkhNryc3Y/OUFaQAAAABJRU5ErkJggg==" />
+                                      </ui:ClickImage.Image>
+                                      <ui:ClickImage.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="3beaf07a-8d5e-4bc2-9fb9-016295f3c956">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:ClickImage.Target>
+                                      <sap:WorkflowViewStateService.ViewState>
+                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                        </scg:Dictionary>
+                                      </sap:WorkflowViewStateService.ViewState>
+                                    </ui:ClickImage>
+                                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="416,208" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_10" Shortcuts="[d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)][d(hk)][k(Up)][u(hk)]" Version="V3" />
+                                  </Sequence>
+                                </ActivityAction>
+                              </ui:RetryScope.ActivityBody>
+                              <ui:RetryScope.Condition>
+                                <ActivityFunc x:TypeArguments="x:Boolean" />
+                              </ui:RetryScope.Condition>
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </ui:RetryScope>
+                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,167.2" sap2010:WorkflowViewState.IdRef="LogMessage_47" Message="[&quot;Lower Panel dragging success&quot;]" />
+                          </Sequence>
+                        </TryCatch.Try>
+                        <TryCatch.Catches>
+                          <Catch x:TypeArguments="s1:Exception" sap:VirtualizedContainerService.HintSize="494.4,23.2" sap2010:WorkflowViewState.IdRef="Catch`1_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ActivityAction x:TypeArguments="s1:Exception">
+                              <ActivityAction.Argument>
+                                <DelegateInArgument x:TypeArguments="s1:Exception" Name="exception" />
+                              </ActivityAction.Argument>
+                              <ui:LogMessage DisplayName="Log Message (Reset View)" sap:VirtualizedContainerService.HintSize="416,144" sap2010:WorkflowViewState.IdRef="LogMessage_48" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;SPBinder is failed to reset the view to default &amp; drag the lower Panel&quot;]" />
+                            </ActivityAction>
+                          </Catch>
+                        </TryCatch.Catches>
+                        <TryCatch.Finally>
+                          <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="416,89.6" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                          </Sequence>
+                        </TryCatch.Finally>
+                      </TryCatch>
+                    </Sequence>
+                  </ActivityAction>
+                </uix:NApplicationCard.Body>
+                <uix:NApplicationCard.TargetApp>
+                  <uix:TargetApp Area="0, 0, 1920, 1020" FilePath="C:\SurePrepLocalFiles\SPbinder\spbinder.exe" IconBase64="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" InformativeScreenshot="4418bc32c5b4b0fe6c25e123f5f6e569.png" Selector="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - *' /&gt;" Title="SPbinder - Anderson, Jack (DD24SP53-1) | 1040 | 2024 | Binder ID*" />
+                </uix:NApplicationCard.TargetApp>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </uix:NApplicationCard>
+              <TryCatch DisplayName="Navigate to LEADS" sap:VirtualizedContainerService.HintSize="524.8,49.6" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1227,7 +1303,7 @@
                     </sap:WorkflowViewStateService.ViewState>
                     <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'LEADS'" sap:VirtualizedContainerService.HintSize="382.4,225.6" sap2010:WorkflowViewState.IdRef="NClick_15" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                       <uix:NClick.Target>
-                        <uix:TargetAnchorable CVScreenId="c4273e39-525a-4a96-a251-c694428dc965" CvTextArea="52, 976, 41, 12" CvTextArgument="LEADS" CvType="Text" DesignTimeRectangle="53, 974, 39, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'LEADS'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='LEADS' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='LEADS' role='text' automationid='' check:text='LEADS' /&gt;" Guid="ab6dee9c-6853-4289-8015-0fe4bc727cf9" InformativeScreenshot="ea8d9e6dc961b0a1a24f6f6f00e4d140.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                        <uix:TargetAnchorable CVScreenId="c4273e39-525a-4a96-a251-c694428dc965" CvTextArea="52, 976, 41, 12" CvTextArgument="LEADS" CvType="Text" DesignTimeRectangle="53, 974, 39, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='LEADS' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='LEADS' role='text' automationid='' check:text='LEADS' /&gt;" Guid="ab6dee9c-6853-4289-8015-0fe4bc727cf9" InformativeScreenshot="ea8d9e6dc961b0a1a24f6f6f00e4d140.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                       </uix:NClick.Target>
                       <uix:NClick.VerifyOptions>
                         <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -1294,18 +1370,18 @@
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <x:Boolean x:Key="IsPinned">False</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Matching the values added in CCH tax software" AttachMode="ByInstance" DisplayName="Use Application: SPbinder - OBFB, BUNR (CCAB17042540 (V1)) | 1040 | 2024 | Binder ID: 39372729 | Aut" sap:VirtualizedContainerService.HintSize="514.4,88" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="ff52ded2-eea0-4eaf-8348-88e3cd582a67" Version="V2">
+      <uix:NApplicationCard sap2010:Annotation.AnnotationText="Matching the values added in CCH tax software" AttachMode="ByInstance" DisplayName="Use Application: SPbinder - OBFB, BUNR (CCAB17042540 (V1)) | 1040 | 2024 | Binder ID: 39372729 | Aut" sap:VirtualizedContainerService.HintSize="645.6,100.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_5" ScopeGuid="ff52ded2-eea0-4eaf-8348-88e3cd582a67" Version="V2">
         <uix:NApplicationCard.Body>
           <ActivityAction x:TypeArguments="x:Object">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="483.2,1106.4" sap2010:WorkflowViewState.IdRef="Sequence_71">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="520,1106.4" sap2010:WorkflowViewState.IdRef="Sequence_71">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1397,14 +1473,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NMouseScroll>
-                <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="312eb748-a1ff-433f-9808-f7e2395232e2" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_19" SendOnPremData="False" Version="V6">
+                <p:CVScope DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" ContinueOnError="True" CvMethod="ElementDetection, OCR" DesignTimeCacheId="312eb748-a1ff-433f-9808-f7e2395232e2" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_19" SendOnPremData="False" Version="V6">
                   <p:CVScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                       </ActivityAction.Argument>
                       <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_64">
-                        <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyText (1052,362,34,13)&quot; +&#xA;&quot;Anchor: Text '26' (882,360,16,10)&quot; +&#xA;&quot;Anchor: Text 'and amount' (412,360,74,12)&quot;]" DesignTimeCacheId="312eb748-a1ff-433f-9808-f7e2395232e2" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_9" InformativeScreenshot="1408709c0d72c5a2fff270da2e40ca9b" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet26Value]" ScrollDirection="None" Version="V6">
+                        <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" ContinueOnError="True" Descriptor="[&quot;Target: AnyText (1052,362,34,13)&quot; +&#xA;&quot;Anchor: Text '26' (882,360,16,10)&quot; +&#xA;&quot;Anchor: Text 'and amount' (412,360,74,12)&quot;]" DesignTimeCacheId="312eb748-a1ff-433f-9808-f7e2395232e2" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_9" InformativeScreenshot="1408709c0d72c5a2fff270da2e40ca9b" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet26Value]" ScrollDirection="None" Version="V6">
                           <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                             <uc:CvDescriptor Id="e08c2750-530e-4a8f-9f73-02ba817029f7">
                               <uc:CvDescriptor.Anchors>
@@ -2226,7 +2302,7 @@
                       <ActivityFunc.Argument>
                         <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                       </ActivityFunc.Argument>
-                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_16" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="400,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_16" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                     </ActivityFunc>
                   </p:CVScope.OCREngine>
                   <p:CVScope.Target>
@@ -2318,14 +2394,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NMouseScroll>
-                <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2f0cb3de-2301-45a6-bc14-670588f69b83" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_20" SendOnPremData="False" Version="V6">
+                <p:CVScope DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" ContinueOnError="True" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2f0cb3de-2301-45a6-bc14-670588f69b83" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_20" SendOnPremData="False" Version="V6">
                   <p:CVScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                       </ActivityAction.Argument>
                       <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_67">
-                        <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DelayBefore="2" Descriptor="[&quot;Target: AnyWordGroup (1045,384,42,12)&quot; +&#xA;&quot;Anchor: Text '35a' (880,384,22,12)&quot; +&#xA;&quot;Anchor: Text 'FORM 1040 (Pg 2)' (373,406,100,14)&quot;]" DesignTimeCacheId="2f0cb3de-2301-45a6-bc14-670588f69b83" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_10" InformativeScreenshot="da3e7a64323cbee9d3c065fea24ece7d" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet35aValue]" ScrollDirection="None" Version="V6">
+                        <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" ContinueOnError="True" DelayBefore="2" Descriptor="[&quot;Target: AnyWordGroup (1045,384,42,12)&quot; +&#xA;&quot;Anchor: Text '35a' (880,384,22,12)&quot; +&#xA;&quot;Anchor: Text 'FORM 1040 (Pg 2)' (373,406,100,14)&quot;]" DesignTimeCacheId="2f0cb3de-2301-45a6-bc14-670588f69b83" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_10" InformativeScreenshot="da3e7a64323cbee9d3c065fea24ece7d" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet35aValue]" ScrollDirection="None" Version="V6">
                           <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                             <uc:CvDescriptor Id="307c79c3-0369-4235-b954-79c5f1eb2d54">
                               <uc:CvDescriptor.Anchors>
@@ -3103,7 +3179,7 @@
                       <ActivityFunc.Argument>
                         <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                       </ActivityFunc.Argument>
-                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_17" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="400,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_17" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                     </ActivityFunc>
                   </p:CVScope.OCREngine>
                   <p:CVScope.Target>
@@ -3227,14 +3303,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </uix:NMouseScroll>
-                <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="10719380-0d6d-4500-ad45-5d274dbc1b1d" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_21" SendOnPremData="False" Version="V6">
+                <p:CVScope DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" ContinueOnError="True" CvMethod="ElementDetection, OCR" DesignTimeCacheId="10719380-0d6d-4500-ad45-5d274dbc1b1d" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_21" SendOnPremData="False" Version="V6">
                   <p:CVScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                       </ActivityAction.Argument>
                       <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_70">
-                        <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" DelayBefore="2" Descriptor="[&quot;Target: AnyText (764,332,49,13)&quot; +&#xA;&quot;Anchor: Text 'FORM 1040 (Pg 1)' (258,406,98,14)&quot; +&#xA;&quot;Anchor: Text '15' (596,332,16,12)&quot;]" DesignTimeCacheId="fa8f7f72-4168-49cb-9122-f1ae84d47691" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_11" InformativeScreenshot="546366d982ceaad5ad3db50bddcbbb3b" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet15Value]" ScrollDirection="None" Version="V6">
+                        <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" ContinueOnError="True" DelayBefore="2" Descriptor="[&quot;Target: AnyText (764,332,49,13)&quot; +&#xA;&quot;Anchor: Text 'FORM 1040 (Pg 1)' (258,406,98,14)&quot; +&#xA;&quot;Anchor: Text '15' (596,332,16,12)&quot;]" DesignTimeCacheId="fa8f7f72-4168-49cb-9122-f1ae84d47691" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_11" InformativeScreenshot="546366d982ceaad5ad3db50bddcbbb3b" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet15Value]" ScrollDirection="None" Version="V6">
                           <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                             <uc:CvDescriptor Id="d686293b-1c1c-44d1-9d8b-9745a33f5d6f">
                               <uc:CvDescriptor.Anchors>
@@ -4694,7 +4770,7 @@
                       <ActivityFunc.Argument>
                         <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                       </ActivityFunc.Argument>
-                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_18" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                      <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="400,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_18" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                     </ActivityFunc>
                   </p:CVScope.OCREngine>
                   <p:CVScope.Target>
@@ -4728,7 +4804,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
-                <If Condition="[strLeadsheet15Value.Contains(strCCHValueIn15)]" DisplayName="If value 15" sap:VirtualizedContainerService.HintSize="416,49.6" sap2010:WorkflowViewState.IdRef="If_9">
+                <If Condition="[strLeadsheet15Value.Contains(System.Text.RegularExpressions.Regex.Replace(strCCHValueIn15, &quot;[^\d]&quot;, &quot;&quot;))]" DisplayName="If value 15" sap:VirtualizedContainerService.HintSize="416,49.6" sap2010:WorkflowViewState.IdRef="If_9">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -4742,7 +4818,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[strCCHValueIn15.ToString+&quot; is equal to &quot;+strLeadsheet15Value+&quot;. Hence, Match &amp; Update for value 15 is Successful.&quot;]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_39" Level="Info" Message="[System.Text.RegularExpressions.Regex.Replace(strCCHValueIn15, &quot;[^\d]&quot;, &quot;&quot;).ToString+&quot; is equal to &quot;+strLeadsheet15Value+&quot;. Hence, Match &amp; Update for value 15 is Successful.&quot;]" />
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_40" Level="Info" Message="[&quot;TC_10 - Successfully Able to validate the value for line 15 in leadsheet - Pass&quot;]" />
                       <s:SanityReport_TCFiltering in_strComments="{x:Null}" in_strExceptionMessage="{x:Null}" in_strExceptionScreenshot="{x:Null}" sap:VirtualizedContainerService.HintSize="382.4,425.6" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_23" inOut_dtTestSummaryReport="[io_dtTestSummaryReport]" in_listTestCaseID="[new List(Of String) From {&quot;TC_10&quot;}]" in_strStatus="[&quot;Pass&quot;]" in_strSubComponent="SPBinder_Leadsheet">
                         <sap:WorkflowViewStateService.ViewState>
@@ -4761,7 +4837,7 @@
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Error" Message="[strCCHValueIn15.ToString+&quot; is equal to &quot;+strLeadsheet15Value+&quot;. Hence, Match &amp; Update for value 15 is Successful.&quot;]" />
+                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_41" Level="Error" Message="[strCCHValueIn15.ToString+&quot; is equal to &quot;+strLeadsheet15Value+&quot;. Hence, Match &amp; Update for value 15 is Not Successful.&quot;]" />
                       <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382.4,176" sap2010:WorkflowViewState.IdRef="LogMessage_42" Level="Error" Message="[&quot;TC_10 - Successfully Able to validate the value for line 15 in leadsheet - Fail&quot;]" />
                       <t:TakeScreenshot sap:VirtualizedContainerService.HintSize="382.4,174.4" sap2010:WorkflowViewState.IdRef="TakeScreenshot_10" in_Folder="[in_strExceptionScreenshotFolder]" io_FilePath="[strExceptionScreenshot]" />
                       <s:SanityReport_TCFiltering in_strComments="{x:Null}" sap:VirtualizedContainerService.HintSize="382.4,425.6" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_24" inOut_dtTestSummaryReport="[io_dtTestSummaryReport]" in_listTestCaseID="[new List(Of String) From {&quot;TC_10&quot;}]" in_strExceptionMessage="Validated the value for line 15 in leadsheet is different from CCH value" in_strExceptionScreenshot="[strExceptionScreenshot]" in_strStatus="[&quot;Fail&quot;]" in_strSubComponent="SPBinder_Leadsheet">
@@ -4790,7 +4866,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uix:NApplicationCard>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="514.4,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="645.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
         <ui:CommentOut.Body>
           <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="483.2,108" sap2010:WorkflowViewState.IdRef="Sequence_74">
             <sap:WorkflowViewStateService.ViewState>
@@ -4843,7 +4919,7 @@
               </ui:MultipleAssign>
               <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'FORM 1040 (Pg 2)'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NClick_16" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                 <uix:NClick.Target>
-                  <uix:TargetAnchorable CVScreenId="cdb76f8a-e4e3-48f2-b33b-24b04f462d47" CvElementArea="372, 948, 126, 20" CvTextArea="385, 952, 100, 14" CvTextArgument="FORM 1040 (Pg 2)" CvType="Button" DesignTimeRectangle="385, 950, 99, 15" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'FORM 1040 (Pg 2)'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='FORM 1040 (Pg 2)' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='FORM 1040 (Pg 2)' role='text' automationid='' check:text='FORM 1040 (Pg 2)' /&gt;" Guid="54a6dde1-1ad9-4d60-ba5f-ad09dd5d8c21" InformativeScreenshot="bd1f94034610ef6bb2b35a468af1a685.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable CVScreenId="cdb76f8a-e4e3-48f2-b33b-24b04f462d47" CvElementArea="372, 948, 126, 20" CvTextArea="385, 952, 100, 14" CvTextArgument="FORM 1040 (Pg 2)" CvType="Button" DesignTimeRectangle="385, 950, 99, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='FORM 1040 (Pg 2)' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='FORM 1040 (Pg 2)' role='text' automationid='' check:text='FORM 1040 (Pg 2)' /&gt;" Guid="54a6dde1-1ad9-4d60-ba5f-ad09dd5d8c21" InformativeScreenshot="bd1f94034610ef6bb2b35a468af1a685.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NClick.Target>
                 <uix:NClick.VerifyOptions>
                   <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -4864,7 +4940,7 @@
               </uix:NClick>
               <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="Mouse Scroll 'Process Track'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_3" InteractionMode="HardwareEvents" MovementUnits="10" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                 <uix:NMouseScroll.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="13, 410, 1894, 529" DesignTimeScaleFactor="1.25" FriendlyName="'Process Track'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' role='client' check:fulltext='Process Track Change completed&amp;#xD;&amp;#xA;201&amp;#xD;&amp;#xA;190&amp;#xD;&amp;#xA;179&amp;#xD;&amp;#xA;178&amp;#xD;&amp;#xA;177&amp;#xD;&amp;#xA;168&amp;#xD;&amp;#xA;167&amp;#xD;&amp;#xA;165&amp;#xD;&amp;#xA;9&amp;#xD;&amp;#xA;8&amp;#xD;&amp;#xA;7&amp;#xD;&amp;#xA;6&amp;#xD;&amp;#xA;5&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;3&amp;#xD;&amp;#xA;2&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;' /&gt;" Guid="7d81a1c8-72c4-4ab5-b3f3-9a52879fde4b" InformativeScreenshot="caa66fce04fabd27c9478a6f4b74a303.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable DesignTimeRectangle="13, 410, 1894, 529" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' role='client' check:fulltext='Process Track Change completed&amp;#xD;&amp;#xA;201&amp;#xD;&amp;#xA;190&amp;#xD;&amp;#xA;179&amp;#xD;&amp;#xA;178&amp;#xD;&amp;#xA;177&amp;#xD;&amp;#xA;168&amp;#xD;&amp;#xA;167&amp;#xD;&amp;#xA;165&amp;#xD;&amp;#xA;9&amp;#xD;&amp;#xA;8&amp;#xD;&amp;#xA;7&amp;#xD;&amp;#xA;6&amp;#xD;&amp;#xA;5&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;3&amp;#xD;&amp;#xA;2&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;' /&gt;" Guid="7d81a1c8-72c4-4ab5-b3f3-9a52879fde4b" InformativeScreenshot="caa66fce04fabd27c9478a6f4b74a303.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NMouseScroll.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -4875,7 +4951,7 @@
               </uix:NMouseScroll>
               <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll 'Process Track'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_9" InteractionMode="HardwareEvents" MovementUnits="3" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                 <uix:NMouseScroll.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="13, 410, 1894, 529" DesignTimeScaleFactor="1.25" FriendlyName="'Process Track'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' role='client' check:fulltext='Process Track Change completed&amp;#xD;&amp;#xA;201&amp;#xD;&amp;#xA;190&amp;#xD;&amp;#xA;179&amp;#xD;&amp;#xA;178&amp;#xD;&amp;#xA;177&amp;#xD;&amp;#xA;168&amp;#xD;&amp;#xA;167&amp;#xD;&amp;#xA;165&amp;#xD;&amp;#xA;9&amp;#xD;&amp;#xA;8&amp;#xD;&amp;#xA;7&amp;#xD;&amp;#xA;6&amp;#xD;&amp;#xA;5&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;3&amp;#xD;&amp;#xA;2&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;' /&gt;" Guid="7d81a1c8-72c4-4ab5-b3f3-9a52879fde4b" InformativeScreenshot="caa66fce04fabd27c9478a6f4b74a303.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable DesignTimeRectangle="13, 410, 1894, 529" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' role='client' check:fulltext='Process Track Change completed&amp;#xD;&amp;#xA;201&amp;#xD;&amp;#xA;190&amp;#xD;&amp;#xA;179&amp;#xD;&amp;#xA;178&amp;#xD;&amp;#xA;177&amp;#xD;&amp;#xA;168&amp;#xD;&amp;#xA;167&amp;#xD;&amp;#xA;165&amp;#xD;&amp;#xA;9&amp;#xD;&amp;#xA;8&amp;#xD;&amp;#xA;7&amp;#xD;&amp;#xA;6&amp;#xD;&amp;#xA;5&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;3&amp;#xD;&amp;#xA;2&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;' /&gt;" Guid="7d81a1c8-72c4-4ab5-b3f3-9a52879fde4b" InformativeScreenshot="caa66fce04fabd27c9478a6f4b74a303.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NMouseScroll.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -4884,14 +4960,14 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NMouseScroll>
-              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="312eb748-a1ff-433f-9808-f7e2395232e2" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_11" SendOnPremData="False" Version="V6">
+              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="312eb748-a1ff-433f-9808-f7e2395232e2" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_11" SendOnPremData="False" Version="V6">
                 <p:CVScope.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                     </ActivityAction.Argument>
                     <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_54">
-                      <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyText (1052,362,34,13)&quot; +&#xA;&quot;Anchor: Text '26' (882,360,16,10)&quot; +&#xA;&quot;Anchor: Text 'and amount' (412,360,74,12)&quot;]" DesignTimeCacheId="312eb748-a1ff-433f-9808-f7e2395232e2" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_5" InformativeScreenshot="1408709c0d72c5a2fff270da2e40ca9b" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet26Value]" ScrollDirection="None" Version="V6">
+                      <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: AnyText (1052,362,34,13)&quot; +&#xA;&quot;Anchor: Text '26' (882,360,16,10)&quot; +&#xA;&quot;Anchor: Text 'and amount' (412,360,74,12)&quot;]" DesignTimeCacheId="312eb748-a1ff-433f-9808-f7e2395232e2" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_5" InformativeScreenshot="1408709c0d72c5a2fff270da2e40ca9b" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet26Value]" ScrollDirection="None" Version="V6">
                         <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor Id="e08c2750-530e-4a8f-9f73-02ba817029f7">
                             <uc:CvDescriptor.Anchors>
@@ -5713,7 +5789,7 @@
                     <ActivityFunc.Argument>
                       <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                     </ActivityFunc.Argument>
-                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_9" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_9" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                   </ActivityFunc>
                 </p:CVScope.OCREngine>
                 <p:CVScope.Target>
@@ -5796,7 +5872,7 @@
               </If>
               <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll 'Process Track'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_10" InteractionMode="HardwareEvents" MovementUnits="5" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                 <uix:NMouseScroll.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="13, 410, 1894, 529" DesignTimeScaleFactor="1.25" FriendlyName="'Process Track'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' role='client' check:fulltext='Process Track Change completed&amp;#xD;&amp;#xA;201&amp;#xD;&amp;#xA;190&amp;#xD;&amp;#xA;179&amp;#xD;&amp;#xA;178&amp;#xD;&amp;#xA;177&amp;#xD;&amp;#xA;168&amp;#xD;&amp;#xA;167&amp;#xD;&amp;#xA;165&amp;#xD;&amp;#xA;9&amp;#xD;&amp;#xA;8&amp;#xD;&amp;#xA;7&amp;#xD;&amp;#xA;6&amp;#xD;&amp;#xA;5&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;3&amp;#xD;&amp;#xA;2&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;' /&gt;" Guid="7d81a1c8-72c4-4ab5-b3f3-9a52879fde4b" InformativeScreenshot="caa66fce04fabd27c9478a6f4b74a303.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable DesignTimeRectangle="13, 410, 1894, 529" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' role='client' check:fulltext='Process Track Change completed&amp;#xD;&amp;#xA;201&amp;#xD;&amp;#xA;190&amp;#xD;&amp;#xA;179&amp;#xD;&amp;#xA;178&amp;#xD;&amp;#xA;177&amp;#xD;&amp;#xA;168&amp;#xD;&amp;#xA;167&amp;#xD;&amp;#xA;165&amp;#xD;&amp;#xA;9&amp;#xD;&amp;#xA;8&amp;#xD;&amp;#xA;7&amp;#xD;&amp;#xA;6&amp;#xD;&amp;#xA;5&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;3&amp;#xD;&amp;#xA;2&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;' /&gt;" Guid="7d81a1c8-72c4-4ab5-b3f3-9a52879fde4b" InformativeScreenshot="caa66fce04fabd27c9478a6f4b74a303.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NMouseScroll.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -5805,14 +5881,14 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NMouseScroll>
-              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2f0cb3de-2301-45a6-bc14-670588f69b83" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_17" SendOnPremData="False" Version="V6">
+              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="2f0cb3de-2301-45a6-bc14-670588f69b83" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_17" SendOnPremData="False" Version="V6">
                 <p:CVScope.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                     </ActivityAction.Argument>
                     <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_61">
-                      <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (1045,384,42,12)&quot; +&#xA;&quot;Anchor: Text '35a' (880,384,22,12)&quot; +&#xA;&quot;Anchor: Text 'FORM 1040 (Pg 2)' (373,406,100,14)&quot;]" DesignTimeCacheId="0c5eb3a6-951b-4def-a520-f07591bd8cb4" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_6" InformativeScreenshot="da3e7a64323cbee9d3c065fea24ece7d" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet35aValue]" ScrollDirection="None" Version="V6">
+                      <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: AnyWordGroup (1045,384,42,12)&quot; +&#xA;&quot;Anchor: Text '35a' (880,384,22,12)&quot; +&#xA;&quot;Anchor: Text 'FORM 1040 (Pg 2)' (373,406,100,14)&quot;]" DesignTimeCacheId="0c5eb3a6-951b-4def-a520-f07591bd8cb4" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Word Group" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_6" InformativeScreenshot="da3e7a64323cbee9d3c065fea24ece7d" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet35aValue]" ScrollDirection="None" Version="V6">
                         <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor Id="307c79c3-0369-4235-b954-79c5f1eb2d54">
                             <uc:CvDescriptor.Anchors>
@@ -7169,7 +7245,7 @@
                     <ActivityFunc.Argument>
                       <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                     </ActivityFunc.Argument>
-                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_14" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_14" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                   </ActivityFunc>
                 </p:CVScope.OCREngine>
                 <p:CVScope.Target>
@@ -7252,7 +7328,7 @@
               </If>
               <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'FORM 1040 (Pg 1)'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NClick_17" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                 <uix:NClick.Target>
-                  <uix:TargetAnchorable CVScreenId="de3fea13-e42e-47e7-ae7f-5d14d0bdc950" CvElementArea="315, 914, 155, 26" CvTextArea="336, 920, 123, 16" CvTextArgument="FORM 1040 (Pg 1)" CvType="Button" DesignTimeRectangle="337, 917, 123, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'FORM 1040 (Pg 1)'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='FORM 1040 (Pg 1)' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='FORM 1040 (Pg 1)' role='text' automationid='' check:text='FORM 1040 (Pg 1)' /&gt;" Guid="89549938-fa81-4b71-a4cd-3a01af6ce2ac" ImageBase64="" InformativeScreenshot="5fc23a3d61e7e0fe0b949d7cc76dc90d.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable CVScreenId="de3fea13-e42e-47e7-ae7f-5d14d0bdc950" CvElementArea="315, 914, 155, 26" CvTextArea="336, 920, 123, 16" CvTextArgument="FORM 1040 (Pg 1)" CvType="Button" DesignTimeRectangle="337, 917, 123, 19" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='FORM 1040 (Pg 1)' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl name='FORM 1040 (Pg 1)' role='text' automationid='' check:text='FORM 1040 (Pg 1)' /&gt;" Guid="89549938-fa81-4b71-a4cd-3a01af6ce2ac" ImageBase64="" InformativeScreenshot="5fc23a3d61e7e0fe0b949d7cc76dc90d.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NClick.Target>
                 <uix:NClick.VerifyOptions>
                   <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
@@ -7273,7 +7349,7 @@
               </uix:NClick>
               <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Up" DisplayName="Mouse Scroll 'Process Track'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_11" InteractionMode="HardwareEvents" MovementUnits="21" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                 <uix:NMouseScroll.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="13, 410, 1894, 529" DesignTimeScaleFactor="1.25" FriendlyName="'Process Track'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' role='client' check:fulltext='Process Track Change completed&amp;#xD;&amp;#xA;201&amp;#xD;&amp;#xA;190&amp;#xD;&amp;#xA;179&amp;#xD;&amp;#xA;178&amp;#xD;&amp;#xA;177&amp;#xD;&amp;#xA;168&amp;#xD;&amp;#xA;167&amp;#xD;&amp;#xA;165&amp;#xD;&amp;#xA;9&amp;#xD;&amp;#xA;8&amp;#xD;&amp;#xA;7&amp;#xD;&amp;#xA;6&amp;#xD;&amp;#xA;5&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;3&amp;#xD;&amp;#xA;2&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;' /&gt;" Guid="7d81a1c8-72c4-4ab5-b3f3-9a52879fde4b" InformativeScreenshot="caa66fce04fabd27c9478a6f4b74a303.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable DesignTimeRectangle="13, 410, 1894, 529" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' role='client' check:fulltext='Process Track Change completed&amp;#xD;&amp;#xA;201&amp;#xD;&amp;#xA;190&amp;#xD;&amp;#xA;179&amp;#xD;&amp;#xA;178&amp;#xD;&amp;#xA;177&amp;#xD;&amp;#xA;168&amp;#xD;&amp;#xA;167&amp;#xD;&amp;#xA;165&amp;#xD;&amp;#xA;9&amp;#xD;&amp;#xA;8&amp;#xD;&amp;#xA;7&amp;#xD;&amp;#xA;6&amp;#xD;&amp;#xA;5&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;3&amp;#xD;&amp;#xA;2&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;' /&gt;" Guid="7d81a1c8-72c4-4ab5-b3f3-9a52879fde4b" InformativeScreenshot="caa66fce04fabd27c9478a6f4b74a303.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NMouseScroll.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -7284,7 +7360,7 @@
               </uix:NMouseScroll>
               <uix:NMouseScroll KeyModifiers="{x:Null}" Direction="Down" DisplayName="Mouse Scroll 'Process Track'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="NMouseScroll_12" InteractionMode="HardwareEvents" MovementUnits="20" ScopeIdentifier="2417706c-8cb9-4015-a627-10b439469ec7" Version="V3">
                 <uix:NMouseScroll.Target>
-                  <uix:TargetAnchorable DesignTimeRectangle="13, 410, 1894, 529" DesignTimeScaleFactor="1.25" FriendlyName="'Process Track'" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' role='client' check:fulltext='Process Track Change completed&amp;#xD;&amp;#xA;201&amp;#xD;&amp;#xA;190&amp;#xD;&amp;#xA;179&amp;#xD;&amp;#xA;178&amp;#xD;&amp;#xA;177&amp;#xD;&amp;#xA;168&amp;#xD;&amp;#xA;167&amp;#xD;&amp;#xA;165&amp;#xD;&amp;#xA;9&amp;#xD;&amp;#xA;8&amp;#xD;&amp;#xA;7&amp;#xD;&amp;#xA;6&amp;#xD;&amp;#xA;5&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;3&amp;#xD;&amp;#xA;2&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;' /&gt;" Guid="7d81a1c8-72c4-4ab5-b3f3-9a52879fde4b" InformativeScreenshot="caa66fce04fabd27c9478a6f4b74a303.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                  <uix:TargetAnchorable DesignTimeRectangle="13, 410, 1894, 529" DesignTimeScaleFactor="1.25" FullSelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='rpgInputForm' /&gt;&lt;ctrl automationid='rpInputForm' /&gt;&lt;ctrl automationid='LeadsTabItem' /&gt;&lt;ctrl automationid='lssheet' role='client' check:fulltext='Process Track Change completed&amp;#xD;&amp;#xA;201&amp;#xD;&amp;#xA;190&amp;#xD;&amp;#xA;179&amp;#xD;&amp;#xA;178&amp;#xD;&amp;#xA;177&amp;#xD;&amp;#xA;168&amp;#xD;&amp;#xA;167&amp;#xD;&amp;#xA;165&amp;#xD;&amp;#xA;9&amp;#xD;&amp;#xA;8&amp;#xD;&amp;#xA;7&amp;#xD;&amp;#xA;6&amp;#xD;&amp;#xA;5&amp;#xD;&amp;#xA;4&amp;#xD;&amp;#xA;3&amp;#xD;&amp;#xA;2&amp;#xD;&amp;#xA;1&amp;#xD;&amp;#xA;' /&gt;" Guid="7d81a1c8-72c4-4ab5-b3f3-9a52879fde4b" InformativeScreenshot="caa66fce04fabd27c9478a6f4b74a303.png" ScopeSelectorArgument="&lt;wnd app='spbinder.exe' cls='HwndWrapper*' title='SPbinder - Anderson, Jack (HS190325_3 (v1)) | 1040 | 2024 | Bind*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
                 </uix:NMouseScroll.Target>
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -7293,14 +7369,14 @@
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
               </uix:NMouseScroll>
-              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="10719380-0d6d-4500-ad45-5d274dbc1b1d" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_18" SendOnPremData="False" Version="V6">
+              <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="10719380-0d6d-4500-ad45-5d274dbc1b1d" DisplayName="CV Screen Scope 'client  lssheet'" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="CVScope_18" SendOnPremData="False" Version="V6">
                 <p:CVScope.Body>
                   <ActivityAction x:TypeArguments="x:Object">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
                     </ActivityAction.Argument>
                     <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_62">
-                      <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" Descriptor="[&quot;Target: AnyText (764,332,49,13)&quot; +&#xA;&quot;Anchor: Text 'FORM 1040 (Pg 1)' (258,406,98,14)&quot; +&#xA;&quot;Anchor: Text '15' (596,332,16,12)&quot;]" DesignTimeCacheId="fa8f7f72-4168-49cb-9122-f1ae84d47691" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_7" InformativeScreenshot="546366d982ceaad5ad3db50bddcbbb3b" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet15Value]" ScrollDirection="None" Version="V6">
+                      <p:CvGetTextWithDescriptor DelayScreenshotAfterScroll="{x:Null}" ScrollOffset="{x:Null}" Descriptor="[&quot;Target: AnyText (764,332,49,13)&quot; +&#xA;&quot;Anchor: Text 'FORM 1040 (Pg 1)' (258,406,98,14)&quot; +&#xA;&quot;Anchor: Text '15' (596,332,16,12)&quot;]" DesignTimeCacheId="fa8f7f72-4168-49cb-9122-f1ae84d47691" DesignTimeScaleFactor="1.25" DisplayName="CV Get Text - Any Text" sap:VirtualizedContainerService.HintSize="400,244.8" sap2010:WorkflowViewState.IdRef="CvGetTextWithDescriptor_7" InformativeScreenshot="546366d982ceaad5ad3db50bddcbbb3b" NumberOfScrolls="2" RefreshBefore="True" Result="[strLeadsheet15Value]" ScrollDirection="None" Version="V6">
                         <p:CvGetTextWithDescriptor.DesignTimeDescriptor>
                           <uc:CvDescriptor Id="d686293b-1c1c-44d1-9d8b-9745a33f5d6f">
                             <uc:CvDescriptor.Anchors>
@@ -8760,7 +8836,7 @@
                     <ActivityFunc.Argument>
                       <DelegateInArgument x:TypeArguments="sd1:Image" Name="Image" />
                     </ActivityFunc.Argument>
-                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_15" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
+                    <p1:UiPathScreenOCR ApiKey="{x:Null}" Endpoint="{x:Null}" Output="{x:Null}" PredictionId="{x:Null}" Text="{x:Null}" UseAccents="{x:Null}" UseLocalServer="{x:Null}" ComputeSkewAngle="False" DisplayName="UiPath Screen OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,24.8" sap2010:WorkflowViewState.IdRef="UiPathScreenOCR_15" Image="[Image]" Language="auto" NoopExecution="False" Profile="Screen" Scale="1" Timeout="100000" />
                   </ActivityFunc>
                 </p:CVScope.OCREngine>
                 <p:CVScope.Target>
@@ -8851,7 +8927,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:CommentOut>
-      <s2:SanityReport_GenerateOutput sap:VirtualizedContainerService.HintSize="514.4,48" sap2010:WorkflowViewState.IdRef="SanityReport_GenerateOutput_2" in_Config="[in_Config]" in_SanityTestFilesheetName="[in_SanityTestFileSheetName]" in_TransactionItem="[in_TransactionItem]" in_dtTestSummaryReport="[io_dtTestSummaryReport]" in_strBinderID="[in_strBinderID]">
+      <s2:SanityReport_GenerateOutput sap:VirtualizedContainerService.HintSize="645.6,48" sap2010:WorkflowViewState.IdRef="SanityReport_GenerateOutput_2" in_Config="[in_Config]" in_SanityTestFilesheetName="[in_SanityTestFileSheetName]" in_TransactionItem="[in_TransactionItem]" in_dtTestSummaryReport="[io_dtTestSummaryReport]" in_strBinderID="[in_strBinderID]">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>

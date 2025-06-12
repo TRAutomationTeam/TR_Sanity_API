@@ -4,16 +4,16 @@
   "description": "This process use for Simplified Leadsheet to update and match the data from CCH tax software to SP Binder Leadsheet",
   "main": "NewActivity.xaml",
   "dependencies": {
-    "SanityReport_GenerateOutput": "1.0.3",
-    "SanityReport_TCFiltering": "1.0.1",
+    "SanityReport_GenerateOutput": "1.0.4",
+    "SanityReport_TCFiltering": "1.0.2",
     "TakeScreenshot": "1.0.1",
-    "UiPath.UIAutomation.Activities": "23.10.13"
+    "UiPath.UIAutomation.Activities": "24.10.11"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.6.0",
-  "projectVersion": "1.0.11",
+  "projectVersion": "1.0.21",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
