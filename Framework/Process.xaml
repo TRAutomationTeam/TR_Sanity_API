@@ -142,7 +142,7 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1019.6000000000001,747.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="928.4000000000001,747.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strClientId" />
     </Sequence.Variables>
@@ -945,7 +945,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             <av:Point x:Key="ShapeLocation">3000,1540</av:Point>
             <av:Size x:Key="ShapeSize">60,60</av:Size>
-            <av:PointCollection x:Key="TrueConnector">3030,1600 3030,1630.0000000000002 3030.2,1630.0000000000002 3030.2,1655</av:PointCollection>
+            <av:PointCollection x:Key="TrueConnector">3030,1600 3030,1630 3030.2,1630 3030.2,1655</av:PointCollection>
             <av:PointCollection x:Key="FalseConnector">3060,1570 3090,1570 3090,1570.2 3145,1570.2</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
@@ -1030,8 +1030,8 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <av:Point x:Key="ShapeLocation">2810,1420</av:Point>
                 <av:Size x:Key="ShapeSize">60,60</av:Size>
-                <av:PointCollection x:Key="TrueConnector">2840,1480 2840,1510.0000000000002 2840.2,1510.0000000000002 2840.2,1535</av:PointCollection>
-                <av:PointCollection x:Key="FalseConnector">2870,1450 2899.9999999999995,1450 2899.9999999999995,1450.2 2975,1450.2</av:PointCollection>
+                <av:PointCollection x:Key="TrueConnector">2840,1480 2840,1510 2840.2,1510 2840.2,1535</av:PointCollection>
+                <av:PointCollection x:Key="FalseConnector">2870,1450 2900,1450 2900,1450.2 2975,1450.2</av:PointCollection>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </FlowDecision>
@@ -1058,7 +1058,7 @@
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <av:Point x:Key="ShapeLocation">2785,1285</av:Point>
             <av:Size x:Key="ShapeSize">110.4,70.4</av:Size>
-            <av:PointCollection x:Key="ConnectorLocation">2785,1320.2 2754.9999999999995,1320.2 2754.9999999999995,1320 2710,1320</av:PointCollection>
+            <av:PointCollection x:Key="ConnectorLocation">2785,1320.2 2755,1320.2 2755,1320 2710,1320</av:PointCollection>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
         <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="SCD_VerificationQueue_AddDoc - Invoke Workflow File (Performer\SCD_VerificationQueue_AddDoc.xaml)" sap:VirtualizedContainerService.HintSize="110.4,70.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_20" UnSafe="False" WorkflowFileName="Performer\SCD_VerificationQueue_AddDoc.xaml">
