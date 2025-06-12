@@ -142,7 +142,7 @@
       <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="928.4000000000001,747.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="1019.6000000000001,747.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strClientId" />
     </Sequence.Variables>
@@ -437,7 +437,7 @@
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                     <av:Point x:Key="ShapeLocation">320,1040</av:Point>
                                                                     <av:Size x:Key="ShapeSize">60,60</av:Size>
-                                                                    <av:PointCollection x:Key="TrueConnector">320,1070 290,1070 290,1070.2 235.4,1070.2</av:PointCollection>
+                                                                    <av:PointCollection x:Key="TrueConnector">320,1070 290.00000000000006,1070 290.00000000000006,1070.2 235.4,1070.2</av:PointCollection>
                                                                     <av:PointCollection x:Key="FalseConnector">350,1040 350,960.2 235.4,960.2</av:PointCollection>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
@@ -511,8 +511,8 @@
                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                     <av:Point x:Key="ShapeLocation">320,1280</av:Point>
                                                                                     <av:Size x:Key="ShapeSize">60,60</av:Size>
-                                                                                    <av:PointCollection x:Key="TrueConnector">350,1340 350,1370 350.2,1370 350.2,1405</av:PointCollection>
-                                                                                    <av:PointCollection x:Key="FalseConnector">320,1310 290,1310 290,1310.2 235.4,1310.2</av:PointCollection>
+                                                                                    <av:PointCollection x:Key="TrueConnector">350,1340 350,1370.0000000000002 350.2,1370.0000000000002 350.2,1405</av:PointCollection>
+                                                                                    <av:PointCollection x:Key="FalseConnector">320,1310 290.00000000000006,1310 290.00000000000006,1310.2 235.4,1310.2</av:PointCollection>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
                                                                                 <FlowDecision.True>
