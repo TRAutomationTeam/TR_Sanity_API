@@ -4,13 +4,14 @@
   "description": "Robotic Enterprise Framework",
   "main": "Main.xaml",
   "dependencies": {
-    "Cloning_MasterTaxClient": "[1.0.24]",
+    "Cloning_MasterTaxClient": "[1.0.29]",
     "ExceptionClassifier": "[1.0.8]",
     "PingID": "[1.0.12]",
-    "Review_Wizards": "[1.1.1]",
-    "Sanity_AddDoc": "[1.0.11]",
+    "Review_Wizards": "[1.1.10]",
+    "Review_Wizards_DemoDoc2024": "[1.0.20]",
+    "Sanity_AddDoc": "[1.0.14]",
     "Sanity_ApiIndexTreeValidations": "[1.0.3]",
-    "Sanity_CCHLeadSheet": "[1.0.25]",
+    "Sanity_CCHLeadSheet": "[1.0.28]",
     "SanityReport_GenerateOutput": "[1.0.4]",
     "SanityReport_ReadTemplate": "[1.0.7]",
     "SanityReport_TCFiltering": "[1.0.2]",
@@ -23,7 +24,7 @@
     "UiPath.Testing.Activities": "[24.10.3]",
     "UiPath.UIAutomation.Activities": "[24.10.11]",
     "UiPath.WebAPI.Activities": "[1.21.1]",
-    "Verification_AddDoc": "[1.0.9]"
+    "Verification_AddDoc": "[1.0.13]"
   },
   "webServices": [],
   "entitiesStores": [
@@ -34,7 +35,7 @@
   ],
   "schemaVersion": "4.0",
   "studioVersion": "24.10.6.0",
-  "projectVersion": "1.0.8",
+  "projectVersion": "1.0.1",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,

@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="cZe5moQR-ka0MMa7o4MQFQ" Reference="kOjobpdQYEyzZnkE2nPqag/kyF8w7h5G0eVDThPRnwZFg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
-  <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="production.sureprep.com/Api/ApiUserManagement" CVScreenId="8fc29364-b2bc-48c5-86bd-46ec275ba7de" CvTextArea="320, 246, 77, 12" CvTextArgument="Firm Defaults" CvType="Text" DesignTimeRectangle="316, 244, 85, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;webctrl aria-role='navigation' tableRow='1' tag='TABLE' /&gt;&lt;webctrl aaname='  Firm Defaults  ' tableRow='1' tag='A' /&gt;" FuzzyAccuracy="0.7" FuzzySelectorArgument="&lt;webctrl aria-role='navigation' tag='TABLE' /&gt;&lt;webctrl aaname='  Firm Defaults  ' type='' tag='A' class='item-font' check:innerText='Firm Defaults' /&gt;" Guid="bd3ffa77-a87c-4785-bd5a-7bda02e10cd1" ScopeSelectorArgument="&lt;html app='chrome.exe' title='User Management' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
-      <imageRef attrName="InformativeScreenshot" originalValue="5613cf6c8b21d5bf3d2f2e838f20f302.png" xmlns="">0po2u5NwUzU-rmg6ydmi8BQ</imageRef>
-    </TargetAnchorable>
-    <x:String x:Key="ActivityType">None</x:String>
-  </ObjectRepositoryTargetData.Data>
-</ObjectRepositoryTargetData>

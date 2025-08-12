@@ -155,7 +155,7 @@
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="API_Binder_Submission" sap:VirtualizedContainerService.HintSize="840.0000000000001,3336.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="API_Binder_Submission" sap:VirtualizedContainerService.HintSize="1106,5120" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="strCreateBinderURL" />
       <Variable x:TypeArguments="x:String" Name="strSubmitBinderURL" />
@@ -167,9 +167,9 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="484.8,3313.6" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="547.2,5096.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <Sequence DisplayName="API Binder Creation" sap:VirtualizedContainerService.HintSize="483.2,335.2" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <Sequence DisplayName="API Binder Creation" sap:VirtualizedContainerService.HintSize="545.6,2116.8" sap2010:WorkflowViewState.IdRef="Sequence_2">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Boolean" Name="CB_boolSuccess" />
             <Variable x:TypeArguments="x:String" Name="str_CB_ResStatus" />
@@ -180,7 +180,7 @@
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:MultipleAssign DisplayName="Assign Multiple URLs For Binder Creation" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
+          <ui:MultipleAssign DisplayName="Assign Multiple URLs For Binder Creation" sap:VirtualizedContainerService.HintSize="512,56.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
             <ui:MultipleAssign.AssignOperations>
               <scg:List x:TypeArguments="ui:AssignOperation" Capacity="4">
                 <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
@@ -216,7 +216,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:MultipleAssign>
-          <Sequence DisplayName="Create Binder" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="Sequence_3">
+          <Sequence DisplayName="Create Binder" sap:VirtualizedContainerService.HintSize="512,1838.4" sap2010:WorkflowViewState.IdRef="Sequence_3">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="str_CB_response_code" />
               <Variable x:TypeArguments="x:String" Name="AccountNumber" />
@@ -253,11 +253,11 @@
             </Sequence.Variables>
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assign all the data in Binder Creation sheet in excel to variables." DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="416,116.8" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
+            <ui:MultipleAssign sap2010:Annotation.AnnotationText="Assign all the data in Binder Creation sheet in excel to variables." DisplayName="Multiple Assign" sap:VirtualizedContainerService.HintSize="478.4,1179.2" sap2010:WorkflowViewState.IdRef="MultipleAssign_2">
               <ui:MultipleAssign.AssignOperations>
                 <scg:List x:TypeArguments="ui:AssignOperation" Capacity="64">
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_4">
@@ -305,7 +305,7 @@
                       <OutArgument x:TypeArguments="x:String">[Client_Id]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Client_Id").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_ClientID]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_10">
@@ -321,7 +321,7 @@
                       <OutArgument x:TypeArguments="x:String">[Locator_No]</OutArgument>
                     </ui:AssignOperation.To>
                     <ui:AssignOperation.Value>
-                      <InArgument x:TypeArguments="x:String">[in_TransactionItem.SpecificContent("Locator_No").ToString]</InArgument>
+                      <InArgument x:TypeArguments="x:String">[in_ClientID]</InArgument>
                     </ui:AssignOperation.Value>
                   </ui:AssignOperation>
                   <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_12">
@@ -528,59 +528,129 @@
               </ui:MultipleAssign.AssignOperations>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:MultipleAssign>
-            <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This VB.Net code connect UiPath and API to create bulk binders and stored it in out argument for further use." Code="Dim client As RestSharp.RestClient = New RestSharp.RestClient(Req_URL)&#xA;client.Timeout = 10000&#xA;Dim request As RestRequest= New RestRequest(RestSharp.Method.POST)&#xA;request.AddHeader(&quot;AuthToken&quot;, Token)&#xA;request.AddParameter(&quot;AccountNumber&quot;, AccountNumber)&#xA;request.AddParameter(&quot;CustomStatus&quot;, CustomStatus)&#xA;request.AddParameter(&quot;Spouse_SSN&quot;, Spouse_SSN)&#xA;request.AddParameter(&quot;Custom_Field&quot;, Custom_Field)&#xA;request.AddParameter(&quot;Client_Id&quot;, Client_Id)&#xA;request.AddParameter(&quot;Locator_Pwd&quot;, Locator_Pwd)&#xA;request.AddParameter(&quot;Locator_No&quot;, Locator_No)&#xA;request.AddParameter(&quot;Office_Location_Id&quot;, Office_Location_Id)&#xA;request.AddParameter(&quot;Email&quot;, Email)&#xA;request.AddParameter(&quot;Has_Leadsheet&quot;, Has_Leadsheet)&#xA;request.AddParameter(&quot;TaxPayer_SSN&quot;, TaxPayer_SSN)&#xA;request.AddParameter(&quot;Unique_Identifier&quot;, Unique_Identifier)&#xA;request.AddParameter(&quot;Service_Type_Id&quot;, Service_Type_Id)&#xA;request.AddParameter(&quot;Filing_Status&quot;, Filing_Status)&#xA;request.AddParameter(&quot;SpouseFirstName&quot;, SpouseFirstName)&#xA;request.AddParameter(&quot;SpouseLastName&quot;, SpouseLastName)&#xA;request.AddParameter(&quot;BinderTypeId&quot;, BinderTypeId)&#xA;request.AddParameter(&quot;TrustEIN&quot;, TrustEIN)&#xA;request.AddParameter(&quot;TypeofEntity&quot;, TypeofEntity)&#xA;request.AddParameter(&quot;TrustName&quot;, TrustName)&#xA;request.AddParameter(&quot;Template_Id&quot;, Template_Id)&#xA;request.AddParameter(&quot;Linkbinder&quot;, Linkbinder)&#xA;request.AddParameter(&quot;First_Name&quot;, First_Name)&#xA;request.AddParameter(&quot;Last_Name&quot;, Last_Name)&#xA;request.AddParameter(&quot;RestrictOfficeLocation&quot;, RestrictOfficeLocation)&#xA;request.AddParameter(&quot;IsSCANverifyPlus&quot;, IsSCANverifyPlus)&#xA;request.AddParameter(&quot;SubmissionType&quot;, SubmissionType)&#xA;request.AddParameter(&quot;AssignMember&quot;, AssignMember)&#xA;request.AddParameter(&quot;Is7216ConsentReceived&quot;, Is7216ConsentReceived)&#xA;System.Threading.Thread.Sleep(1000)&#xA;Dim response As IRestResponse = client.Execute(request)&#xA;Response_status = response.Content&#xA;CB_Response_code = response.StatusCode.ToString" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="416,132.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+            <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This VB.Net code connect UiPath and API to create bulk binders and stored it in out argument for further use." Code="Dim client As RestSharp.RestClient = New RestSharp.RestClient(Req_URL)&#xD;&#xA;client.Timeout = 10000&#xD;&#xA;Dim request As RestRequest= New RestRequest(RestSharp.Method.POST)&#xD;&#xA;request.AddHeader(&quot;AuthToken&quot;, Token)&#xD;&#xA;request.AddParameter(&quot;AccountNumber&quot;, AccountNumber)&#xD;&#xA;request.AddParameter(&quot;CustomStatus&quot;, CustomStatus)&#xD;&#xA;request.AddParameter(&quot;Spouse_SSN&quot;, Spouse_SSN)&#xD;&#xA;request.AddParameter(&quot;Custom_Field&quot;, Custom_Field)&#xD;&#xA;request.AddParameter(&quot;Client_Id&quot;, Client_Id)&#xD;&#xA;request.AddParameter(&quot;Locator_Pwd&quot;, Locator_Pwd)&#xD;&#xA;request.AddParameter(&quot;Locator_No&quot;, Locator_No)&#xD;&#xA;request.AddParameter(&quot;Office_Location_Id&quot;, Office_Location_Id)&#xD;&#xA;request.AddParameter(&quot;Email&quot;, Email)&#xD;&#xA;request.AddParameter(&quot;Has_Leadsheet&quot;, Has_Leadsheet)&#xD;&#xA;request.AddParameter(&quot;TaxPayer_SSN&quot;, TaxPayer_SSN)&#xD;&#xA;request.AddParameter(&quot;Unique_Identifier&quot;, Unique_Identifier)&#xD;&#xA;request.AddParameter(&quot;Service_Type_Id&quot;, Service_Type_Id)&#xD;&#xA;request.AddParameter(&quot;Filing_Status&quot;, Filing_Status)&#xD;&#xA;request.AddParameter(&quot;SpouseFirstName&quot;, SpouseFirstName)&#xD;&#xA;request.AddParameter(&quot;SpouseLastName&quot;, SpouseLastName)&#xD;&#xA;request.AddParameter(&quot;BinderTypeId&quot;, BinderTypeId)&#xD;&#xA;request.AddParameter(&quot;TrustEIN&quot;, TrustEIN)&#xD;&#xA;request.AddParameter(&quot;TypeofEntity&quot;, TypeofEntity)&#xD;&#xA;request.AddParameter(&quot;TrustName&quot;, TrustName)&#xD;&#xA;request.AddParameter(&quot;Template_Id&quot;, Template_Id)&#xD;&#xA;request.AddParameter(&quot;Linkbinder&quot;, Linkbinder)&#xD;&#xA;request.AddParameter(&quot;First_Name&quot;, First_Name)&#xD;&#xA;request.AddParameter(&quot;Last_Name&quot;, Last_Name)&#xD;&#xA;request.AddParameter(&quot;RestrictOfficeLocation&quot;, RestrictOfficeLocation)&#xD;&#xA;request.AddParameter(&quot;IsSCANverifyPlus&quot;, IsSCANverifyPlus)&#xD;&#xA;request.AddParameter(&quot;SubmissionType&quot;, SubmissionType)&#xD;&#xA;request.AddParameter(&quot;AssignMember&quot;, AssignMember)&#xD;&#xA;request.AddParameter(&quot;Is7216ConsentReceived&quot;, Is7216ConsentReceived)&#xD;&#xA;System.Threading.Thread.Sleep(1000)&#xD;&#xA;Dim response As IRestResponse = client.Execute(request)&#xD;&#xA;Response_status = response.Content&#xD;&#xA;CB_Response_code = response.StatusCode.ToString" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="478.4,256.8" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
               <ui:InvokeCode.Arguments>
-                <InArgument x:TypeArguments="x:String" x:Key="Token">[in_strToken]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="AccountNumber">[AccountNumber]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="CustomStatus">[CustomStatus]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Tax_Client_Version">[Tax_Client_Version]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Spouse_SSN">[Spouse_SSN]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Custom_Field">[Custom_Field]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Client_Id">[Client_Id]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Locator_Pwd">[Locator_Pwd]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Locator_No">[Locator_No]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Office_Location_Id">[Office_Location_Id]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Email">[Email]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="TaxPayer_SSN">[TaxPayer_SSN]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Unique_Identifier">[Unique_Identifier]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Service_Type_Id">[Service_Type_Id]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Filing_Status">[Filing_Status]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="SpouseFirstName">[SpouseFirstName]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="SpouseLastName">[SpouseLastName]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="BinderTypeId">[BinderTypeId]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="TrustEIN">[TrustEIN]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="TypeofEntity">[TypeofEntity]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="TrustName">[TrustName]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Template_Id">[Template_Id]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Has_Leadsheet">[Has_Leadsheet]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="First_Name">[First_Name]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Last_Name">[Last_Name]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="HomeState">[HomeState]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="RestrictOfficeLocation">[RestrictOfficeLocation]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="IsSCANverifyPlus">[IsSCANverifyPlus]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="SubmissionType">[SubmissionType]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="AssignMember">[AssignMember]</InArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Is7216ConsentReceived">[Is7216ConsentReceived]</InArgument>
-                <InArgument x:TypeArguments="x:String" x:Key="Req_URL">[strCreateBinderURL]</InArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="Response_status">[str_CB_ResStatus]</OutArgument>
-                <OutArgument x:TypeArguments="x:String" x:Key="CB_Response_code">[str_CB_response_code]</OutArgument>
-                <InArgument x:TypeArguments="x:Int32" x:Key="Linkbinder">[Linkbinder]</InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Token">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_strToken" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="AccountNumber">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="AccountNumber" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="CustomStatus">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="CustomStatus" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Tax_Client_Version">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Tax_Client_Version" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Spouse_SSN">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Spouse_SSN" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Custom_Field">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Custom_Field" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Client_Id">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Client_Id" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Locator_Pwd">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Locator_Pwd" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Locator_No">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Locator_No" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Office_Location_Id">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Office_Location_Id" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Email">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Email" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="TaxPayer_SSN">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TaxPayer_SSN" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Unique_Identifier">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Unique_Identifier" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Service_Type_Id">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Service_Type_Id" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Filing_Status">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Filing_Status" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="SpouseFirstName">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="SpouseFirstName" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="SpouseLastName">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="SpouseLastName" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="BinderTypeId">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="BinderTypeId" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="TrustEIN">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TrustEIN" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="TypeofEntity">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TypeofEntity" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="TrustName">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="TrustName" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Template_Id">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Template_Id" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Has_Leadsheet">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Has_Leadsheet" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="First_Name">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="First_Name" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Last_Name">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="Last_Name" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="HomeState">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="HomeState" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="RestrictOfficeLocation">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="RestrictOfficeLocation" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="IsSCANverifyPlus">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="IsSCANverifyPlus" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="SubmissionType">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="SubmissionType" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="AssignMember">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="AssignMember" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Is7216ConsentReceived">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Is7216ConsentReceived" />
+                </InArgument>
+                <InArgument x:TypeArguments="x:String" x:Key="Req_URL">
+                  <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strCreateBinderURL" />
+                </InArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="Response_status">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_CB_ResStatus" />
+                </OutArgument>
+                <OutArgument x:TypeArguments="x:String" x:Key="CB_Response_code">
+                  <VisualBasicReference x:TypeArguments="x:String" ExpressionText="str_CB_response_code" />
+                </OutArgument>
+                <InArgument x:TypeArguments="x:Int32" x:Key="Linkbinder">
+                  <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="Linkbinder" />
+                </InArgument>
               </ui:InvokeCode.Arguments>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:InvokeCode>
-            <ui:IfElseIf sap2010:Annotation.AnnotationText="This is for error handling if the data in excel is not accurate or any other issue. Then the error throw by api catch here" DisplayName="Else If (Error Handler)" sap:VirtualizedContainerService.HintSize="416,132.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
+            <ui:IfElseIf sap2010:Annotation.AnnotationText="This is for error handling if the data in excel is not accurate or any other issue. Then the error throw by api catch here" DisplayName="Else If (Error Handler)" sap:VirtualizedContainerService.HintSize="478.4,148.8" sap2010:WorkflowViewState.IdRef="IfElseIf_1">
               <ui:IfElseIf.ConditionBlocks>
                 <sc:BindingList x:TypeArguments="ui:IfElseIfBlock" AllowEdit="True" AllowNew="True" AllowRemove="True" RaiseListChangedEvents="True">
                   <ui:IfElseIfBlock BlockType="If" Condition="[str_CB_ResStatus=&quot;Invalid session token&quot;]" sap2010:WorkflowViewState.IdRef="IfElseIfBlock_5">
@@ -987,7 +1057,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:IfElseIf>
-            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="[&quot;TC_01 - Successfully Created Binder via API - Pass&quot;]">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="LogMessage_33" Level="Info" Message="[&quot;TC_01 - Successfully Created Binder via API - Pass&quot;]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -995,7 +1065,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LogMessage>
-            <s:SanityReport_TCFiltering in_strComments="{x:Null}" in_strExceptionMessage="{x:Null}" in_strExceptionScreenshot="{x:Null}" sap:VirtualizedContainerService.HintSize="416,56.8" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_1" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_listTestCaseID="[new List(Of String) From {&quot;TC_01&quot;}]" in_strStatus="[&quot;Pass&quot;]" in_strSubComponent="API">
+            <s:SanityReport_TCFiltering in_strComments="{x:Null}" in_strExceptionMessage="{x:Null}" in_strExceptionScreenshot="{x:Null}" sap:VirtualizedContainerService.HintSize="478.4,56.8" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_1" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_listTestCaseID="[new List(Of String) From {&quot;TC_01&quot;}]" in_strStatus="[&quot;Pass&quot;]" in_strSubComponent="API">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1003,7 +1073,7 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </s:SanityReport_TCFiltering>
-            <Assign sap:VirtualizedContainerService.HintSize="416,48" sap2010:WorkflowViewState.IdRef="Assign_3">
+            <Assign sap:VirtualizedContainerService.HintSize="478.4,48" sap2010:WorkflowViewState.IdRef="Assign_3">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:Int32">[out_BinderID]</OutArgument>
               </Assign.To>
@@ -1018,7 +1088,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </Assign>
           </Sequence>
-          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="449.6,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,56.8" sap2010:WorkflowViewState.IdRef="CommentOut_1">
             <ui:CommentOut.Body>
               <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="536,517" sap2010:WorkflowViewState.IdRef="Sequence_55">
                 <sap:WorkflowViewStateService.ViewState>
@@ -1073,7 +1143,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:CommentOut>
-          <Sequence DisplayName="Upload Document" sap:VirtualizedContainerService.HintSize="451.2,1319.2" sap2010:WorkflowViewState.IdRef="Sequence_16">
+          <Sequence DisplayName="Upload Document" sap:VirtualizedContainerService.HintSize="512,56.8" sap2010:WorkflowViewState.IdRef="Sequence_16">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="isK1Document" />
               <Variable x:TypeArguments="x:Int32" Name="isBookmarkOnly" />
@@ -1193,41 +1263,19 @@
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
                     </Delay>
-                    <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This VB.Net code connect UiPath and API to upload documents in bulk binders." Code="Dim client As RestSharp.RestClient = New RestSharp.RestClient(Req_URL+Binder_id.ToString+&quot;&amp;isK1Document=&quot;+isK1Document.ToString+&quot;&amp;isBookmarkOnly=&quot;+isBookmarkOnly.ToString+&quot;&amp;isOCR=&quot;+isOCR.ToString+&quot;&amp;documentType=&quot;+documentType.ToString+&quot;&amp;submissionSource=&quot;+submissionSource.ToString)&#xD;&#xA;Dim request As RestRequest= New RestRequest(RestSharp.Method.POST)&#xD;&#xA;client.Timeout = 300000&#xD;&#xA;request.AddHeader(&quot;AuthToken&quot;, Token)&#xD;&#xA;request.AddFile(&quot;file&quot;, file)&#xD;&#xA;client.Timeout = 300000&#xD;&#xA;Dim response As IRestResponse = client.Execute(request)&#xD;&#xA;client.Timeout = 300000&#xD;&#xA;ResContent = response.Content.ToString&#xD;&#xA;UD_Response_code = response.StatusCode.ToString" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="382.4,240.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
+                    <ui:InvokeCode ContinueOnError="{x:Null}" sap2010:Annotation.AnnotationText="This VB.Net code connect UiPath and API to upload documents in bulk binders." Code="Dim client As RestSharp.RestClient = New RestSharp.RestClient(Req_URL+Binder_id.ToString+&quot;&amp;isK1Document=&quot;+isK1Document.ToString+&quot;&amp;isBookmarkOnly=&quot;+isBookmarkOnly.ToString+&quot;&amp;isOCR=&quot;+isOCR.ToString+&quot;&amp;documentType=&quot;+documentType.ToString+&quot;&amp;submissionSource=&quot;+submissionSource.ToString)&#xA;Dim request As RestRequest= New RestRequest(RestSharp.Method.POST)&#xA;client.Timeout = 300000&#xA;request.AddHeader(&quot;AuthToken&quot;, Token)&#xA;request.AddFile(&quot;file&quot;, file)&#xA;client.Timeout = 300000&#xA;Dim response As IRestResponse = client.Execute(request)&#xA;client.Timeout = 300000&#xA;ResContent = response.Content.ToString&#xA;UD_Response_code = response.StatusCode.ToString" DisplayName="Invoke code" sap:VirtualizedContainerService.HintSize="382.4,240.8" sap2010:WorkflowViewState.IdRef="InvokeCode_3">
                       <ui:InvokeCode.Arguments>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="Binder_id">
-                          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="out_BinderID" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="file">
-                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="currentItem.ToString" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="Req_URL">
-                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="strUploadDocURL" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:String" x:Key="Token">
-                          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="in_strToken" />
-                        </InArgument>
-                        <OutArgument x:TypeArguments="x:String" x:Key="ResContent">
-                          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="UD_strResContent" />
-                        </OutArgument>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="isK1Document">
-                          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="isK1Document" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="isBookmarkOnly">
-                          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="isBookmarkOnly" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="isOCR">
-                          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="isOCR" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="documentType">
-                          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="documentType" />
-                        </InArgument>
-                        <InArgument x:TypeArguments="x:Int32" x:Key="submissionSource">
-                          <VisualBasicValue x:TypeArguments="x:Int32" ExpressionText="submissionSource" />
-                        </InArgument>
-                        <OutArgument x:TypeArguments="x:String" x:Key="UD_Response_code">
-                          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="UD_Response_code" />
-                        </OutArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="Binder_id">[out_BinderID]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="file">[currentItem.ToString]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Req_URL">[strUploadDocURL]</InArgument>
+                        <InArgument x:TypeArguments="x:String" x:Key="Token">[in_strToken]</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="ResContent">[UD_strResContent]</OutArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="isK1Document">[isK1Document]</InArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="isBookmarkOnly">[isBookmarkOnly]</InArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="isOCR">[isOCR]</InArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="documentType">[documentType]</InArgument>
+                        <InArgument x:TypeArguments="x:Int32" x:Key="submissionSource">[submissionSource]</InArgument>
+                        <OutArgument x:TypeArguments="x:String" x:Key="UD_Response_code">[UD_Response_code]</OutArgument>
                       </ui:InvokeCode.Arguments>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1874,7 +1922,7 @@
               </sap:WorkflowViewStateService.ViewState>
             </s:SanityReport_TCFiltering>
           </Sequence>
-          <Sequence DisplayName="Submit Binder" sap:VirtualizedContainerService.HintSize="449.6,48" sap2010:WorkflowViewState.IdRef="Sequence_37">
+          <Sequence DisplayName="Submit Binder" sap:VirtualizedContainerService.HintSize="512,48" sap2010:WorkflowViewState.IdRef="Sequence_37">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Int32" Name="IsInHouseProcess" />
               <Variable x:TypeArguments="x:String" Name="SB_strResContent" />
@@ -2389,14 +2437,14 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s1:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="483.2,1228.8" sap2010:WorkflowViewState.IdRef="Sequence_54">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="545.6,1230.4" sap2010:WorkflowViewState.IdRef="Sequence_54">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="449.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Error" Message="[&quot;TC_01 - Successfully Created Binder via API - Fail&quot;]" />
-              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,173" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Error" Message="[&quot;TC_02 - Successfully Uploaded Document in Binder via API - Fail&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_38" Level="Error" Message="[&quot;TC_01 - Successfully Created Binder via API - Fail&quot;]" />
+              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_37" Level="Error" Message="[&quot;TC_02 - Successfully Uploaded Document in Binder via API - Fail&quot;]" />
               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="382,173" sap2010:WorkflowViewState.IdRef="LogMessage_36" Level="Error" Message="[&quot;TC_03 - Successully Submitted Binder via API - Fail&quot;]" />
               <t:TakeScreenshot sap:VirtualizedContainerService.HintSize="382,173" sap2010:WorkflowViewState.IdRef="TakeScreenshot_2" in_Folder="[in_strExceptionScreenshotFolder]" io_FilePath="[strExceptionScreenshot]" />
               <s:SanityReport_TCFiltering in_strComments="{x:Null}" sap:VirtualizedContainerService.HintSize="382,428" sap2010:WorkflowViewState.IdRef="SanityReport_TCFiltering_4" inOut_dtTestSummaryReport="[in_dtTestSummaryReport]" in_listTestCaseID="[new List(Of String) From {&quot;TC_01&quot;,&quot;TC_02&quot;,&quot;TC_03&quot;}]" in_strExceptionMessage="Error occured while binder creation" in_strExceptionScreenshot="[strExceptionScreenshot]" in_strStatus="[&quot;Fail&quot;]" in_strSubComponent="API">
@@ -2422,7 +2470,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:BusinessRuleException" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="416,1228.8" sap2010:WorkflowViewState.IdRef="Sequence_56">
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="416,1228.8" sap2010:WorkflowViewState.IdRef="Sequence_56">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>

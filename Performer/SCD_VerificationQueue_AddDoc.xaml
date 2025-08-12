@@ -1,5 +1,6 @@
 <Activity mc:Ignorable="sap sap2010" x:Class="SCD_VerificationQueue" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="clr-namespace:PingID;assembly=PingID" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:s1="clr-namespace:Scd_ManagerAssignmentQueue;assembly=Scd_ManagerAssignmentQueue" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
+    <x:Property Name="in_strNoneAddDocBinderID" Type="InArgument(x:String)" />
     <x:Property Name="in_drRowToUpdate" Type="InArgument(sd:DataRow)" />
     <x:Property sap2010:Annotation.AnnotationText="Transaction item to be processed." Name="in_TransactionItem" Type="InArgument(ui:QueueItem)" />
     <x:Property sap2010:Annotation.AnnotationText="Dictionary structure to store configuration data of the process (settings, constants and assets)." Name="in_Config" Type="InArgument(scg:Dictionary(x:String, x:Object))" />
@@ -70,6 +71,7 @@
       <x:String>UiPath.UIAutomationNext.Contracts</x:String>
       <x:String>UiPath.UIAutomationNext.Enums</x:String>
       <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>SanityReport_ReadTemplate</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -146,9 +148,10 @@
       <AssemblyReference>System.Linq.Parallel</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
       <AssemblyReference>System.Linq.Queryable</AssemblyReference>
+      <AssemblyReference>SanityReport_ReadTemplate</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="SCD_VerificationQueue" sap:VirtualizedContainerService.HintSize="1452.0000000000002,1409.6" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="SCD_VerificationQueue" sap:VirtualizedContainerService.HintSize="1100.4,4487.2" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:DateTime" Name="dtStartTime" />
     </Sequence.Variables>
@@ -157,7 +160,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[Not in_TransactionItem.Progress.Contains(&quot;SCD Verification AddDoc Success&quot;)]" sap:VirtualizedContainerService.HintSize="571.2,1386.4" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[Not in_TransactionItem.Progress.Contains(&quot;SCD Verification AddDoc Success&quot;)]" sap:VirtualizedContainerService.HintSize="548.8,4464" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -165,13 +168,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="537.6,999.2" sap2010:WorkflowViewState.IdRef="Sequence_11">
+        <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="547.2,4108.8" sap2010:WorkflowViewState.IdRef="Sequence_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="504,939.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+          <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="513.6,4048.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -179,7 +182,7 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
             <TryCatch.Try>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,1305.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="512,2133.6" sap2010:WorkflowViewState.IdRef="Sequence_5">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -207,14 +210,35 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </Assign>
-                <p:PingId_Authentication sap:VirtualizedContainerService.HintSize="478.4,330.4" sap2010:WorkflowViewState.IdRef="PingId_Authentication_1" in_Config="[in_Config]" in_TransactionItem="[in_TransactionItem]" in_isAPI="Yes" in_strBinderId="[in_strBinderID]" io_dtTestSummaryReport="[io_dtTestSummaryReport]" />
-                <s1:SCD_ManagerAssignmentToVerificaionQueue sap:VirtualizedContainerService.HintSize="478.4,330.4" sap2010:WorkflowViewState.IdRef="SCD_ManagerAssignmentToVerificaionQueue_1" in_Config="[in_Config]" in_TransactionItem="[in_TransactionItem]" in_isAPI="Yes" in_strBinderId="[in_strBinderID]" io_dtTestSummaryReport="[io_dtTestSummaryReport]" />
+                <p:PingId_Authentication sap:VirtualizedContainerService.HintSize="478.4,330.4" sap2010:WorkflowViewState.IdRef="PingId_Authentication_1" in_Config="[in_Config]" in_TransactionItem="[in_TransactionItem]" in_isAPI="Yes" in_strBinderId="[in_strNoneAddDocBinderID]" io_dtTestSummaryReport="[io_dtTestSummaryReport]" />
+                <If Condition="[in_TransactionItem.SpecificContent(&quot;Has_Leadsheet&quot;).ToString=&quot;0&quot;]" sap:VirtualizedContainerService.HintSize="478.4,901.6" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If.Then>
+                    <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,381.6" sap2010:WorkflowViewState.IdRef="Sequence_15">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <s1:SCD_ManagerAssignmentToVerificaionQueue sap:VirtualizedContainerService.HintSize="382.4,321.6" sap2010:WorkflowViewState.IdRef="SCD_ManagerAssignmentToVerificaionQueue_1" in_Config="[in_Config]" in_TransactionItem="[in_TransactionItem]" in_isAPI="Yes" in_strBinderId="[in_strNoneAddDocBinderID]" io_dtTestSummaryReport="[io_dtTestSummaryReport]" />
+                    </Sequence>
+                  </If.Then>
+                  <If.Else>
+                    <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,381.6" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <s1:SCD_ManagerAssignmentToVerificaionQueue sap:VirtualizedContainerService.HintSize="382.4,321.6" sap2010:WorkflowViewState.IdRef="SCD_ManagerAssignmentToVerificaionQueue_2" in_Config="[in_Config]" in_TransactionItem="[in_TransactionItem]" in_isAPI="Yes" in_strBinderId="[in_strBinderID]" io_dtTestSummaryReport="[io_dtTestSummaryReport]" />
+                    </Sequence>
+                  </If.Else>
+                </If>
                 <ui:MultipleAssign sap2010:Annotation.AnnotationText="1. Update component status in Reporter&#xA;2. Update client id in Input sheet&#xA;3. Update component status in  Input sheet" DisplayName="Multiple Assign - Execution Status" sap:VirtualizedContainerService.HintSize="478.4,240" sap2010:WorkflowViewState.IdRef="MultipleAssign_1">
                   <ui:MultipleAssign.AssignOperations>
                     <scg:List x:TypeArguments="ui:AssignOperation" Capacity="8">
                       <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_1">
                         <ui:AssignOperation.To>
-                          <OutArgument x:TypeArguments="x:Object">[in_dtReporter(6)("Execution Status")]</OutArgument>
+                          <OutArgument x:TypeArguments="x:Object">[in_dtReporter(5)("Execution Status")]</OutArgument>
                         </ui:AssignOperation.To>
                         <ui:AssignOperation.Value>
                           <InArgument x:TypeArguments="x:Object">["Success"]</InArgument>
@@ -246,7 +270,7 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                 </ui:WriteRange>
-                <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - API Submission" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.4,217.6" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_1" Progress="SCD Verification AddDoc Success" TransactionItem="[in_TransactionItem]">
+                <ui:SetTransactionProgress TimeoutMS="{x:Null}" DisplayName="Set Transaction Progress - API Submission" FolderPath="[in_Config(&quot;OrchestratorQueueFolder&quot;).ToString]" sap:VirtualizedContainerService.HintSize="478.4,165.6" sap2010:WorkflowViewState.IdRef="SetTransactionProgress_1" Progress="SCD Verification AddDoc Success" TransactionItem="[in_TransactionItem]">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -296,7 +320,7 @@
                           </ui:AssignOperation>
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_7">
                             <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:Object">[in_dtReporter(6)("Execution Status")]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Object">[in_dtReporter(5)("Execution Status")]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:Object">["Failed"]</InArgument>
@@ -304,7 +328,7 @@
                           </ui:AssignOperation>
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_8">
                             <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:Object">[in_dtReporter(6)("Exception")]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Object">[in_dtReporter(5)("Exception")]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:Object">[exception.Message]</InArgument>
@@ -356,7 +380,7 @@
                           </ui:AssignOperation>
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_13">
                             <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:Object">[in_dtReporter(6)("Execution Status")]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Object">[in_dtReporter(5)("Execution Status")]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:Object">["Failed"]</InArgument>
@@ -364,7 +388,7 @@
                           </ui:AssignOperation>
                           <ui:AssignOperation sap2010:WorkflowViewState.IdRef="AssignOperation_14">
                             <ui:AssignOperation.To>
-                              <OutArgument x:TypeArguments="x:Object">[in_dtReporter(6)("Exception")]</OutArgument>
+                              <OutArgument x:TypeArguments="x:Object">[in_dtReporter(5)("Exception")]</OutArgument>
                             </ui:AssignOperation.To>
                             <ui:AssignOperation.Value>
                               <InArgument x:TypeArguments="x:Object">[exception.Message]</InArgument>
@@ -378,17 +402,17 @@
               </Catch>
             </TryCatch.Catches>
             <TryCatch.Finally>
-              <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="467.2,661.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
+              <Sequence DisplayName="Finally" sap:VirtualizedContainerService.HintSize="512,661.6" sap2010:WorkflowViewState.IdRef="Sequence_10">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:LogMessage DisplayName="Log Message - Component RunTime" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;SCD Verification AddDoc Run Time - &quot; + DateTime.Now.Subtract(dtStartTime).ToString]" />
-                <ui:LogMessage DisplayName="Log Message - Execution Ended" sap:VirtualizedContainerService.HintSize="433.6,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;************************************************************************SCD Verification AddDoc Ended************************************************************************&quot;]" />
-                <Assign DisplayName="Assign - Execution Time" sap:VirtualizedContainerService.HintSize="433.6,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
+                <ui:LogMessage DisplayName="Log Message - Component RunTime" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_2" Message="[&quot;SCD Verification AddDoc Run Time - &quot; + DateTime.Now.Subtract(dtStartTime).ToString]" />
+                <ui:LogMessage DisplayName="Log Message - Execution Ended" sap:VirtualizedContainerService.HintSize="478.4,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_3" Message="[&quot;************************************************************************SCD Verification AddDoc Ended************************************************************************&quot;]" />
+                <Assign DisplayName="Assign - Execution Time" sap:VirtualizedContainerService.HintSize="478.4,113.6" sap2010:WorkflowViewState.IdRef="Assign_4">
                   <Assign.To>
-                    <OutArgument x:TypeArguments="x:Object">[in_dtReporter(6)("Automation Time")]</OutArgument>
+                    <OutArgument x:TypeArguments="x:Object">[in_dtReporter(5)("Automation Time")]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
                     <InArgument x:TypeArguments="x:Object">[DateTime.Now.ToLocalTime.Subtract(dtStartTime).ToString.Split("."c)(0)]</InArgument>
@@ -401,14 +425,14 @@
         </Sequence>
       </If.Then>
       <If.Else>
-        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,225.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
+        <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="547.2,225.6" sap2010:WorkflowViewState.IdRef="Sequence_12">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:LogMessage DisplayName="Log Message - Already executed" sap:VirtualizedContainerService.HintSize="382.4,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;SCD Verification AddDoc is already executed.&quot;]">
+          <ui:LogMessage DisplayName="Log Message - Already executed" sap:VirtualizedContainerService.HintSize="513.6,165.6" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;SCD Verification AddDoc is already executed.&quot;]">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
